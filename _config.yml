@@ -1,6 +1,6 @@
 title: "SmartEVPedia"
 description: "中国智能电动车软件与智驾演进百科"
-baseurl: "/SmartEVPedia"
+baseurl: ""  # 对于用户页面，baseurl 应该为空
 url: "https://hkgood.github.io"
 github_username: "hkgood"
 
@@ -19,15 +19,14 @@ collections:
 # Data files
 data_dir: _data
 
-# Exclude from processing
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+# Include custom assets
+include:
+  - assets
+
+# Sass configuration
+sass:
+  sass_dir: assets/css
+  style: compressed
 
 # Custom variables
 brands:
@@ -45,15 +44,6 @@ defaults:
       type: "pages"
     values:
       layout: "default"
-
-# Include custom assets
-include:
-  - assets
-
-# Sass configuration
-sass:
-  sass_dir: assets/css
-  style: compressed
 
 # Exclude from processing
 exclude:
