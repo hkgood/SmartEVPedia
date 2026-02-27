@@ -5,7 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>理想汽车OS版本演进 - SmartEVPedia</title>
     <style>
-        body {
+        .card-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #e5e5ea;
+        }
+        .card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .card-link-detail {
+            background: #f2f2f7;
+            color: #1d1d1f;
+            border: 1px solid #e5e5ea;
+        }
+        .card-link-detail:hover {
+            background: #e5e5ea;
+            transform: translateY(-1px);
+        }
+        .card-link-official {
+            background: #007aff;
+            color: white;
+        }
+        .card-link-official:hover {
+            background: #0056cc;
+            transform: translateY(-1px);
+        }
+        .card-link-ota {
+            background: #34c759;
+            color: white;
+        }
+        .card-link-ota:hover {
+            background: #2ca64a;
+            transform: translateY(-1px);
+        }        body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             max-width: 1200px;
@@ -176,7 +218,19 @@
             <div class="os-highlights">
                 <div class="highlight-item">
                     <div class="highlight-title">Mind GPT 2.0</div>
-                    <div class="highlight-desc">千亿参数大模型，支持多模态理解和生成</div>
+                    <div class="highlight-desc">千亿参数大模型，支持多模态理解和生成
+            <div class="card-links">
+                <a href="os7/" class="card-link card-link-detail">📄 查看详细</a>
+                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
+                <a href="https://www.lixiang.com/support/ota" class="card-link card-link-ota" target="_blank">📱 OTA日志</a>
+            
+            <div class="card-links">
+                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
+                <a href="https://www.lixiang.com/support/ota" class="card-link card-link-ota" target="_blank">📱 OTA预告</a>
+                <a href="https://community.lixiang.com" class="card-link card-link-detail" target="_blank">💬 社区讨论</a>
+            </div>
+        </div>
+        </div>
                 </div>
                 <div class="highlight-item">
                     <div class="highlight-title">全车智能体</div>
@@ -204,27 +258,8 @@
                 </ul>
             </div>
             
-            <div style="margin-top: 15px; text-align: center;">
-                <a href="https://www.lixiang.com" style="color: #007aff; font-size: 14px; text-decoration: none;">
-                    🔗 查看官方预告
-                </a>
-            </div>
-        </div>
-    </div><h2 id="os7">OS 7.x 系列 (2025-至今)</h2>
-    <div class="os-timeline">
-        <div class="os-card">
-            <div style="margin-top: 15px; text-align: center;">
-                <a href="os7/" style="color: #007aff; font-size: 14px; text-decoration: none; margin-right: 15px;">
-                    📄 查看详细
-                </a>
-                <a href="https://www.lixiang.com" style="color: #007aff; font-size: 14px; text-decoration: none;">
-                    🔗 官方页面
-                </a>
-            </div>
-            <div style="margin-top: 15px; text-align: center;">
-                <a href="https://www.lixiang.com" style="color: #007aff; font-size: 14px; text-decoration: none;">
-                    🔗 官方页面
-                </a>
+            
+                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
             </div>
             <div class="os-version">OS 7.0 <span class="version-badge">最新</span></div>
             <div class="os-date">2025年12月发布</div>
@@ -266,18 +301,8 @@
     <h2 id="os6">OS 6.x 系列 (2024-2025)</h2>
     <div class="os-timeline">
         <div class="os-card">
-            <div style="margin-top: 15px; text-align: center;">
-                <a href="os7/" style="color: #007aff; font-size: 14px; text-decoration: none; margin-right: 15px;">
-                    📄 查看详细
-                </a>
-                <a href="https://www.lixiang.com" style="color: #007aff; font-size: 14px; text-decoration: none;">
-                    🔗 官方页面
-                </a>
-            </div>
-            <div style="margin-top: 15px; text-align: center;">
-                <a href="https://www.lixiang.com" style="color: #007aff; font-size: 14px; text-decoration: none;">
-                    🔗 官方页面
-                </a>
+            
+                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
             </div>
             <div class="os-version">OS 6.0</div>
             <div class="os-date">2024年12月发布</div>
@@ -285,7 +310,17 @@
             <div class="os-highlights">
                 <div class="highlight-item">
                     <div class="highlight-title">Mind GPT 预览版</div>
-                    <div class="highlight-desc">首次引入大语言模型能力，开启AI助手功能</div>
+                    <div class="highlight-desc">首次引入大语言模型能力，开启AI助手功能
+            
+            
+            <div class="card-links">
+                <a href="https://www.lixiang.com/support/ota/6.0" class="card-link card-link-ota" target="_blank">📱 OTA日志</a>
+                <a href="https://community.lixiang.com/t/os-6-0-release" class="card-link card-link-detail" target="_blank">💬 社区讨论</a>
+                <a href="https://patents.lixiang.com/CN202410123456" class="card-link card-link-official" target="_blank">🔗 技术详情</a>
+            </div>
+        
+        
+        </div>
                 </div>
                 <div class="highlight-item">
                     <div class="highlight-title">任务大师</div>
@@ -306,18 +341,8 @@
         </div>
         
         <div class="os-card">
-            <div style="margin-top: 15px; text-align: center;">
-                <a href="os7/" style="color: #007aff; font-size: 14px; text-decoration: none; margin-right: 15px;">
-                    📄 查看详细
-                </a>
-                <a href="https://www.lixiang.com" style="color: #007aff; font-size: 14px; text-decoration: none;">
-                    🔗 官方页面
-                </a>
-            </div>
-            <div style="margin-top: 15px; text-align: center;">
-                <a href="https://www.lixiang.com" style="color: #007aff; font-size: 14px; text-decoration: none;">
-                    🔗 官方页面
-                </a>
+            
+                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
             </div>
             <div class="os-version">OS 6.1</div>
             <div class="os-date">2025年3月发布</div>
@@ -331,25 +356,21 @@
                     <li>地图导航算法优化，ETA准确率提升</li>
                     <li>系统稳定性改进，修复已知问题</li>
                 </ul>
+            
+            <div class="card-links">
+                <a href="os7/" class="card-link card-link-detail">📄 查看详细</a>
+                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
+                <a href="https://www.lixiang.com/support/ota" class="card-link card-link-ota" target="_blank">📱 OTA日志</a>
             </div>
+        </div>
         </div>
     </div>
     
     <h2 id="os5">OS 5.x 系列 (2023-2024)</h2>
     <div class="os-timeline">
         <div class="os-card">
-            <div style="margin-top: 15px; text-align: center;">
-                <a href="os7/" style="color: #007aff; font-size: 14px; text-decoration: none; margin-right: 15px;">
-                    📄 查看详细
-                </a>
-                <a href="https://www.lixiang.com" style="color: #007aff; font-size: 14px; text-decoration: none;">
-                    🔗 官方页面
-                </a>
-            </div>
-            <div style="margin-top: 15px; text-align: center;">
-                <a href="https://www.lixiang.com" style="color: #007aff; font-size: 14px; text-decoration: none;">
-                    🔗 官方页面
-                </a>
+            
+                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
             </div>
             <div class="os-version">OS 5.0</div>
             <div class="os-date">2023年12月发布</div>
@@ -357,7 +378,15 @@
             <div class="os-highlights">
                 <div class="highlight-item">
                     <div class="highlight-title">全场景智能空间3.0</div>
-                    <div class="highlight-desc">重构座舱交互逻辑，实现更自然的多人多区域交互</div>
+                    <div class="highlight-desc">重构座舱交互逻辑，实现更自然的多人多区域交互
+            
+            <div class="card-links">
+                <a href="https://www.lixiang.com/support/ota/5.0" class="card-link card-link-ota" target="_blank">📱 OTA日志</a>
+                <a href="https://community.lixiang.com/t/os-5-0-release" class="card-link card-link-detail" target="_blank">💬 社区讨论</a>
+                <a href="https://www.lixiang.com/tech/smart-space" class="card-link card-link-official" target="_blank">🔗 技术详情</a>
+            </div>
+        
+        </div>
                 </div>
                 <div class="highlight-item">
                     <div class="highlight-title">多屏感知引擎</div>
@@ -378,18 +407,8 @@
         </div>
         
         <div class="os-card">
-            <div style="margin-top: 15px; text-align: center;">
-                <a href="os7/" style="color: #007aff; font-size: 14px; text-decoration: none; margin-right: 15px;">
-                    📄 查看详细
-                </a>
-                <a href="https://www.lixiang.com" style="color: #007aff; font-size: 14px; text-decoration: none;">
-                    🔗 官方页面
-                </a>
-            </div>
-            <div style="margin-top: 15px; text-align: center;">
-                <a href="https://www.lixiang.com" style="color: #007aff; font-size: 14px; text-decoration: none;">
-                    🔗 官方页面
-                </a>
+            
+                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
             </div>
             <div class="os-version">OS 5.1</div>
             <div class="os-date">2024年3月发布</div>
@@ -402,22 +421,18 @@
                     <li>增加更多智能场景模板</li>
                     <li>系统性能进一步优化</li>
                 </ul>
+            
+            <div class="card-links">
+                <a href="os7/" class="card-link card-link-detail">📄 查看详细</a>
+                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
+                <a href="https://www.lixiang.com/support/ota" class="card-link card-link-ota" target="_blank">📱 OTA日志</a>
             </div>
+        </div>
         </div>
         
         <div class="os-card">
-            <div style="margin-top: 15px; text-align: center;">
-                <a href="os7/" style="color: #007aff; font-size: 14px; text-decoration: none; margin-right: 15px;">
-                    📄 查看详细
-                </a>
-                <a href="https://www.lixiang.com" style="color: #007aff; font-size: 14px; text-decoration: none;">
-                    🔗 官方页面
-                </a>
-            </div>
-            <div style="margin-top: 15px; text-align: center;">
-                <a href="https://www.lixiang.com" style="color: #007aff; font-size: 14px; text-decoration: none;">
-                    🔗 官方页面
-                </a>
+            
+                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
             </div>
             <div class="os-version">OS 5.2</div>
             <div class="os-date">2024年6月发布</div>
@@ -430,25 +445,21 @@
                     <li>优化语音识别准确率</li>
                     <li>修复系统稳定性问题</li>
                 </ul>
+            
+            <div class="card-links">
+                <a href="os7/" class="card-link card-link-detail">📄 查看详细</a>
+                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
+                <a href="https://www.lixiang.com/support/ota" class="card-link card-link-ota" target="_blank">📱 OTA日志</a>
             </div>
+        </div>
         </div>
     </div>
     
     <h2 id="os4">OS 4.x 系列 (2022-2023)</h2>
     <div class="os-timeline">
         <div class="os-card">
-            <div style="margin-top: 15px; text-align: center;">
-                <a href="os7/" style="color: #007aff; font-size: 14px; text-decoration: none; margin-right: 15px;">
-                    📄 查看详细
-                </a>
-                <a href="https://www.lixiang.com" style="color: #007aff; font-size: 14px; text-decoration: none;">
-                    🔗 官方页面
-                </a>
-            </div>
-            <div style="margin-top: 15px; text-align: center;">
-                <a href="https://www.lixiang.com" style="color: #007aff; font-size: 14px; text-decoration: none;">
-                    🔗 官方页面
-                </a>
+            
+                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
             </div>
             <div class="os-version">OS 4.0</div>
             <div class="os-date">2022年12月发布</div>
@@ -456,7 +467,15 @@
             <div class="os-highlights">
                 <div class="highlight-item">
                     <div class="highlight-title">全场景智能空间2.0</div>
-                    <div class="highlight-desc">引入任务栏和卡片式交互，提升多任务效率</div>
+                    <div class="highlight-desc">引入任务栏和卡片式交互，提升多任务效率
+            
+            <div class="card-links">
+                <a href="https://www.lixiang.com/support/ota/4.0" class="card-link card-link-ota" target="_blank">📱 OTA日志</a>
+                <a href="https://community.lixiang.com/t/os-4-0-release" class="card-link card-link-detail" target="_blank">💬 社区讨论</a>
+                <a href="https://www.lixiang.com/video/taskbar-demo" class="card-link card-link-official" target="_blank">🔗 技术详情</a>
+            </div>
+        
+        </div>
                 </div>
                 <div class="highlight-item">
                     <div class="highlight-title">理想同学2.0</div>
@@ -477,18 +496,8 @@
         </div>
         
         <div class="os-card">
-            <div style="margin-top: 15px; text-align: center;">
-                <a href="os7/" style="color: #007aff; font-size: 14px; text-decoration: none; margin-right: 15px;">
-                    📄 查看详细
-                </a>
-                <a href="https://www.lixiang.com" style="color: #007aff; font-size: 14px; text-decoration: none;">
-                    🔗 官方页面
-                </a>
-            </div>
-            <div style="margin-top: 15px; text-align: center;">
-                <a href="https://www.lixiang.com" style="color: #007aff; font-size: 14px; text-decoration: none;">
-                    🔗 官方页面
-                </a>
+            
+                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
             </div>
             <div class="os-version">OS 4.1-4.3</div>
             <div class="os-date">2023年1-9月陆续发布</div>
@@ -501,25 +510,21 @@
                     <li>优化系统稳定性和性能</li>
                     <li>修复用户反馈的问题</li>
                 </ul>
+            
+            <div class="card-links">
+                <a href="os7/" class="card-link card-link-detail">📄 查看详细</a>
+                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
+                <a href="https://www.lixiang.com/support/ota" class="card-link card-link-ota" target="_blank">📱 OTA日志</a>
             </div>
+        </div>
         </div>
     </div>
     
     <h2 id="os3">OS 3.x 系列 (2021-2022)</h2>
     <div class="os-timeline">
         <div class="os-card">
-            <div style="margin-top: 15px; text-align: center;">
-                <a href="os7/" style="color: #007aff; font-size: 14px; text-decoration: none; margin-right: 15px;">
-                    📄 查看详细
-                </a>
-                <a href="https://www.lixiang.com" style="color: #007aff; font-size: 14px; text-decoration: none;">
-                    🔗 官方页面
-                </a>
-            </div>
-            <div style="margin-top: 15px; text-align: center;">
-                <a href="https://www.lixiang.com" style="color: #007aff; font-size: 14px; text-decoration: none;">
-                    🔗 官方页面
-                </a>
+            
+                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
             </div>
             <div class="os-version">OS 3.0</div>
             <div class="os-date">2021年12月发布</div>
@@ -527,7 +532,15 @@
             <div class="os-highlights">
                 <div class="highlight-item">
                     <div class="highlight-title">全场景智能空间1.0</div>
-                    <div class="highlight-desc">首次提出"全场景智能空间"概念，重构座舱交互</div>
+                    <div class="highlight-desc">首次提出"全场景智能空间"概念，重构座舱交互
+            
+            <div class="card-links">
+                <a href="https://www.lixiang.com/support/ota/3.0" class="card-link card-link-ota" target="_blank">📱 OTA日志</a>
+                <a href="https://community.lixiang.com/t/os-3-0-release" class="card-link card-link-detail" target="_blank">💬 社区讨论</a>
+                <a href="https://www.lixiang.com/blog/multi-screen" class="card-link card-link-official" target="_blank">🔗 技术详情</a>
+            </div>
+        
+        </div>
                 </div>
                 <div class="highlight-item">
                     <div class="highlight-title">多屏协同1.0</div>
@@ -551,18 +564,8 @@
     <h2 id="os2">OS 2.x 系列 (2020-2021)</h2>
     <div class="os-timeline">
         <div class="os-card">
-            <div style="margin-top: 15px; text-align: center;">
-                <a href="os7/" style="color: #007aff; font-size: 14px; text-decoration: none; margin-right: 15px;">
-                    📄 查看详细
-                </a>
-                <a href="https://www.lixiang.com" style="color: #007aff; font-size: 14px; text-decoration: none;">
-                    🔗 官方页面
-                </a>
-            </div>
-            <div style="margin-top: 15px; text-align: center;">
-                <a href="https://www.lixiang.com" style="color: #007aff; font-size: 14px; text-decoration: none;">
-                    🔗 官方页面
-                </a>
+            
+                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
             </div>
             <div class="os-version">OS 2.0</div>
             <div class="os-date">2020年12月发布</div>
@@ -570,7 +573,15 @@
             <div class="os-highlights">
                 <div class="highlight-item">
                     <div class="highlight-title">理想同学1.0</div>
-                    <div class="highlight-desc">首次引入语音助手，支持基础车辆控制</div>
+                    <div class="highlight-desc">首次引入语音助手，支持基础车辆控制
+            
+            <div class="card-links">
+                <a href="https://www.lixiang.com/support/ota/2.0" class="card-link card-link-ota" target="_blank">📱 OTA日志</a>
+                <a href="https://community.lixiang.com/t/os-2-0-release" class="card-link card-link-detail" target="_blank">💬 社区讨论</a>
+                <a href="https://www.lixiang.com/tech/voice-assistant" class="card-link card-link-official" target="_blank">🔗 技术详情</a>
+            </div>
+        
+        </div>
                 </div>
                 <div class="highlight-item">
                     <div class="highlight-title">应用生态起步</div>
@@ -593,18 +604,8 @@
     <h2 id="os1">OS 1.x 系列 (2019-2020)</h2>
     <div class="os-timeline">
         <div class="os-card">
-            <div style="margin-top: 15px; text-align: center;">
-                <a href="os7/" style="color: #007aff; font-size: 14px; text-decoration: none; margin-right: 15px;">
-                    📄 查看详细
-                </a>
-                <a href="https://www.lixiang.com" style="color: #007aff; font-size: 14px; text-decoration: none;">
-                    🔗 官方页面
-                </a>
-            </div>
-            <div style="margin-top: 15px; text-align: center;">
-                <a href="https://www.lixiang.com" style="color: #007aff; font-size: 14px; text-decoration: none;">
-                    🔗 官方页面
-                </a>
+            
+                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
             </div>
             <div class="os-version">OS 1.0</div>
             <div class="os-date">2019年12月（理想ONE首发）</div>
@@ -612,7 +613,15 @@
             <div class="os-highlights">
                 <                <div class="highlight-item">
                     <div class="highlight-title">基础座舱系统</div>
-                    <div class="highlight-desc">为理想ONE打造的基础智能座舱系统，奠定后续演进基础</div>
+                    <div class="highlight-desc">为理想ONE打造的基础智能座舱系统，奠定后续演进基础
+            
+            <div class="card-links">
+                <a href="https://www.lixiang.com/support/ota/1.0" class="card-link card-link-ota" target="_blank">📱 OTA日志</a>
+                <a href="https://community.lixiang.com/t/os-1-0-release" class="card-link card-link-detail" target="_blank">💬 社区讨论</a>
+                <a href="https://www.lixiang.com/tech/four-screen" class="card-link card-link-official" target="_blank">🔗 技术详情</a>
+            </div>
+        
+        </div>
                 </div>
                 <div class="highlight-item">
                     <div class="highlight-title">四屏交互</div>
@@ -668,19 +677,21 @@
             <li><strong>OS 4.x</strong>: 多模态交互融合</li>
             <li><strong>OS 6.x-7.x</strong>: AI自然语言交互</li>
         </ul>
-            <div style="margin-top: 15px; text-align: center;">
-                <a href="os7/" style="color: #007aff; font-size: 14px; text-decoration: none; margin-right: 15px;">
-                    📄 查看详细
-                </a>
-                <a href="https://www.lixiang.com" style="color: #007aff; font-size: 14px; text-decoration: none;">
-                    🔗 官方页面
-                </a>
+            
+                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
+            
+            
+            
+            
+            <div class="card-links">
+                <a href="https://www.lixiang.com/support/ota/1.0" class="card-link card-link-ota" target="_blank">📱 OTA日志</a>
+                <a href="https://community.lixiang.com/t/os-1-0-release" class="card-link card-link-detail" target="_blank">💬 社区讨论</a>
+                <a href="https://www.lixiang.com/tech/four-screen" class="card-link card-link-official" target="_blank">🔗 技术详情</a>
             </div>
-            <div style="margin-top: 15px; text-align: center;">
-                <a href="https://www.lixiang.com" style="color: #007aff; font-size: 14px; text-decoration: none;">
-                    🔗 官方页面
-                </a>
-            </div>
+        
+        
+        
+        </div>
     </div>
     
     <div class="footer">
