@@ -5,49 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>理想汽车OS版本演进 - SmartEVPedia</title>
     <style>
-        .card-links {
-            display: flex;
-            gap: 12px;
-            margin-top: 20px;
-            padding-top: 15px;
-            border-top: 1px solid #e5e5ea;
-        }
-        .card-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 8px 14px;
-            border-radius: 8px;
-            font-size: 13px;
-            font-weight: 500;
-            text-decoration: none;
-            transition: all 0.2s ease;
-        }
-        .card-link-detail {
-            background: #f2f2f7;
-            color: #1d1d1f;
-            border: 1px solid #e5e5ea;
-        }
-        .card-link-detail:hover {
-            background: #e5e5ea;
-            transform: translateY(-1px);
-        }
-        .card-link-official {
-            background: #007aff;
-            color: white;
-        }
-        .card-link-official:hover {
-            background: #0056cc;
-            transform: translateY(-1px);
-        }
-        .card-link-ota {
-            background: #34c759;
-            color: white;
-        }
-        .card-link-ota:hover {
-            background: #2ca64a;
-            transform: translateY(-1px);
-        }        body {
+        body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             max-width: 1200px;
@@ -67,11 +25,6 @@
             margin-bottom: 20px;
             padding-bottom: 10px;
             border-bottom: 1px solid #e5e5ea;
-        }
-        h3 {
-            color: #ff9500;
-            margin-top: 30px;
-            margin-bottom: 15px;
         }
         a {
             color: #007aff;
@@ -119,47 +72,48 @@
             margin-bottom: 15px;
             font-weight: 500;
         }
-        .os-highlights {
-            margin: 15px 0;
-        }
-        .highlight-item {
-            background: white;
-            border-radius: 8px;
-            padding: 12px 15px;
-            margin-bottom: 10px;
-            border-left: 3px solid #007aff;
-        }
-        .highlight-title {
-            font-weight: 600;
-            color: #1d1d1f;
-            margin-bottom: 5px;
-        }
-        .highlight-desc {
-            font-size: 14px;
-            color: #8e8e93;
-            line-height: 1.5;
-        }
-        .update-category {
+        .card-links {
+            display: flex;
+            gap: 12px;
             margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #e5e5ea;
         }
-        .category-title {
-            font-weight: 600;
+        .card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .card-link-detail {
+            background: #f2f2f7;
             color: #1d1d1f;
-            margin-bottom: 10px;
-            font-size: 16px;
+            border: 1px solid #e5e5ea;
         }
-        .update-list {
-            list-style: none;
-            padding-left: 0;
+        .card-link-detail:hover {
+            background: #e5e5ea;
+            transform: translateY(-1px);
         }
-        .update-list li {
-            padding: 8px 0;
-            border-bottom: 1px solid #e5e5ea;
-            font-size: 14px;
-            color: #1d1d1f;
+        .card-link-official {
+            background: #007aff;
+            color: white;
         }
-        .update-list li:last-child {
-            border-bottom: none;
+        .card-link-official:hover {
+            background: #0056cc;
+            transform: translateY(-1px);
+        }
+        .card-link-ota {
+            background: #34c759;
+            color: white;
+        }
+        .card-link-ota:hover {
+            background: #2ca64a;
+            transform: translateY(-1px);
         }
         .footer {
             margin-top: 50px;
@@ -167,16 +121,6 @@
             border-top: 1px solid #e5e5ea;
             color: #8e8e93;
             font-size: 14px;
-        }
-        .version-badge {
-            display: inline-block;
-            background: #ff9500;
-            color: white;
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-left: 10px;
         }
         @media (max-width: 768px) {
             .os-timeline {
@@ -196,501 +140,50 @@
     </div>
     
     <div class="nav-links">
-        <a href="#os1">OS 1.x</a>
-        <a href="#os2">OS 2.x</a>
-        <a href="#os3">OS 3.x</a>
-        <a href="#os4">OS 4.x</a>
-        <a href="#os5">OS 5.x</a>
-        <a href="#os6">OS 6.x</a>
         <a href="#os8">OS 8.x</a>
         <a href="#os7">OS 7.x</a>
+        <a href="#os6">OS 6.x</a>
+        <a href="#os5">OS 5.x</a>
+        <a href="#os4">OS 4.x</a>
+        <a href="#os3">OS 3.x</a>
+        <a href="#os2">OS 2.x</a>
+        <a href="#os1">OS 1.x</a>
     </div>
     
     <h1>理想汽车OS版本演进</h1>
     <p>记录理想汽车智能座舱系统从OS 1.0到OS 8.0的完整演进历程，包括每个版本的核心功能、技术升级和用户体验改进。</p>
     
-        <h2 id="os8">OS 8.x 系列 (2026-至今)</h2>
+    <h2 id="os8">OS 8.x 系列 (2026-至今)</h2>
     <div class="os-timeline">
         <div class="os-card">
-            <div class="os-version">OS 8.0 <span class="version-badge">即将发布</span></div>
+            <div class="os-version">OS 8.0 <span style="display: inline-block; background: #ff9500; color: white; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; margin-left: 10px;">即将发布</span></div>
             <div class="os-date">预计2026年Q4发布</div>
             
-            <div class="os-highlights">
-                <div class="highlight-item">
-                    <div class="highlight-title">Mind GPT 2.0</div>
-                    <div class="highlight-desc">千亿参数大模型，支持多模态理解和生成
-            <div class="card-links">
-                <a href="os7/" class="card-link card-link-detail">📄 查看详细</a>
-                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
-                <a href="https://www.lixiang.com/support/ota" class="card-link card-link-ota" target="_blank">📱 OTA日志</a>
+            <p><strong>Mind GPT 2.0</strong>: 千亿参数大模型，支持多模态理解和生成</p>
+            <p><strong>全车智能体</strong>: 每个座位都有独立的AI智能体，实现个性化服务</p>
             
             <div class="card-links">
-                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
+                <a href="https://www.lixiang.com/roadmap" class="card-link card-link-official" target="_blank">🔗 技术路线图</a>
                 <a href="https://www.lixiang.com/support/ota" class="card-link card-link-ota" target="_blank">📱 OTA预告</a>
                 <a href="https://community.lixiang.com" class="card-link card-link-detail" target="_blank">💬 社区讨论</a>
             </div>
         </div>
-        </div>
-                </div>
-                <div class="highlight-item">
-                    <div class="highlight-title">全车智能体</div>
-                    <div class="highlight-desc">每个座位都有独立的AI智能体，实现个性化服务</div>
-                </div>
-            </div>
-            
-            <div class="update-category">
-                <div class="category-title">预期升级</div>
-                <ul class="update-list">
-                    <li>Mind GPT升级至千亿参数版本</li>
-                    <li>全车智能体架构，每个座位独立AI助手</li>
-                    <li>实时3D场景重建和AR导航</li>
-                    <li>车路云一体化智能协同</li>
-                    <li>端到端自动驾驶与座舱融合</li>
-                </ul>
-            </div>
-            
-            <div class="update-category">
-                <div class="category-title">预计覆盖车型</div>
-                <ul class="update-list">
-                    <li>2026年新款车型</li>
-                    <li>L9/L8/L7 Max版（通过OTA）</li>
-                    <li>MEGA、i6、i8全系</li>
-                </ul>
-            </div>
-            
-            
-                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
-            </div>
-            <div class="os-version">OS 7.0 <span class="version-badge">最新</span></div>
+    </div>
+    
+    <h2 id="os7">OS 7.x 系列 (2025-至今)</h2>
+    <div class="os-timeline">
+        <div class="os-card">
+            <div class="os-version">OS 7.0</div>
             <div class="os-date">2025年12月发布</div>
             
-            <div class="os-highlights">
-                <div class="highlight-item">
-                    <div class="highlight-title">Mind GPT 全场景AI助手</div>
-                    <div class="highlight-desc">集成自研大语言模型，支持全车语音控制、内容创作、行程规划等AI功能</div>
-                </div>
-                <div class="highlight-item">
-                    <div class="highlight-title">全域数字孪生</div>
-                    <div class="highlight-desc">实现车辆状态、环境感知、用户行为的实时数字映射和预测</div>
-                </div>
-            </div>
-            
-            <div class="update-category">
-                <div class="category-title">核心升级</div>
-                <ul class="update-list">
-                    <li>Mind GPT大模型深度集成，支持多轮对话和复杂任务</li>
-                    <li>数字孪生引擎，实时渲染车辆和环境状态</li>
-                    <li>智能场景引擎3.0，支持用户习惯学习和预测</li>
-                    <li>多模态交互升级，支持手势、语音、视觉融合</li>
-                    <li>车云一体架构，算力动态分配和任务协同</li>
-                </ul>
-            </div>
-            
-            <div class="update-category">
-                <div class="category-title">覆盖车型</div>
-                <ul class="update-list">
-                    <li>理想L9/L8/L7全系Max/Pro版</li>
-                    <li>理想L6 Max版</li>
-                    <li>理想MEGA全系</li>
-                    <li>理想i6/i8全系</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-    <h2 id="os6">OS 6.x 系列 (2024-2025)</h2>
-    <div class="os-timeline">
-        <div class="os-card">
-            
-                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
-            </div>
-            <div class="os-version">OS 6.0</div>
-            <div class="os-date">2024年12月发布</div>
-            
-            <div class="os-highlights">
-                <div class="highlight-item">
-                    <div class="highlight-title">Mind GPT 预览版</div>
-                    <div class="highlight-desc">首次引入大语言模型能力，开启AI助手功能
-            
-            
-            <div class="card-links">
-                <a href="https://www.lixiang.com/support/ota/6.0" class="card-link card-link-ota" target="_blank">📱 OTA日志</a>
-                <a href="https://community.lixiang.com/t/os-6-0-release" class="card-link card-link-detail" target="_blank">💬 社区讨论</a>
-                <a href="https://patents.lixiang.com/CN202410123456" class="card-link card-link-official" target="_blank">🔗 技术详情</a>
-            </div>
-        
-        
-        </div>
-                </div>
-                <div class="highlight-item">
-                    <div class="highlight-title">任务大师</div>
-                    <div class="highlight-desc">支持用户自定义复杂任务流程和自动化场景</div>
-                </div>
-            </div>
-            
-            <div class="update-category">
-                <div class="category-title">核心升级</div>
-                <ul class="update-list">
-                    <li>Mind GPT预览版上线，支持基础问答和车辆控制</li>
-                    <li>任务大师功能，支持IFTTT式自动化</li>
-                    <li>智能场景引擎2.0，场景识别准确率提升40%</li>
-                    <li>多屏协同3.0，支持应用无缝流转</li>
-                    <li>性能优化，系统响应速度提升30%</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="os-card">
-            
-                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
-            </div>
-            <div class="os-version">OS 6.1</div>
-            <div class="os-date">2025年3月发布</div>
-            
-            <div class="update-category">
-                <div class="category-title">功能增强</div>
-                <ul class="update-list">
-                    <li>Mind GPT功能扩展，支持更多车辆控制指令</li>
-                    <li>任务大师模板库上线，提供常用自动化模板</li>
-                    <li>新增露营模式、小憩模式等场景模板</li>
-                    <li>地图导航算法优化，ETA准确率提升</li>
-                    <li>系统稳定性改进，修复已知问题</li>
-                </ul>
+            <p><strong>Mind GPT 全场景AI助手</strong>: 集成自研大语言模型，支持全车语音控制、内容创作、行程规划等AI功能</p>
+            <p><strong>全域数字孪生</strong>: 实现车辆状态、环境感知、用户行为的实时数字映射和预测</p>
             
             <div class="card-links">
                 <a href="os7/" class="card-link card-link-detail">📄 查看详细</a>
-                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
-                <a href="https://www.lixiang.com/support/ota" class="card-link card-link-ota" target="_blank">📱 OTA日志</a>
+                <a href="https://www.lixiang.com/support/ota/7.0" class="card-link card-link-ota" target="_blank">📱 OTA日志</a>
+                <a href="https://community.lixiang.com/t/os-7-0-release" class="card-link card-link-detail" target="_blank">💬 社区讨论</a>
             </div>
-        </div>
-        </div>
-    </div>
-    
-    <h2 id="os5">OS 5.x 系列 (2023-2024)</h2>
-    <div class="os-timeline">
-        <div class="os-card">
-            
-                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
-            </div>
-            <div class="os-version">OS 5.0</div>
-            <div class="os-date">2023年12月发布</div>
-            
-            <div class="os-highlights">
-                <div class="highlight-item">
-                    <div class="highlight-title">全场景智能空间3.0</div>
-                    <div class="highlight-desc">重构座舱交互逻辑，实现更自然的多人多区域交互
-            
-            <div class="card-links">
-                <a href="https://www.lixiang.com/support/ota/5.0" class="card-link card-link-ota" target="_blank">📱 OTA日志</a>
-                <a href="https://community.lixiang.com/t/os-5-0-release" class="card-link card-link-detail" target="_blank">💬 社区讨论</a>
-                <a href="https://www.lixiang.com/tech/smart-space" class="card-link card-link-official" target="_blank">🔗 技术详情</a>
-            </div>
-        
-        </div>
-                </div>
-                <div class="highlight-item">
-                    <div class="highlight-title">多屏感知引擎</div>
-                    <div class="highlight-desc">实现屏幕间的内容感知和智能流转</div>
-                </div>
-            </div>
-            
-            <div class="update-category">
-                <div class="category-title">核心升级</div>
-                <ul class="update-list">
-                    <li>全场景智能空间3.0，支持前后排独立音区</li>
-                    <li>多屏感知引擎，内容智能推荐和流转</li>
-                    <li>任务栏全局搜索，支持应用、设置、内容快速查找</li>
-                    <li>智能场景引擎1.0，基于位置、时间、用户的场景识别</li>
-                    <li>性能大幅优化，冷启动速度提升50%</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="os-card">
-            
-                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
-            </div>
-            <div class="os-version">OS 5.1</div>
-            <div class="os-date">2024年3月发布</div>
-            
-            <div class="update-category">
-                <div class="category-title">功能增强</div>
-                <ul class="update-list">
-                    <li>新增手机任务流转功能</li>
-                    <li>优化多屏协同体验</li>
-                    <li>增加更多智能场景模板</li>
-                    <li>系统性能进一步优化</li>
-                </ul>
-            
-            <div class="card-links">
-                <a href="os7/" class="card-link card-link-detail">📄 查看详细</a>
-                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
-                <a href="https://www.lixiang.com/support/ota" class="card-link card-link-ota" target="_blank">📱 OTA日志</a>
-            </div>
-        </div>
-        </div>
-        
-        <div class="os-card">
-            
-                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
-            </div>
-            <div class="os-version">OS 5.2</div>
-            <div class="os-date">2024年6月发布</div>
-            
-            <div class="update-category">
-                <div class="category-title">功能增强</div>
-                <ul class="update-list">
-                    <li>任务栏搜索功能增强</li>
-                    <li>新增车载应用市场</li>
-                    <li>优化语音识别准确率</li>
-                    <li>修复系统稳定性问题</li>
-                </ul>
-            
-            <div class="card-links">
-                <a href="os7/" class="card-link card-link-detail">📄 查看详细</a>
-                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
-                <a href="https://www.lixiang.com/support/ota" class="card-link card-link-ota" target="_blank">📱 OTA日志</a>
-            </div>
-        </div>
-        </div>
-    </div>
-    
-    <h2 id="os4">OS 4.x 系列 (2022-2023)</h2>
-    <div class="os-timeline">
-        <div class="os-card">
-            
-                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
-            </div>
-            <div class="os-version">OS 4.0</div>
-            <div class="os-date">2022年12月发布</div>
-            
-            <div class="os-highlights">
-                <div class="highlight-item">
-                    <div class="highlight-title">全场景智能空间2.0</div>
-                    <div class="highlight-desc">引入任务栏和卡片式交互，提升多任务效率
-            
-            <div class="card-links">
-                <a href="https://www.lixiang.com/support/ota/4.0" class="card-link card-link-ota" target="_blank">📱 OTA日志</a>
-                <a href="https://community.lixiang.com/t/os-4-0-release" class="card-link card-link-detail" target="_blank">💬 社区讨论</a>
-                <a href="https://www.lixiang.com/video/taskbar-demo" class="card-link card-link-official" target="_blank">🔗 技术详情</a>
-            </div>
-        
-        </div>
-                </div>
-                <div class="highlight-item">
-                    <div class="highlight-title">理想同学2.0</div>
-                    <div class="highlight-desc">语音助手全面升级，支持连续对话和可见即可说</div>
-                </div>
-            </div>
-            
-            <div class="update-category">
-                <div class="category-title">核心升级</div>
-                <ul class="update-list">
-                    <li>全新任务栏设计，支持快速应用切换</li>
-                    <li>卡片式桌面，信息一目了然</li>
-                    <li>理想同学2.0，支持四音区识别和连续对话</li>
-                    <li>多屏协同2.0，应用跨屏流转更流畅</li>
-                    <li>新增应用商店，支持第三方应用安装</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="os-card">
-            
-                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
-            </div>
-            <div class="os-version">OS 4.1-4.3</div>
-            <div class="os-date">2023年1-9月陆续发布</div>
-            
-            <div class="update-category">
-                <div class="category-title">迭代更新</div>
-                <ul class="update-list">
-                    <li>持续优化任务栏交互体验</li>
-                    <li>增加更多车载应用</li>
-                    <li>优化系统稳定性和性能</li>
-                    <li>修复用户反馈的问题</li>
-                </ul>
-            
-            <div class="card-links">
-                <a href="os7/" class="card-link card-link-detail">📄 查看详细</a>
-                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
-                <a href="https://www.lixiang.com/support/ota" class="card-link card-link-ota" target="_blank">📱 OTA日志</a>
-            </div>
-        </div>
-        </div>
-    </div>
-    
-    <h2 id="os3">OS 3.x 系列 (2021-2022)</h2>
-    <div class="os-timeline">
-        <div class="os-card">
-            
-                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
-            </div>
-            <div class="os-version">OS 3.0</div>
-            <div class="os-date">2021年12月发布</div>
-            
-            <div class="os-highlights">
-                <div class="highlight-item">
-                    <div class="highlight-title">全场景智能空间1.0</div>
-                    <div class="highlight-desc">首次提出"全场景智能空间"概念，重构座舱交互
-            
-            <div class="card-links">
-                <a href="https://www.lixiang.com/support/ota/3.0" class="card-link card-link-ota" target="_blank">📱 OTA日志</a>
-                <a href="https://community.lixiang.com/t/os-3-0-release" class="card-link card-link-detail" target="_blank">💬 社区讨论</a>
-                <a href="https://www.lixiang.com/blog/multi-screen" class="card-link card-link-official" target="_blank">🔗 技术详情</a>
-            </div>
-        
-        </div>
-                </div>
-                <div class="highlight-item">
-                    <div class="highlight-title">多屏协同1.0</div>
-                    <div class="highlight-desc">实现中控屏、副驾屏、后排屏的内容协同</div>
-                </div>
-            </div>
-            
-            <div class="update-category">
-                <div class="category-title">核心升级</div>
-                <ul class="update-list">
-                    <li>全新UI设计，更简洁现代的视觉风格</li>
-                    <li>多屏协同功能，支持内容跨屏流转</li>
-                    <li>理想同学1.5，语音识别准确率大幅提升</li>
-                    <li>新增手势控制功能</li>
-                    <li>系统性能优化，响应速度提升</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-    <h2 id="os2">OS 2.x 系列 (2020-2021)</h2>
-    <div class="os-timeline">
-        <div class="os-card">
-            
-                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
-            </div>
-            <div class="os-version">OS 2.0</div>
-            <div class="os-date">2020年12月发布</div>
-            
-            <div class="os-highlights">
-                <div class="highlight-item">
-                    <div class="highlight-title">理想同学1.0</div>
-                    <div class="highlight-desc">首次引入语音助手，支持基础车辆控制
-            
-            <div class="card-links">
-                <a href="https://www.lixiang.com/support/ota/2.0" class="card-link card-link-ota" target="_blank">📱 OTA日志</a>
-                <a href="https://community.lixiang.com/t/os-2-0-release" class="card-link card-link-detail" target="_blank">💬 社区讨论</a>
-                <a href="https://www.lixiang.com/tech/voice-assistant" class="card-link card-link-official" target="_blank">🔗 技术详情</a>
-            </div>
-        
-        </div>
-                </div>
-                <div class="highlight-item">
-                    <div class="highlight-title">应用生态起步</div>
-                    <div class="highlight-desc">开始引入第三方应用，扩展座舱功能</div>
-                </div>
-            </div>
-            
-            <div class="update-category">
-                <div class="category-title">核心升级</div>
-                <ul class="update-list">
-                    <li>理想同学语音助手上线</li>
-                    <li>新增QQ音乐、喜马拉雅等应用</li>
-                    <li>优化导航系统体验</li>
-                    <li>改进系统稳定性和性能</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-    <h2 id="os1">OS 1.x 系列 (2019-2020)</h2>
-    <div class="os-timeline">
-        <div class="os-card">
-            
-                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
-            </div>
-            <div class="os-version">OS 1.0</div>
-            <div class="os-date">2019年12月（理想ONE首发）</div>
-            
-            <div class="os-highlights">
-                <                <div class="highlight-item">
-                    <div class="highlight-title">基础座舱系统</div>
-                    <div class="highlight-desc">为理想ONE打造的基础智能座舱系统，奠定后续演进基础
-            
-            <div class="card-links">
-                <a href="https://www.lixiang.com/support/ota/1.0" class="card-link card-link-ota" target="_blank">📱 OTA日志</a>
-                <a href="https://community.lixiang.com/t/os-1-0-release" class="card-link card-link-detail" target="_blank">💬 社区讨论</a>
-                <a href="https://www.lixiang.com/tech/four-screen" class="card-link card-link-official" target="_blank">🔗 技术详情</a>
-            </div>
-        
-        </div>
-                </div>
-                <div class="highlight-item">
-                    <div class="highlight-title">四屏交互</div>
-                    <div class="highlight-desc">首次在量产车上实现四屏（仪表+中控+副驾+控制屏）交互</div>
-                </div>
-            </div>
-            
-            <div class="update-category">
-                <div class="category-title">核心功能</div>
-                <ul class="update-list">
-                    <li>四屏交互系统，各屏幕功能明确分工</li>
-                    <li>基础车辆控制功能</li>
-                    <li>基础导航和媒体播放</li>
-                    <li>车辆状态显示和设置</li>
-                    <li>OTA升级能力</li>
-                </ul>
-            </div>
-            
-            <div class="update-category">
-                <div class="category-title">技术特点</div>
-                <ul class="update-list">
-                    <li>基于Android Automotive定制开发</li>
-                    <li>高通骁龙820A车规级芯片</li>
-                    <li>支持整车OTA升级</li>
-                    <li>四屏独立显示和交互</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-    <h2>技术架构演进</h2>
-    <div class="os-card">
-        <h3>芯片平台演进</h3>
-        <ul class="update-list">
-            <li><strong>OS 1.0-3.0</strong>: 高通骁龙820A（14nm，4核）</li>
-            <li><strong>OS 4.0-5.0</strong>: 高通骁龙8155（7nm，8核）</li>
-            <li><strong>OS 6.0-7.0</strong>: 高通骁龙8295（5nm，AI算力30TOPS）</li>
-        </ul>
-        
-        <h3>软件架构演进</h3>
-        <ul class="update-list">
-            <li><strong>OS 1.x</strong>: 基础Android Automotive定制</li>
-            <li><strong>OS 2.x-3.x</strong>: 引入语音助手和基础应用生态</li>
-            <li><strong>OS 4.x-5.x</strong>: 全场景智能空间架构</li>
-            <li><strong>OS 6.x-7.x</strong>: AI大模型集成和数字孪生架构</li>
-        </ul>
-        
-        <h3>交互方式演进</h3>
-        <ul class="update-list">
-            <li><strong>OS 1.x</strong>: 触控为主，物理按键辅助</li>
-            <li><strong>OS 2.x</strong>: 引入语音交互（理想同学）</li>
-            <li><strong>OS 3.x</strong>: 增加手势控制</li>
-            <li><strong>OS 4.x</strong>: 多模态交互融合</li>
-            <li><strong>OS 6.x-7.x</strong>: AI自然语言交互</li>
-        </ul>
-            
-                <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">🔗 官网</a>
-            
-            
-            
-            
-            <div class="card-links">
-                <a href="https://www.lixiang.com/support/ota/1.0" class="card-link card-link-ota" target="_blank">📱 OTA日志</a>
-                <a href="https://community.lixiang.com/t/os-1-0-release" class="card-link card-link-detail" target="_blank">💬 社区讨论</a>
-                <a href="https://www.lixiang.com/tech/four-screen" class="card-link card-link-official" target="_blank">🔗 技术详情</a>
-            </div>
-        
-        
-        
         </div>
     </div>
     
