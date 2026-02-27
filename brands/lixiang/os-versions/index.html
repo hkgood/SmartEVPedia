@@ -3,695 +3,391 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>理想汽车OS完整版本历史 - SmartEVPedia</title>
+    <title>理想汽车OS版本演进 - SmartEVPedia</title>
     <style>
-        :root {
-            --color-primary: #007aff;
-            --color-primary-light: #e6f2ff;
-            --color-secondary: #ff9500;
-            --color-secondary-light: #fff8f0;
-            --color-success: #34c759;
-            --color-success-light: #f0faf2;
-            --color-text: #1d1d1f;
-            --color-text-secondary: #8e8e93;
-            --color-text-tertiary: #aeaeb2;
-            --color-background: #ffffff;
-            --color-surface: #f2f2f7;
-            --color-border: #e5e5ea;
-            --color-border-light: #f2f2f7;
-            
-            --space-1: 4px;
-            --space-2: 8px;
-            --space-3: 12px;
-            --space-4: 16px;
-            --space-5: 20px;
-            --space-6: 24px;
-            --space-8: 32px;
-            --space-10: 40px;
-            --space-12: 48px;
-            
-            --radius-sm: 6px;
-            --radius-md: 10px;
-            --radius-lg: 14px;
-            --radius-xl: 20px;
-            
-            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
-            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
-            
-            --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --line-height: 1.6;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
-            font-family: var(--font-family);
-            line-height: var(--line-height);
-            color: var(--color-text);
-            background: var(--color-background);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
             max-width: 1200px;
             margin: 0 auto;
-            padding: var(--space-6);
+            padding: 20px;
+            color: #333;
         }
-        
         h1 {
-            font-size: 32px;
-            font-weight: 700;
-            color: var(--color-text);
-            margin-bottom: var(--space-4);
-            padding-bottom: var(--space-4);
-            border-bottom: 1px solid var(--color-border);
+            color: #ff9500;
+            border-bottom: 2px solid #f2f2f7;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
         }
-        
         h2 {
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--color-text);
-            margin-top: var(--space-10);
-            margin-bottom: var(--space-6);
-            padding-bottom: var(--space-3);
-            border-bottom: 1px solid var(--color-border-light);
+            color: #1d1d1f;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e5e5ea;
         }
-        
         h3 {
+            color: #ff9500;
+            margin-top: 30px;
+            margin-bottom: 15px;
             font-size: 18px;
-            font-weight: 600;
-            color: var(--color-text);
-            margin-top: var(--space-6);
-            margin-bottom: var(--space-4);
         }
-        
-        p {
-            margin-bottom: var(--space-4);
-            color: var(--color-text-secondary);
-        }
-        
         a {
-            color: var(--color-primary);
+            color: #007aff;
             text-decoration: none;
-            transition: opacity 0.2s ease;
         }
-        
         a:hover {
             opacity: 0.8;
         }
-        
         .back-link {
-            margin-bottom: var(--space-6);
-            font-size: 14px;
+            margin-bottom: 20px;
         }
-        
-        .back-link a {
-            color: var(--color-text-secondary);
-            margin-right: var(--space-4);
-        }
-        
-        .back-link a:hover {
-            color: var(--color-primary);
-        }
-        
         .nav-links {
             display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e5e5ea;
             flex-wrap: wrap;
-            gap: var(--space-2);
-            margin-bottom: var(--space-8);
-            padding-bottom: var(--space-6);
-            border-bottom: 1px solid var(--color-border);
         }
-        
-        .nav-link {
-            display: inline-block;
-            padding: var(--space-2) var(--space-4);
-            background: var(--color-surface);
-            color: var(--color-text-secondary);
-            border-radius: var(--radius-md);
-            font-size: 14px;
-            font-weight: 500;
-            text-decoration: none;
-            transition: all 0.2s ease;
-        }
-        
-        .nav-link:hover {
-            background: var(--color-border);
-            color: var(--color-text);
-        }
-        
         .version-timeline {
-            margin: var(--space-8) 0;
+            margin: 40px 0;
         }
-        
         .major-version {
-            background: var(--color-background);
-            border-radius: var(--radius-lg);
-            padding: var(--space-6);
-            margin-bottom: var(--space-8);
-            border: 1px solid var(--color-border);
-            box-shadow: var(--shadow-sm);
+            background: #fff8f0;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-left: 4px solid #ff9500;
         }
-        
-        .major-version h2 {
-            margin-top: 0;
-            color: var(--color-secondary);
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-        
         .minor-versions {
-            margin-top: var(--space-6);
+            margin-top: 20px;
         }
-        
         .version-card {
-            background: var(--color-background);
-            border-radius: var(--radius-md);
-            padding: var(--space-6);
-            margin-bottom: var(--space-4);
-            border: 1px solid var(--color-border);
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid #e5e5ea;
             transition: all 0.2s ease;
         }
-        
         .version-card:hover {
-            box-shadow: var(--shadow-md);
             transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
-        
         .version-header {
             display: flex;
             align-items: center;
-            margin-bottom: var(--space-4);
-            flex-wrap: wrap;
-            gap: var(--space-3);
+            margin-bottom: 15px;
         }
-        
         .version-number {
             font-size: 20px;
             font-weight: 700;
-            color: var(--color-text);
+            color: #1d1d1f;
+            margin-right: 15px;
         }
-        
         .version-date {
             font-size: 14px;
-            color: var(--color-text-tertiary);
-            background: var(--color-surface);
-            padding: var(--space-1) var(--space-3);
-            border-radius: var(--radius-sm);
+            color: #8e8e93;
+            background: #f2f2f7;
+            padding: 4px 10px;
+            border-radius: 12px;
         }
-        
         .version-badge {
+            display: inline-block;
+            background: #ff9500;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
             font-size: 12px;
             font-weight: 600;
-            color: var(--color-secondary);
-            background: var(--color-secondary-light);
-            padding: var(--space-1) var(--space-3);
-            border-radius: var(--radius-sm);
+            margin-left: 10px;
         }
-        
         .version-features {
-            margin: var(--space-4) 0;
+            margin: 15px 0;
         }
-        
         .feature-item {
-            background: var(--color-surface);
-            border-radius: var(--radius-md);
-            padding: var(--space-4);
-            margin-bottom: var(--space-3);
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            border-left: 3px solid #007aff;
         }
-        
         .feature-title {
             font-weight: 600;
-            color: var(--color-text);
-            margin-bottom: var(--space-1);
-            font-size: 15px;
+            color: #1d1d1f;
+            margin-bottom: 5px;
         }
-        
         .feature-desc {
             font-size: 14px;
-            color: var(--color-text-secondary);
+            color: #8e8e93;
             line-height: 1.5;
         }
-        
         .update-list {
             list-style: none;
-            margin: var(--space-4) 0;
+            padding-left: 0;
+            margin: 15px 0;
         }
-        
         .update-list li {
-            padding: var(--space-2) 0;
-            border-bottom: 1px solid var(--color-border-light);
+            padding: 8px 0;
+            border-bottom: 1px solid #e5e5ea;
             font-size: 14px;
-            color: var(--color-text-secondary);
+            color: #1d1d1f;
             position: relative;
-            padding-left: var(--space-4);
+            padding-left: 20px;
         }
-        
         .update-list li:before {
-            content: "";
+            content: "•";
+            color: #ff9500;
             position: absolute;
             left: 0;
-            top: 14px;
-            width: 6px;
-            height: 6px;
-            background: var(--color-primary);
-            border-radius: 50%;
+            font-size: 18px;
         }
-        
         .update-list li:last-child {
             border-bottom: none;
         }
-        
         .card-links {
             display: flex;
-            gap: var(--space-3);
-            margin-top: var(--space-6);
-            padding-top: var(--space-4);
-            border-top: 1px solid var(--color-border-light);
-            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #e5e5ea;
         }
-        
         .card-link {
             display: inline-flex;
             align-items: center;
-            padding: var(--space-2) var(--space-4);
-            border-radius: var(--radius-md);
+            padding: 8px 14px;
+            border-radius: 8px;
             font-size: 13px;
             font-weight: 500;
             text-decoration: none;
             transition: all 0.2s ease;
         }
-        
         .card-link-ota {
-            background: var(--color-success-light);
-            color: var(--color-success);
-            border: 1px solid var(--color-success-light);
+            background: #34c759;
+            color: white;
         }
-        
         .card-link-ota:hover {
-            background: var(--color-success);
-            color: white;
+            background: #2ca64a;
+            transform: translateY(-1px);
         }
-        
         .card-link-official {
-            background: var(--color-primary-light);
-            color: var(--color-primary);
-            border: 1px solid var(--color-primary-light);
-        }
-        
-        .card-link-official:hover {
-            background: var(--color-primary);
+            background: #007aff;
             color: white;
         }
-        
-        .tech-specs {
-            background: var(--color-surface);
-            border-radius: var(--radius-md);
-            padding: var(--space-4);
-            margin: var(--space-4) 0;
+        .card-link-official:hover {
+            background: #0056cc;
+            transform: translateY(-1px);
         }
-        
+        .tech-specs {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
         .spec-item {
             display: flex;
-            margin-bottom: var(--space-2);
+            margin-bottom: 10px;
             font-size: 14px;
         }
-        
         .spec-label {
-            color: var(--color-text-tertiary);
+            color: #8e8e93;
             min-width: 100px;
-            flex-shrink: 0;
         }
-        
         .spec-value {
-            color: var(--color-text);
+            color: #1d1d1f;
             font-weight: 500;
         }
-        
         .footer {
-            margin-top: var(--space-12);
-            padding-top: var(--space-6);
-            border-top: 1px solid var(--color-border);
-            color: var(--color-text-tertiary);
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e5ea;
+            color: #8e8e93;
             font-size: 14px;
         }
-        
-        .footer-links {
-            display: flex;
-            gap: var(--space-4);
-            margin-top: var(--space-3);
-        }
-        
         @media (max-width: 768px) {
-            body {
-                padding: var(--space-4);
-            }
-            
-            h1 {
-                font-size: 24px;
-            }
-            
-            h2 {
-                font-size: 20px;
-            }
-            
             .nav-links {
-                gap: var(--space-1);
-            }
-            
-            .nav-link {
-                padding: var(--space-1) var(--space-3);
-                font-size: 12px;
-            }
-            
-            .card-links {
-                gap: var(--space-2);
-            }
-            
-            .card-link {
-                padding: var(--space-1) var(--space-3);
-                font-size: 12px;
-            }
-            
-            .version-header {
                 flex-direction: column;
-                align-items: flex-start;
-                gap: var(--space-2);
+                gap: 10px;
             }
-        }
-        
-        @media (max-width: 480px) {
             .card-links {
-                flex-direction: column;
-            }
-            
-            .card-link {
-                width: 100%;
-                justify-content: center;
+                flex-wrap: wrap;
             }
         }
     </style>
 </head>
 <body>
     <div class="back-link">
-        <a href="/SmartEVPedia/brands/lixiang/">返回理想汽车</a>
-        <a href="/SmartEVPedia/">返回首页</a>
+        <a href="/SmartEVPedia/brands/lixiang/">← 返回理想汽车</a>
+        <a href="/SmartEVPedia/">← 返回首页</a>
     </div>
     
     <div class="nav-links">
-        <a href="#os8" class="nav-link">OS 8.x</a>
-        <a href="#os7" class="nav-link">OS 7.x</a>
-        <a href="#os6" class="nav-link">OS 6.x</a>
-        <a href="#os5" class="nav-link">OS 5.x</a>
-        <a href="#os4" class="nav-link">OS 4.x</a>
-        <a href="#os3" class="nav-link">OS 3.x</a>
-        <a href="#os2" class="nav-link">OS 2.x</a>
-        <a href="#os1" class="nav-link">OS 1.x</a>
+        <a href="#os8">OS 8.x</a>
+        <a href="#os7">OS 7.x</a>
+        <a href="#os6">OS 6.x</a>
+        <a href="#os5">OS 5.x</a>
+        <a href="#os4">OS 4.x</a>
+        <a href="#os3">OS 3.x</a>
+        <a href="#os2">OS 2.x</a>
+        <a href="#os1">OS 1.x</a>
     </div>
     
-    <h1>理想汽车OS完整版本历史</h1>
-    <p>基于理想汽车官方OTA更新记录，完整记录从OS 1.0到OS 8.0的所有大版本和小版本更新，包括每个版本的功能改进、技术升级和用户体验优化。</p>
+    <h1>理想汽车OS版本演进</h1>
+    <p>基于理想汽车官方OTA更新记录，完整记录从OS 1.0到OS 8.4的所有版本更新，包括每个版本的功能改进、技术升级和用户体验优化。</p>
     
     <div class="version-timeline">
         
         <div class="major-version">
-            <h2 id="os8">OS 8.x 系列 (2026-至今)</h2>
-            <p>AI大模型深度集成时代，全车智能体架构，脑机接口探索。</p>
+            <h2 id="os8">OS 8.x 系列 (2025-2026)</h2>
+            <p>VLA司机大模型时代，端到端智能驾驶，全场景AI助手。</p>
             
             <div class="minor-versions">
                 
                 <div class="version-card">
                     <div class="version-header">
-                        <div class="version-number">OS 8.3 <span class="version-badge">规划中</span></div>
-                        <div class="version-date">预计2026年Q4</div>
+                        <div class="version-number">OS 8.4 <span class="version-badge">测试中</span></div>
+                        <div class="version-date">2026年2月18日（测试版）</div>
                     </div>
                     
                     <div class="version-features">
                         <div class="feature-item">
-                            <div class="feature-title">Mind GPT 3.0</div>
-                            <div class="feature-desc">万亿参数模型，支持实时多模态生成和推理，车端推理延迟＜100ms</div>
+                            <div class="feature-title">VLA司机大模型3.0</div>
+                            <div class="feature-desc">强化学习模型，变道决策更精准，驾驶行为更拟人</div>
                         </div>
                         <div class="feature-item">
-                            <div class="feature-title">全车脑机接口原型</div>
-                            <div class="feature-desc">初步脑电波识别系统，实现基础意念控制功能</div>
+                            <div class="feature-title">全场景车道级导航</div>
+                            <div class="feature-desc">支持城市、高速、停车场全场景车道级指引</div>
                         </div>
                     </div>
                     
-                    <div class="tech-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">芯片平台</span>
-                            <span class="spec-value">下一代车规级AI芯片（预计）</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">AI算力</span>
-                            <span class="spec-value">＞100 TOPS</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">关键技术</span>
-                            <span class="spec-value">量子安全通信、跨品牌协同</span>
-                        </div>
-                    </div>
+                    <ul class="update-list">
+                        <li>VLA司机大模型行为强化学习能力升级</li>
+                        <li>新增宠物模式，车内环境智能调节</li>
+                        <li>艺术相框功能，个性化车机界面</li>
+                        <li>充电预热功能（增程车型）</li>
+                        <li>超充站状态实况展示，高峰期避堵</li>
+                        <li>支持U盘播放本地影音，兼容主流格式</li>
+                    </ul>
                     
                     <div class="card-links">
-                        <a href="https://www.lixiang.com/roadmap" class="card-link card-link-official" target="_blank">技术路线图</a>
+                        <a href="https://chejiahao.autohome.com.cn/info/24872258" class="card-link card-link-ota" target="_blank">OTA 8.4测试版</a>
+                    </div>
+                </div>
+                
+                <div class="version-card">
+                    <div class="version-header">
+                        <div class="version-number">OS 8.3</div>
+                        <div class="version-date">2026年2月7日发布</div>
+                    </div>
+                    
+                    <div class="version-features">
+                        <div class="feature-item">
+                            <div class="feature-title">超充站状态实况</div>
+                            <div class="feature-desc">实时展示超充站使用状态，高峰期提前避堵</div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-title">本地影音播放</div>
+                            <div class="feature-desc">支持U盘播放本地影音文件，兼容主流格式</div>
+                        </div>
+                    </div>
+                    
+                    <ul class="update-list">
+                        <li>新增超充站状态实况展示功能</li>
+                        <li>支持U盘播放本地影音（MP4、MKV、FLAC等）</li>
+                        <li>辅助驾驶出园区可提醒缴停车费</li>
+                        <li>VLA司机大模型变道决策更精准</li>
+                        <li>优化车机娱乐与实用体验</li>
+                    </ul>
+                    
+                    <div class="card-links">
+                        <a href="https://www.ithome.com/0/920/123.htm" class="card-link card-link-ota" target="_blank">OTA 8.3功能介绍</a>
                     </div>
                 </div>
                 
                 <div class="version-card">
                     <div class="version-header">
                         <div class="version-number">OS 8.2</div>
-                        <div class="version-date">预计2026年Q3</div>
+                        <div class="version-date">2026年1月21日发布</div>
                     </div>
                     
                     <div class="version-features">
                         <div class="feature-item">
-                            <div class="feature-title">Mind GPT 2.5</div>
-                            <div class="feature-desc">5000亿参数模型，支持实时视频理解和生成，多模态融合精度提升40%</div>
+                            <div class="feature-title">VLA司机大模型2.0</div>
+                            <div class="feature-desc">行为强化学习模型，替代大量规则代码</div>
                         </div>
                         <div class="feature-item">
-                            <div class="feature-title">全车智能体协作系统</div>
-                            <div class="feature-desc">各座位AI智能体可协同完成复杂任务，支持任务分解和分配</div>
+                            <div class="feature-title">宠物模式</div>
+                            <div class="feature-desc">车内环境智能调节，保障宠物安全舒适</div>
                         </div>
                     </div>
                     
                     <ul class="update-list">
-                        <li>Mind GPT升级至5000亿参数版本</li>
-                        <li>智能体任务协同框架上线</li>
-                        <li>实时3D场景重建精度提升至95%</li>
-                        <li>AR导航全场景覆盖（高速、城市、停车场）</li>
-                        <li>车路云一体化V2X 2.0协议支持</li>
+                        <li>VLA司机大模型行为强化学习上线</li>
+                        <li>新增宠物模式，车内温湿度智能调节</li>
+                        <li>艺术相框功能，个性化车机界面</li>
+                        <li>充电预热功能（增程车型）</li>
+                        <li>40项新功能，涵盖智驾、舒适、交互维度</li>
                     </ul>
                     
                     <div class="card-links">
-                        <a href="https://www.lixiang.com/roadmap" class="card-link card-link-official" target="_blank">技术路线图</a>
+                        <a href="https://finance.sina.com.cn/tech/digi/2026-01-21/doc-inhiaemv8135608.shtml" class="card-link card-link-ota" target="_blank">OTA 8.2功能介绍</a>
                     </div>
                 </div>
                 
                 <div class="version-card">
                     <div class="version-header">
                         <div class="version-number">OS 8.1</div>
-                        <div class="version-date">预计2026年Q2</div>
+                        <div class="version-date">2025年12月发布</div>
                     </div>
                     
                     <div class="version-features">
                         <div class="feature-item">
-                            <div class="feature-title">Mind GPT 2.1</div>
-                            <div class="feature-desc">2000亿参数模型，优化中文理解和生成，支持方言识别</div>
+                            <div class="feature-title">理想AI眼镜支持</div>
+                            <div class="feature-desc">支持绑定理想AI眼镜，扩展AR交互体验</div>
                         </div>
                         <div class="feature-item">
-                            <div class="feature-title">全车智能体1.5</div>
-                            <div class="feature-desc">每个座位AI智能体支持个性化学习和长期记忆</div>
+                            <div class="feature-title">全场景车道级导航</div>
+                            <div class="feature-desc">城市、高速、停车场全场景车道级指引</div>
                         </div>
                     </div>
                     
                     <ul class="update-list">
-                        <li>Mind GPT中文优化版本发布</li>
-                        <li>智能体个性化学习系统上线</li>
-                        <li>实时3D场景重建功能（Beta）</li>
-                        <li>AR导航基础功能（停车场场景）</li>
-                        <li>车路云一体化V2X 1.0协议支持</li>
-                        <li>系统性能优化，响应速度提升25%</li>
+                        <li>支持绑定理想AI眼镜</li>
+                        <li>全场景车道级导航上线</li>
+                        <li>新增47项功能</li>
+                        <li>覆盖MEGA、i系列、L系列车型</li>
+                        <li>22/23款L系列后续推送</li>
                     </ul>
                     
                     <div class="card-links">
-                        <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">官网</a>
+                        <a href="https://www.ithome.com/0/903/014.htm" class="card-link card-link-ota" target="_blank">OTA 8.1功能介绍</a>
                     </div>
                 </div>
                 
                 <div class="version-card">
                     <div class="version-header">
-                        <div class="version-number">OS 8.0 <span class="version-badge">即将发布</span></div>
-                        <div class="version-date">预计2026年Q1</div>
+                        <div class="version-number">OS 8.0</div>
+                        <div class="version-date">2025年9月10日发布</div>
                     </div>
                     
                     <div class="version-features">
                         <div class="feature-item">
-                            <div class="feature-title">Mind GPT 2.0</div>
-                            <div class="feature-desc">千亿参数大模型，支持多模态理解和生成，车端推理延迟＜500ms</div>
+                            <div class="feature-title">全球首个VLA司机大模型</div>
+                            <div class="feature-desc">视觉-语言-动作大模型，实现类人驾驶决策</div>
                         </div>
                         <div class="feature-item">
-                            <div class="feature-title">全车智能体1.0</div>
-                            <div class="feature-desc">每个座位都有独立的AI智能体，实现个性化服务和专属记忆</div>
+                            <div class="feature-title">端到端智能驾驶</div>
+                            <div class="feature-desc">感知-决策-控制一体化，减少规则代码依赖</div>
                         </div>
                     </div>
                     
                     <ul class="update-list">
-                        <li>Mind GPT千亿参数版本首发</li>
-                        <li>全车智能体架构上线（4个独立AI助手）</li>
-                        <li>实时3D场景重建和AR导航（预览）</li>
-                        <li>车路云一体化智能协同框架</li>
-                        <li>端到端自动驾驶与座舱融合接口</li>
-                        <li>数字孪生引擎2.0，渲染精度提升60%</li>
-                    </ul>
-                    
-                    <div class="tech-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">芯片平台</span>
-                            <span class="spec-value">高通骁龙8295 (5nm)</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">AI算力</span>
-                            <span class="spec-value">30 TOPS</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">内存</span>
-                            <span class="spec-value">16GB LPDDR5</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">覆盖车型</span>
-                            <span class="spec-value">2026新款、L9/L8/L7 Max、MEGA、i6/i8</span>
-                        </div>
-                    </div>
-                    
-                    <div class="card-links">
-                        <a href="https://www.lixiang.com" class="card-link card-link-official" target="_blank">官网</a>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        <div class="major-version">
-            <h2 id="os7">OS 7.x 系列 (2025-至今)</h2>
-            <p>AI大模型时代开端，数字孪生技术，智能场景引擎3.0。</p>
-            
-            <div class="minor-versions">
-                
-                <div class="version-card">
-                    <div class="version-header">
-                        <div class="version-number">OS 7.3</div>
-                        <div class="version-date">2025年11月发布</div>
-                    </div>
-                    
-                    <div class="version-features">
-                        <div class="feature-item">
-                            <div class="feature-title">Mind GPT 1.3</div>
-                            <div class="feature-desc">优化多轮对话逻辑，支持复杂任务分解和执行</div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-title">数字孪生1.3</div>
-                            <div class="feature-desc">环境感知精度提升，支持天气和路况预测</div>
-                        </div>
-                    </div>
-                    
-                    <ul class="update-list">
-                        <li>Mind GPT多轮对话优化，上下文长度扩展至8K</li>
-                        <li>数字孪生环境建模精度提升至90%</li>
-                        <li>新增5个智能场景模板</li>
-                        <li>修复多屏协同偶发卡顿问题</li>
-                        <li>系统稳定性改进，崩溃率降低40%</li>
-                    </ul>
-                    
-                    <div class="card-links">
-                        <a href="https://www.lixiang.com/community/detail/article/2112434.html" class="card-link card-link-ota" target="_blank">OTA 8.0.0功能介绍</a>
-                    </div>
-                </div>
-                
-                <div class="version-card">
-                    <div class="version-header">
-                        <div class="version-number">OS 7.2</div>
-                        <div class="version-date">2025年8月发布</div>
-                    </div>
-                    
-                    <div class="version-features">
-                        <div class="feature-item">
-                            <div class="feature-title">Mind GPT 1.2</div>
-                            <div class="feature-desc">扩展车辆控制指令集，支持复杂条件判断</div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-title">智能场景引擎3.2</div>
-                            <div class="feature-desc">场景识别准确率提升至92%，支持用户自定义规则</div>
-                        </div>
-                    </div>
-                    
-                    <ul class="update-list">
-                        <li>Mind GPT车辆控制指令扩展至200+条</li>
-                        <li>智能场景引擎支持IFTTT式复杂规则</li>
-                        <li>多模态交互响应速度提升30%</li>
-                        <li>新增AR导航预览功能</li>
-                        <li>优化电池管理系统显示</li>
-                    </ul>
-                    
-                    <div class="card-links">
-                        <a href="https://www.lixiang.com/community/detail/article/1372150.html" class="card-link card-link-ota" target="_blank">OTA 6.1.0功能介绍</a>
-                    </div>
-                </div>
-                
-                <div class="version-card">
-                    <div class="version-header">
-                        <div class="version-number">OS 7.1</div>
-                        <div class="version-date">2025年5月发布</div>
-                    </div>
-                    
-                    <div class="version-features">
-                        <div class="feature-item">
-                            <div class="feature-title">Mind GPT 1.1</div>
-                            <div class="feature-desc">优化中文理解和生成，支持方言识别</div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-title">数字孪生1.1</div>
-                            <div class="feature-desc">车辆状态建模精度提升，支持故障预测</div>
-                        </div>
-                    </div>
-                    
-                    <ul class="update-list">
-                        <li>Mind GPT中文优化，支持5种主要方言</li>
-                        <li>数字孪生故障预测准确率85%</li>
-                        <li>智能场景引擎模板增加至50个</li>
-                        <li>多屏协同延迟降低至＜100ms</li>
-                        <li>系统资源占用优化20%</li>
-                    </ul>
-                    
-                    <div class="card-links">
-                        <a href="https://www.lixiang.com/community/articledetail/623614" class="card-link card-link-ota" target="_blank">OTA 4.2.0更新说明</a>
-                    </div>
-                </div>
-                
-                <div class="version-card">
-                    <div class="version-header">
-                        <div class="version-number">OS 7.0</div>
-                        <div class="version-date">2025年3月发布</div>
-                    </div>
-                    
-                    <div class="version-features">
-                        <div class="feature-item">
-                            <div class="feature-title">Mind GPT 1.0</div>
-                            <div class="feature-desc">7B参数自研大语言模型，全场景AI助手首发</div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-title">全域数字孪生1.0</div>
-                            <div class="feature-desc">车辆状态、环境感知、用户行为实时数字映射</div>
-                        </div>
-                    </div>
-                    
-                    <ul class="update-list">
-                        <li>Mind GPT大模型首次上车，支持自然语言交互</li>
-                        <li>数字孪生引擎上线，实时环境建模</li>
-                        <li>智能场景引擎3.0，场景识别准确率90%</li>
-                        <li>多模态交互融合（语音、手势、视觉）</li>
-                        <li>车云一体架构，算力动态分配</li>
-                        <li>沉浸式娱乐系统，支持云游戏和8K视频</li>
+                        <li>全球首个VLA司机大模型上车</li>
+                        <li>端到端智能驾驶架构</li>
+                        <li>54项新增功能</li>
+                        <li>26项体验优化</li>
+                        <li>覆盖全系车型</li>
                     </ul>
                     
                     <div class="tech-specs">
@@ -705,12 +401,12 @@
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">覆盖车型</span>
-                            <span class="spec-value">L9/L8/L7 Max、MEGA、i6/i8全系</span>
+                            <span class="spec-value">MEGA、i系列、L系列全系</span>
                         </div>
                     </div>
                     
                     <div class="card-links">
-                        <a href="https://www.lixiang.com/community/detail/article/2112434.html" class="card-link card-link-ota" target="_blank">OTA 8.0.0功能介绍</a>
+                        <a href="https://finance.sina.com.cn/tech/digi/2025-09-10/doc-infpzepe4146187.shtml" class="card-link card-link-ota" target="_blank">OTA 8.0功能介绍</a>
                     </div>
                 </div>
                 
@@ -718,140 +414,41 @@
         </div>
         
         <div class="major-version">
-            <h2 id="os6">OS 6.x 系列 (2024-2025)</h2>
-            <p>AI助手时代开启，任务大师功能，智能场景引擎2.0。</p>
+            <h2 id="os7">OS 7.x 系列 (2024-2025)</h2>
+            <p>AI大模型时代，Mind GPT智能助手，数字孪生技术。</p>
             
             <div class="minor-versions">
                 
                 <div class="version-card">
                     <div class="version-header">
-                        <div class="version-number">OS 6.5</div>
-                        <div class="version-date">2024年11月发布</div>
-                    </div>
-                    
-                    <ul class="update-list">
-                        <li>Mind GPT预览版功能扩展</li>
-                        <li>任务大师模板库上线（30+模板）</li>
-                        <li>智能场景引擎2.5，准确率提升至88%</li>
-                        <li>多屏协同3.0，应用流转更流畅</li>
-                        <li>系统性能优化，冷启动速度提升40%</li>
-                    </ul>
-                    
-                    <div class="card-links">
-                        <a href="https://www.lixiang.com/community/detail/article/1372150.html" class="card-link card-link-ota" target="_blank">OTA 6.1.0功能介绍</a>
-                    </div>
-                </div>
-                
-                <div class="version-card">
-                    <div class="version-header">
-                        <div class="version-number">OS 6.3</div>
-                        <div class="version-date">2024年9月发布</div>
-                    </div>
-                    
-                    <ul class="update-list">
-                        <li>新增露营模式、小憩模式等场景模板</li>
-                        <li>地图导航算法优化，ETA准确率提升</li>
-                        <li>系统稳定性改进，修复已知问题</li>
-                        <li>语音识别准确率提升至97%</li>
-                    </ul>
-                    
-                    <div class="card-links">
-                        <a href="https://www.lixiang.com/community/articledetail/623614" class="card-link card-link-ota" target="_blank">OTA 4.2.0更新说明</a>
-                    </div>
-                </div>
-                
-                <div class="version-card">
-                    <div class="version-header">
-                        <div class="version-number">OS 6.2</div>
-                        <div class="version-date">2024年7月发布</div>
-                    </div>
-                    
-                    <ul class="update-list">
-                        <li>任务大师功能增强，支持复杂条件判断</li>
-                        <li>智能场景引擎2.2，场景识别速度提升</li>
-                        <li>新增车载应用市场（Beta）</li>
-                        <li>优化多屏协同体验</li>
-                    </ul>
-                    
-                    <div class="card-links">
-                        <a href="https://www.lixiang.com/community/articledetail/623614" class="card-link card-link-ota" target="_blank">OTA 4.2.0更新说明</a>
-                    </div>
-                </div>
-                
-                <div class="version-card">
-                    <div class="version-header">
-                        <div class="version-number">OS 6.1</div>
-                        <div class="version-date">2024年5月发布</div>
-                    </div>
-                    
-                    <ul class="update-list">
-                        <li>Mind GPT功能扩展，支持更多车辆控制指令</li>
-                        <li>任务大师模板库上线，提供常用自动化模板</li>
-                        <li>系统性能进一步优化</li>
-                        <li>修复蓝牙连接稳定性问题</li>
-                    </ul>
-                    
-                    <div class="card-links">
-                        <a href="https://www.lixiang.com/community/detail/article/1372150.html" class="card-link card-link-ota" target="_blank">OTA 6.1.0功能介绍</a>
-                    </div>
-                </div>
-                
-                <div class="version-card">
-                    <div class="version-header">
-                        <div class="version-number">OS 6.0</div>
-                        <div class="version-date">2024年3月发布</div>
+                        <div class="version-number">OS 7.4</div>
+                        <div class="version-date">2025年5月28日发布</div>
                     </div>
                     
                     <div class="version-features">
                         <div class="feature-item">
-                            <div class="feature-title">Mind GPT 预览版</div>
-                            <div class="feature-desc">首次引入大语言模型能力，开启AI助手功能</div>
+                            <div class="feature-title">理想同学毛绒形象</div>
+                            <div class="feature-desc">智能助手全新毛绒外观，更温暖亲切</div>
                         </div>
                         <div class="feature-item">
-                            <div class="feature-title">任务大师</div>
-                            <div class="feature-desc">支持用户自定义复杂任务流程和自动化场景</div>
+                            <div class="feature-title">智能家庭账号系统</div>
+                            <div class="feature-desc">多用户个性化设置，家庭共享智能体验</div>
                         </div>
                     </div>
                     
                     <ul class="update-list">
-                        <li>Mind GPT预览版上线，支持基础问答和车辆控制</li>
-                        <li>任务大师功能，支持IFTTT式自动化</li>
-                        <li>智能场景引擎2.0，场景识别准确率提升40%</li>
-                        <li>多屏协同3.0，支持应用无缝流转</li>
-                        <li>性能优化，系统响应速度提升30%</li>
+                        <li>理想同学毛绒形象上线</li>
+                        <li>智能家庭账号系统</li>
+                        <li>支付宝车载助手正式上线</li>
+                        <li>超充站降锁功能</li>
+                        <li>App冰箱定时开启</li>
+                        <li>自动关闭遮阳帘功能</li>
                     </ul>
                     
-                    <div class="tech-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">芯片平台</span>
-                            <span class="spec-value">高通骁龙8295 (5nm)</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">覆盖车型</span>
-                            <span class="spec-value">MEGA、L6、i6首发，后续OTA至其他车型</span>
-                        </div>
-                    </div>
-                    
                     <div class="card-links">
-                        <a href="https://www.lixiang.com/community/detail/article/1372150.html" class="card-link card-link-ota" target="_blank">OTA 6.1.0功能介绍</a>
+                        <a href="https://www.ithome.com/0/856/665.htm" class="card-link card-link-ota" target="_blank">OTA 7.4功能介绍</a>
                     </div>
                 </div>
                 
-            </div>
-        </div>
-        
-        <!-- 为了简洁，这里省略了OS 5.x到OS 1.x的详细内容 -->
-        <!-- 但所有版本都只保留真实的官方OTA链接 -->
-        
-    </div>
-    
-    <div class="footer">
-        <p>© 2026 SmartEVPedia. 数据基于理想汽车官方发布信息、OTA更新日志和用户实测，持续更新中。</p>
-        <div class="footer-links">
-            <a href="/SmartEVPedia/brands/lixiang/">返回理想汽车</a>
-            <a href="/SmartEVPedia/">返回首页</a>
-            <a href="https://github.com/hkgood/SmartEVPedia">GitHub 仓库</a>
-        </div>
-    </div>
-</body>
-</html>
+                <div class="version-card">
+                    <div class="version-header">
