@@ -45,3 +45,23 @@ defaults:
       type: "pages"
     values:
       layout: "default"
+
+# Include custom assets
+include:
+  - assets
+
+# Sass configuration
+sass:
+  sass_dir: assets/css
+  style: compressed
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
