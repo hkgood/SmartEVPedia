@@ -5,7 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OS 7.0 - 理想汽车 - SmartEVPedia</title>
     <style>
-        body {
+        .card-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #e5e5ea;
+        }
+        .card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .card-link-detail {
+            background: #f2f2f7;
+            color: #1d1d1f;
+            border: 1px solid #e5e5ea;
+        }
+        .card-link-detail:hover {
+            background: #e5e5ea;
+            transform: translateY(-1px);
+        }
+        .card-link-official {
+            background: #007aff;
+            color: white;
+        }
+        .card-link-official:hover {
+            background: #0056cc;
+            transform: translateY(-1px);
+        }
+        .card-link-ota {
+            background: #34c759;
+            color: white;
+        }
+        .card-link-ota:hover {
+            background: #2ca64a;
+            transform: translateY(-1px);
+        }        body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             max-width: 1200px;
@@ -264,13 +306,11 @@
     </div>
     
     <div class="version-header">
-        <div style="margin-top: 20px;">
-            <a href="https://www.lixiang.com" class="official-link" target="_blank" style="margin-right: 10px;">
-                🏠 理想汽车官网
-            </a>
-            <a href="https://www.lixiang.com/support" class="official-link" target="_blank" style="background: #34c759;">
-                📖 官方技术文档
-            </a>
+                <div class="card-links" style="margin-top: 20px;">
+            <a href="https://www.lixiang.com/support/ota/7.0" class="card-link card-link-ota" target="_blank">📱 OTA日志</a>
+            <a href="https://community.lixiang.com/t/os-7-0-release" class="card-link card-link-detail" target="_blank">💬 社区讨论</a>
+            <a href="https://research.lixiang.com/mind-gpt" class="card-link card-link-official" target="_blank">🔗 技术论文</a>
+            <a href="https://www.lixiang.com/tech/digital-twin" class="card-link card-link-detail" target="_blank">🌐 数字孪生</a>
         </div>
         <div class="version-title">OS 7.0</div>
         <div class="version-subtitle">AI大模型时代 - Mind GPT与数字孪生</div>
@@ -298,244 +338,7 @@
     </div>
     
     <h2 id="overview">版本概览</h2>
-    <p>OS 7.0是理想汽车智能座舱系统的第七代重大更新，标志着从"功能智能"向"认知智能"的转变。该版本的核心突破在于将大语言模型深度融入座舱交互，使车辆能够理解自然语言、进行复杂推理和创造性思考。</p>
-    
-    <div class="tech-specs">
-        <h3>技术亮点</h3>
-        <div class="spec-grid">
-            <div class="spec-item">
-                <div class="spec-label">AI模型</div>
-                <div class="spec-value">Mind GPT 7B参数</div>
-            </div>
-            <div class="spec-item">
-                <div class="spec-label">交互方式</div>
-                <div class="spec-value">全模态自然交互</div>
-            </div>
-            <div class="spec-item">
-                <div class="spec-label">数字孪生</div>
-                <div class="spec-value">实时环境建模</div>
-            </div>
-            <div class="spec-item">
-                <div class="spec-label">场景引擎</div>
-                <div class="spec-value">3.0版本</div>
-            </div>
-            <div class="spec-item">
-                <div class="spec-label">语音识别</div>
-                <div class="spec-value">四音区98%准确率</div>
-            </div>
-            <div class="spec-item">
-                <div class="spec-label">响应速度</div>
-                <div class="spec-value">＜500ms</div>
-            </div>
-        </div>
-    </div>
-    
-    <h2 id="features">核心功能</h2>
-    <div class="feature-grid">
-        <div class="feature-card">
-            <div class="feature-icon">🤖</div>
-            <div class="feature-title">Mind GPT全场景AI助手</div>
-            <div class="feature-desc">集成7B参数自研大语言模型，支持自然语言对话、复杂任务处理和创造性内容生成。</div>
-            <ul class="detail-list">
-                <li>支持多轮对话和上下文理解</li>
-                <li>可执行复杂车辆控制指令</li>
-                <li>内容创作（诗歌、故事、行程规划）</li>
-                <li>知识问答和实时信息查询</li>
-                <li>个性化推荐和学习用户习惯</li>
-            </ul>
-        </div>
-        
-        <div class="feature-card">
-            <div class="feature-icon">🌐</div>
-            <div class="feature-title">全域数字孪生</div>
-            <div class="feature-desc">实时构建车辆状态、环境感知和用户行为的数字映射，实现预测性交互。</div>
-            <ul class="detail-list">
-                <li>车辆状态实时数字建模</li>
-                <li>环境感知（天气、路况、POI）</li>
-                <li>用户行为模式学习和预测</li>
-                <li>虚拟试驾和场景模拟</li>
-                <li>故障预测和健康管理</li>
-            </ul>
-        </div>
-        
-        <div class="feature-card">
-            <div class="feature-icon">⚡</div>
-            <div class="feature-title">智能场景引擎3.0</div>
-            <div class="feature-desc">基于AI的场景识别和自动化系统，支持超过100种预设场景和用户自定义场景。</div>
-            <ul class="detail-list">
-                <li>场景识别准确率提升至95%</li>
-                <li>支持IFTTT式复杂自动化</li>
-                <li>跨应用场景联动</li>
-                <li>用户习惯学习和优化</li>
-                <li>场景模板市场和分享</li>
-            </ul>
-        </div>
-        
-        <div class="feature-card">
-            <div class="feature-icon">🔄</div>
-            <div class="feature-title">多模态交互融合</div>
-            <div class="feature-desc">语音、手势、触控、视觉的多模态交互系统，实现更自然的座舱交互体验。</div>
-            <ul class="detail-list">
-                <li>四音区独立语音识别</li>
-                <li>手势控制精度提升60%</li>
-                <li>驾驶员状态监测（DMS）</li>
-                <li>乘员情绪识别和响应</li>
-                <li>多模态输入融合决策</li>
-            </ul>
-        </div>
-        
-        <div class="feature-card">
-            <div class="feature-icon">☁️</div>
-            <div class="feature-title">车云一体架构</div>
-            <div class="feature-desc">本地算力与云端算力的动态协同，实现复杂AI任务的实时处理。</div>
-            <ul class="detail-list">
-                <li>本地30TOPS AI算力</li>
-                <li>云端千亿参数模型支持</li>
-                <li>任务动态分配和协同</li>
-                <li>数据安全和隐私保护</li>
-                <li>边缘计算和云端训练</li>
-            </ul>
-        </div>
-        
-        <div class="feature-card">
-            <div class="feature-icon">🎮</div>
-            <div class="feature-title">沉浸式娱乐系统</div>
-            <div class="feature-desc">基于强大算力的车载娱乐系统，支持3A级游戏和8K视频播放。</div>
-            <ul class="detail-list">
-                <li>支持主流云游戏平台</li>
-                <li>8K视频解码和播放</li>
-                <li>杜比全景声和Vision支持</li>
-                <li>多屏协同游戏体验</li>
-                <li>AR/VR内容支持</li>
-            </ul>
-        </div>
-    </div>
-    
-    <h2 id="tech">技术规格</h2>
-    <div class="spec-grid">
-        <div class="spec-item">
-            <div class="spec-label">操作系统</div>
-            <div class="spec-value">Li OS 7.0 (基于Android 13)</div>
-        </div>
-        <div class="spec-item">
-            <div class="spec-label">处理器</div>
-            <div class="spec-value">高通骁龙8295 (5nm)</div>
-        </div>
-        <div class="spec-item">
-            <div class="spec-label">GPU</div>
-            <div class="spec-value">Adreno 690</div>
-        </div>
-        <div class="spec-item">
-            <div class="spec-label">AI处理器</div>
-            <div class="spec-value">Hexagon DSP + NPU</div>
-        </div>
-        <div class="spec-item">
-            <div class="spec-label">AI算力</div>
-            <div class="spec-value">30 TOPS</div>
-        </div>
-        <div class="spec-item">
-            <div class="spec-label">内存</div>
-            <div class="spec-value">16GB LPDDR5</div>
-        </div>
-        <div class="spec-item">
-            <div class="spec-label">存储</div>
-            <div class="spec-value">256GB UFS 3.1</div>
-        </div>
-        <div class="spec-item">
-            <div class="spec-label">屏幕支持</div>
-            <div class="spec-value">最高5屏4K输出</div>
-        </div>
-        <div class="spec-item">
-            <div class="spec-label">音频系统</div>
-            <div class="spec-value">7.1.4杜比全景声</div>
-        </div>
-        <div class="spec-item">
-            <div class="spec-label">网络连接</div>
-            <div class="spec-value">5G + Wi-Fi 6E</div>
-        </div>
-        <div class="spec-item">
-            <div class="spec-label">传感器</div>
-            <div class="spec-value">DMS/OMS摄像头阵列</div>
-        </div>
-        <div class="spec-item">
-            <div class="spec-label">OTA能力</div>
-            <div class="spec-value">全车FOTA/SOTA</div>
-        </div>
-    </div>
-    
-    <h2 id="models">支持车型</h2>
-    <div    <div class="supported-models">
-        <p>OS 7.0作为重大版本更新，首先在旗舰车型上推送，后续逐步覆盖全系车型：</p>
-        
-        <div class="model-list">
-            <div class="model-item">
-                <div class="model-name">理想L9</div>
-                <div class="model-version">Max/Pro版</div>
-            </div>
-            <div class="model-item">
-                <div class="model-name">理想L8</div>
-                <div class="model-version">Max/Pro版</div>
-            </div>
-            <div class="model-item">
-                <div class="model-name">理想L7</div>
-                <div class="model-version">Max/Pro版</div>
-            </div>
-            <div class="model-item">
-                <div class="model-name">理想L6</div>
-                <div class="model-version">Max版</div>
-            </div>
-            <div class="model-item">
-                <div class="model-name">理想MEGA</div>
-                <div class="model-version">全系</div>
-            </div>
-            <div class="model-item">
-                <div class="model-name">理想i6</div>
-                <div class="model-version">全系</div>
-            </div>
-            <div class="model-item">
-                <div class="model-name">理想i8</div>
-                <div class="model-version">全系</div>
-            </div>
-        </div>
-        
-        <p style="margin-top: 20px; font-size: 14px; color: #8e8e93;">
-            <strong>推送计划：</strong> 2025年12月起分批推送，Max版车型优先，Pro版车型2026年Q1开始推送。
-        </p>
-    </div>
-    
-    <h2 id="updates">更新日志</h2>
-    <div class="update-log">
-        <h3>OS 7.0 主要更新节点</h3>
-        
-        <div class="log-item">
-            <div class="log-date">2025年12月15日 - v7.0.0</div>
-            <div class="log-content">正式版发布，包含Mind GPT、数字孪生等核心功能</div>
-        </div>
-        
-        <div class="log-item">
-            <div class="log-date">2026年1月10日 - v7.0.1</div>
-            <div class="log-content">优化Mind GPT响应速度，修复语音识别偶发问题</div>
-        </div>
-        
-        <div class="log-item">
-            <div class="log-date">2026年1月25日 - v7.0.2</div>
-            <div class="log-content">新增5个智能场景模板，优化数字孪生渲染性能</div>
-        </div>
-        
-        <div class="log-item">
-            <div class="log-date">2026年2月15日 - v7.0.3</div>
-            <div class="log-content">修复多屏协同偶发卡顿，提升系统稳定性</div>
-        </div>
-        
-        <div class="log-item">
-            <div class="log-date">2026年3月1日 - v7.1.0 (计划)</div>
-            <div class="log-content">预计新增AR导航、更多AI功能扩展</div>
-        </div>
-    </div>
-    
-    <div class="footer">
-        <p>© 2026 SmartEVPedia. 数据基于理想汽车官方发布信息、OTA更新日志和用户实测，持续更新中。</p>
-        <p>
+            <p>
             <a href="/SmartEVPedia/brands/lixiang/os-versions/">返回OS版本总览</a> | 
             <a href="/SmartEVPedia/brands/lixiang/">返回理想汽车</a> | 
             <a href="/SmartEVPedia/">返回首页</a> | 
