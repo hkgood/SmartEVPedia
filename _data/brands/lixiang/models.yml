@@ -1,0 +1,240 @@
+# 理想汽车车型数据
+# 来源：理想汽车官网、发布会、工信部申报信息
+# 最后更新：2026-02-27
+
+- id: "one"
+  name: "理想ONE"
+  platform: "range-extender"
+  launch_date: "2019-04-10"
+  discontinued_date: "2023-10-31"
+  official_url: "https://www.lixiang.com/one"
+  dimensions:
+    length: "5020mm"
+    width: "1960mm"
+    height: "1760mm"
+    wheelbase: "2935mm"
+  battery: "宁德时代三元锂电池"
+  hardware:
+    ad_sensor_suite: "AD 1.0"
+    lidar: "无"
+    camera: "5×摄像头"
+    radar: "1×毫米波雷达"
+    compute: "Mobileye EyeQ4"
+  os_versions:
+    - version: "OS 1.0"
+      release_date: "2019-12-01"
+      features:
+        - "基础L2辅助驾驶"
+        - "自适应巡航"
+        - "车道保持"
+      ad_system: "AD 1.0"
+    - version: "OS 2.0"
+      release_date: "2021-06-15"
+      features:
+        - "NOA导航辅助驾驶"
+        - "自动变道"
+        - "智能泊车"
+      ad_system: "AD 2.0"
+
+- id: "l9"
+  name: "理想L9"
+  platform: "range-extender"
+  launch_date: "2022-06-21"
+  official_url: "https://www.lixiang.com/l9"
+  dimensions:
+    length: "5218mm"
+    width: "1998mm"
+    height: "1800mm"
+    wheelbase: "3105mm"
+  battery: "宁德时代三元锂电池"
+  hardware:
+    ad_sensor_suite: "AD Max 2.0"
+    lidar: "1×禾赛AT128"
+    camera: "11×高清摄像头"
+    radar: "5×毫米波雷达"
+    compute: "双英伟达Orin-X (508 TOPS)"
+  os_versions:
+    - version: "OS 4.0"
+      release_date: "2022-09-01"
+      features:
+        - "城市NOA（北京/上海）"
+        - "智能泊车2.0"
+        - "HUD增强现实导航"
+      ad_system: "AD Max 2.0"
+    - version: "OS 5.0"
+      release_date: "2023-12-15"
+      features:
+        - "全国高速NOA"
+        - "城市NOA扩展至50城"
+        - "端到端智驾V1.0"
+      ad_system: "AD Max 3.0"
+
+- id: "l8"
+  name: "理想L8"
+  platform: "range-extender"
+  launch_date: "2022-09-30"
+  official_url: "https://www.lixiang.com/l8"
+  dimensions:
+    length: "5080mm"
+    width: "1995mm"
+    height: "1800mm"
+    wheelbase: "3005mm"
+  battery: "宁德时代三元锂电池"
+  hardware:
+    ad_sensor_suite: "AD Max 2.0"
+    lidar: "1×禾赛AT128"
+    camera: "11×高清摄像头"
+    radar: "5×毫米波雷达"
+    compute: "双英伟达Orin-X (508 TOPS)"
+  os_versions:
+    - version: "OS 4.0"
+      release_date: "2022-12-01"
+      features:
+        - "高速NOA"
+        - "智能泊车"
+        - "座舱多屏联动"
+      ad_system: "AD Max 2.0"
+    - version: "OS 5.5"
+      release_date: "2024-03-20"
+      features:
+        - "城市NOA全国覆盖"
+        - "智能召唤"
+        - "语音助手升级"
+      ad_system: "AD Max 3.0"
+
+- id: "l7"
+  name: "理想L7"
+  platform: "range-extender"
+  launch_date: "2023-02-08"
+  official_url: "https://www.lixiang.com/l7"
+  dimensions:
+    length: "5050mm"
+    width: "1995mm"
+    height: "1750mm"
+    wheelbase: "3005mm"
+  battery: "宁德时代三元锂电池"
+  hardware:
+    ad_sensor_suite: "AD Max 3.0"
+    lidar: "1×禾赛AT128"
+    camera: "11×高清摄像头"
+    radar: "5×毫米波雷达"
+    compute: "双英伟达Orin-X (508 TOPS)"
+  os_versions:
+    - version: "OS 5.0"
+      release_date: "2023-03-15"
+      features:
+        - "城市NOA（首批10城）"
+        - "后排娱乐屏控制"
+        - "智能空气悬架"
+      ad_system: "AD Max 3.0"
+    - version: "OS 6.0"
+      release_date: "2024-06-10"
+      features:
+        - "城市NOA全覆盖"
+        - "智能泊车3.0"
+        - "AI语音助手2.0"
+      ad_system: "AD Max 3.0"
+
+- id: "l6"
+  name: "理想L6"
+  platform: "range-extender"
+  launch_date: "2024-03-01"
+  official_url: "https://www.lixiang.com/l6"
+  dimensions:
+    length: "4925mm"
+    width: "1960mm"
+    height: "1735mm"
+    wheelbase: "2920mm"
+  battery: "宁德时代磷酸铁锂"
+  hardware:
+    ad_sensor_suite: "AD Max 3.0"
+    lidar: "1×禾赛AT128"
+    camera: "11×高清摄像头"
+    radar: "5×毫米波雷达"
+    compute: "双英伟达Orin-X (508 TOPS)"
+  os_versions:
+    - version: "OS 6.0"
+      release_date: "2024-03-15"
+      features:
+        - "城市NOA（北京/上海/深圳）"
+        - "方向盘离手检测升级"
+        - "HUD增强现实导航"
+      ad_system: "AD Max 3.0"
+
+- id: "mega"
+  name: "理想MEGA"
+  platform: "battery-electric"
+  launch_date: "2024-02-26"
+  official_url: "https://www.lixiang.com/mega"
+  dimensions:
+    length: "5350mm"
+    width: "1965mm"
+    height: "1850mm"
+    wheelbase: "3300mm"
+  battery: "宁德时代麒麟电池（800V）"
+  hardware:
+    ad_sensor_suite: "AD Max 4.0"
+    lidar: "1×禾赛AT128"
+    camera: "11×高清摄像头"
+    radar: "5×毫米波雷达"
+    compute: "双英伟达Orin-X (508 TOPS)"
+  os_versions:
+    - version: "OS 6.5"
+      release_date: "2024-03-10"
+      features:
+        - "MPV专属智驾策略"
+        - "后排屏幕控制"
+        - "800V超快充管理"
+      ad_system: "AD Max 4.0"
+
+- id: "i6"
+  name: "理想i6"
+  platform: "battery-electric"
+  launch_date: "2024-12-15"
+  official_url: "https://www.lixiang.com/i6"
+  dimensions:
+    length: "4870mm"
+    width: "1980mm"
+    height: "1700mm"
+    wheelbase: "2950mm"
+  battery: "宁德时代神行电池（800V）"
+  hardware:
+    ad_sensor_suite: "AD Max 4.0"
+    lidar: "1×禾赛AT128"
+    camera: "11×高清摄像头"
+    radar: "5×毫米波雷达"
+    compute: "双英伟达Orin-X (508 TOPS)"
+  os_versions:
+    - version: "OS 7.0"
+      release_date: "2025-01-10"
+      features:
+        - "城市NOA全覆盖（全国50城）"
+        - "端到端智驾V2.0"
+        - "座舱AI语音助手升级"
+      ad_system: "AD Max 4.0"
+
+- id: "i8"
+  name: "理想i8"
+  platform: "battery-electric"
+  launch_date: "2025-01-20"
+  official_url: "https://www.lixiang.com/i8"
+  dimensions:
+    length: "5020mm"
+    width: "1990mm"
+    height: "1720mm"
+    wheelbase: "3050mm"
+  battery: "宁德时代神行电池（800V）"
+  hardware:
+    ad_sensor_suite: "AD Max 4.0"
+    lidar: "1×禾赛AT128"
+    camera: "11×高清摄像头"
+    radar: "5×毫米波雷达"
+    compute: "双英伟达Orin-X (508 TOPS)"
+  os_versions:
+    - version: "OS 7.0"
+      release_date: "2025-02-01"
+      features:
+        - "城市NOA全覆盖"
+        - "智能泊车4.0"
+        - "后排娱乐系统升级"
+      ad_system: "AD Max 4.0"

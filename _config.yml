@@ -1,0 +1,47 @@
+title: "SmartEVPedia"
+description: "中国智能电动车软件与智驾演进百科"
+baseurl: "/SmartEVPedia"
+url: "https://hkgood.github.io"
+github_username: "hkgood"
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Collections
+collections:
+  brands:
+    output: true
+    permalink: /brands/:path/
+
+# Data files
+data_dir: _data
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Custom variables
+brands:
+  - lixiang
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "brands"
+    values:
+      layout: "brand"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"

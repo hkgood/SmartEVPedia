@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} - SmartEVPedia</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 1000px; margin: 0 auto; padding: 20px; }
+    .hardware-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    .hardware-table th, .hardware-table td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    .hardware-table th { background-color: #f2f2f2; }
+    .os-version { background: #f8f9fa; border-left: 4px solid #0366d6; padding: 15px; margin: 15px 0; }
+    .feature-list { margin: 10px 0; padding-left: 20px; }
+    .nav { margin: 20px 0; }
+    .nav a { margin-right: 15px; }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <a href="/SmartEVPedia/">首页</a> &gt; 
+    <a href="/SmartEVPedia/brands/lixiang/">理想汽车</a> &gt; 
+    {{ page.title }}
+  </div>
+
+  <h1>{{ page.title }}</h1>
+  
+  <p><strong>官方页面:</strong> <a href="{{ page.model.official_url }}" target="_blank">{{ page.model.official_url }}</a></p>
+  
+  <h2>基本信息</h2>
+  <ul>
+    <li><strong>平台:</strong> {% if page.model.platform == "range-extender" %}增程式电动车{% else %}纯电动车{% endif %}</li>
+    <li><strong>上市时间:</strong> {{ page.model.launch_date }}</li>
+    {% if page.model.discontinued_date %}
+    <li><strong>停产时间:</strong> {{ page.model.discontinued_date }}</li>
+    {% endif %}
+    <li><strong>尺寸:</strong> {{ page.model.dimensions.length }} × {{ page.model.dimensions.width }} × {{ page.model.dimensions.height }}</li>
+    <li><strong>轴距:</strong> {{ page.model.dimensions.wheelbase }}</li>
+    <li><strong>电池:</strong> {{ page.model.battery }}</li>
+  </ul>
+
+  <h2>硬件配置</h2>
+  <table class="hardware-table">
+    <tr>
+      <th>项目</th>
+      <th>配置</th>
+    </tr>
+    <tr>
+      <td>智驾系统</td>
+      <td>{{ page.model.hardware.ad_sensor_suite }}</td>
+    </tr>
+    <tr>
+      <td>激光雷达</td>
+      <td>{{ page.model.hardware.lidar }}</td>
+    </tr>
+    <tr>
+      <td>摄像头</td>
+      <td>{{ page.model.hardware.camera }}</td>
+    </tr>
+    <tr>
+      <td>毫米波雷达</td>
+      <td>{{ page.model.hardware.radar }}</td>
+    </tr>
+    <tr>
+      <td>计算平台</td>
+      <td>{{ page.model.hardware.compute }}</td>
+    </tr>
+  </table>
+
+  <h2>OS版本历史</h2>
+  {% for os in page.model.os_versions %}
+  <div class="os-version">
+    <h3>{{ os.version }} ({{ os.release_date }})</h3>
+    <p><strong>智驾系统:</strong> {{ os.ad_system }}</p>
+    <p><strong>主要功能更新:</strong></p>
+    <ul class="feature-list">
+      {% for feature in os.features %}
+      <li>{{ feature }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+
+  <hr>
+  <p><small>数据最后更新: {{ site.time | date: "%Y-%m-%d" }} | 数据来源: 理想汽车官方信息</small></p>
+</body>
+</html>
