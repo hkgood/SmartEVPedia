@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>蔚来汽车 OS 版本演进 - SmartEVPedia</title>
+    <title>蔚来汽车OS版本演进 - SmartEVPedia</title>
     <style>
+        /* 统一的基础样式 */
         :root {
-            --primary-color: #007aff;
-            --secondary-color: #00b894;
-            --success-color: #34c759;
+            --primary-color: #9b59b6;
+            --secondary-color: #8e44ad;
+            --success-color: #2ecc71;
             --text-dark: #1d1d1f;
             --text-light: #8e8e93;
             --bg-light: #f2f2f7;
@@ -38,7 +39,7 @@
             line-height: 1.6;
         }
         
-        /* 统一导航栏 CSS */
+        /* 统一的导航栏样式 */
         .site-header {
             background-color: var(--white);
             border-bottom: 1px solid var(--border-color);
@@ -203,6 +204,173 @@
                 font-size: 13px;
             }
         }
+        
+        /* OS版本页面专用CSS */
+        .main-content {
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            width: 100%;
+        }
+        
+        .page-title {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            line-height: 1.3;
+        }
+        
+        .page-title.brand-purple {
+            color: var(--primary-color);
+        }
+        
+        .version-timeline {
+            margin: 40px 0;
+        }
+        
+        .major-version {
+            margin-bottom: 40px;
+        }
+        
+        .major-version h2 {
+            color: var(--secondary-color);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+            line-height: 1.3;
+        }
+        
+        .major-version p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .version-card {
+            background-color: var(--bg-card);
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .version-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .version-number {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.3;
+        }
+        
+        .version-date {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.4;
+        }
+        
+        .version-badge {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--secondary-color);
+            background: #f0f9f7;
+            padding: 2px 8px;
+            border-radius: 10px;
+            line-height: 1.4;
+        }
+        
+        .update-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 20px 0;
+        }
+        
+        .update-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 14px;
+            color: var(--text-dark);
+            position: relative;
+            padding-left: 20px;
+            line-height: 1.5;
+        }
+        
+        .update-list li:before {
+            content: "•";
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        
+        .update-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .tech-specs {
+            background-color: var(--bg-light);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+        
+        .spec-item {
+            display: flex;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+        
+        .spec-label {
+            color: var(--text-light);
+            min-width: 80px;
+        }
+        
+        .spec-value {
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+        
+        .card-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            line-height: 1.4;
+        }
+        
+        .btn-success {
+            background-color: var(--success-color);
+            color: var(--white);
+        }
+        
+        .btn-success:hover {
+            background-color: #2ca64a;
+            transform: translateY(-1px);
+        }
+        
         .site-footer {
             background-color: var(--bg-light);
             border-top: 1px solid var(--border-color);
@@ -241,14 +409,56 @@
             line-height: 1.5;
         }
         
+        /* 响应式设计 */
         @media (max-width: 768px) {
             .main-content {
                 padding: 20px 15px;
+            }
+            
+            .version-card {
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+            
+            .version-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+            
+            .update-list li {
+                padding: 8px 0;
+                line-height: 1.4;
+            }
+            
+            .card-links {
+                flex-wrap: wrap;
+            }
+            
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .major-version h2 {
+                font-size: 18px;
+            }
+            
+            .version-number {
+                font-size: 16px;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 10px;
             }
         }
     </style>
 </head>
 <body>
+    <!-- 统一的导航模块 -->
     <header class="site-header">
         <div class="header-container">
             <a href="/SmartEVPedia/" class="logo">
@@ -262,7 +472,7 @@
                 <a href="/SmartEVPedia/" class="nav-link">首页</a>
                 
                 <div class="brands-dropdown">
-                    <a href="/SmartEVPedia/brands/weilai/" class="nav-link">品牌</a>
+                    <a href="/SmartEVPedia/brands/weilai/" class="nav-link active">品牌</a>
                     <div class="brands-menu">
                         <a href="/SmartEVPedia/brands/lixiang/">理想汽车</a>
                         <a href="/SmartEVPedia/brands/xiaopeng/">小鹏汽车</a>
@@ -273,11 +483,11 @@
                 </div>
                 
                 <div class="os-dropdown">
-                    <a href="/SmartEVPedia/brands/weilai/os-versions/" class="nav-link active">OS 版本</a>
+                    <a href="#" class="nav-link active">OS版本</a>
                     <div class="os-menu">
-                        <a href="/SmartEVPedia/brands/lixiang/os-versions/">理想汽车 OS 版本</a>
-                        <a href="/SmartEVPedia/brands/xiaopeng/os-versions/">小鹏汽车 OS 版本</a>
-                        <a href="/SmartEVPedia/brands/weilai/os-versions/">蔚来汽车 OS 版本</a>
+                        <a href="/SmartEVPedia/brands/lixiang/os-versions/">理想汽车OS版本</a>
+                        <a href="/SmartEVPedia/brands/xiaopeng/os-versions/">小鹏汽车OS版本</a>
+                        <a href="/SmartEVPedia/brands/weilai/os-versions/">蔚来汽车OS版本</a>
                     </div>
                 </div>
                 
@@ -286,6 +496,7 @@
             </nav>
         </div>
     </header>
+    
     <main class="main-content">
         <h1 class="page-title brand-purple">蔚来汽车OS版本演进</h1>
         <p>基于蔚来汽车官方OTA更新记录，完整记录从Aspen 1.0到Banyan 3.3.0的所有版本更新。</p>
@@ -323,21 +534,4 @@
                             <span class="spec-value">双平台（英伟达芯片 + 自研神玑芯片）</span>
                         </div>
                         <div class="spec-item">
-                            <span class="spec-label    
-    <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-links">
-                <a href="/SmartEVPedia/">首页</a>
-                <a href="/SmartEVPedia/brands/lixiang/">理想汽车</a>
-                <a href="/SmartEVPedia/brands/xiaopeng/">小鹏汽车</a>
-                <a href="/SmartEVPedia/brands/weilai/">蔚来汽车</a>
-                <a href="https://github.com/hkgood/SmartEVPedia">GitHub 仓库</a>
-                <a href="https://github.com/hkgood/SmartEVPedia/issues">问题反馈</a>
-            </div>
-            <div class="copyright">
-                © 2026 SmartEVPedia. 数据基于官方发布信息，持续更新中。
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+                            <span class="spec-label
