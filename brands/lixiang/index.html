@@ -40,7 +40,7 @@
             line-height: 1.6;
         }
         
-        /* 统一的Header样式 */
+        /* 修复导航栏 - 只做最小修改 */
         .site-header {
             background-color: var(--white);
             border-bottom: 1px solid var(--border-color);
@@ -83,7 +83,7 @@
             font-weight: 400;
         }
         
-        /* 导航菜单 */
+        /* 导航菜单 - 修复下划线和字体 */
         .main-nav {
             display: flex;
             gap: 25px;
@@ -92,10 +92,10 @@
         
         .nav-link {
             color: var(--text-dark);
-            text-decoration: none;
-            font-size: 14px;
+            text-decoration: none; /* 移除下划线 */
+            font-size: 15px; /* 增大字体 */
             font-weight: 500;
-            padding: 6px 0;
+            padding: 8px 0;
             position: relative;
             transition: color 0.2s ease;
         }
@@ -117,6 +117,17 @@
             height: 2px;
             background-color: var(--primary-color);
             border-radius: 1px;
+        }
+        
+        /* 禁用链接 - 无下划线 */
+        .nav-link-disabled {
+            color: var(--text-light);
+            text-decoration: none; /* 移除下划线 */
+            font-size: 15px; /* 增大字体 */
+            font-weight: 500;
+            padding: 8px 0;
+            cursor: not-allowed;
+            opacity: 0.7;
         }
         
         .brands-dropdown {
@@ -150,7 +161,7 @@
             display: block;
             padding: 8px 20px;
             color: var(--text-dark);
-            text-decoration: none;
+            text-decoration: none; /* 移除下划线 */
             font-size: 14px;
             transition: background-color 0.2s ease;
         }
@@ -160,7 +171,44 @@
             color: var(--primary-color);
         }
         
-        /* 主要内容区域 */
+        /* 简单响应式 - 不破坏原有布局 */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px 0;
+            }
+            
+            .main-nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            
+            .nav-link, .nav-link-disabled {
+                font-size: 14px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo h1 {
+                font-size: 18px;
+            }
+            
+            .logo-tagline {
+                display: none;
+            }
+            
+            .main-nav {
+                gap: 10px;
+            }
+            
+            .nav-link, .nav-link-disabled {
+                font-size: 13px;
+            }
+        }
+        
+        /* 保留原有的所有其他CSS */
         .main-content {
             flex: 1;
             max-width: 1200px;
@@ -169,7 +217,6 @@
             width: 100%;
         }
         
-        /* 页面标题 */
         .page-title {
             color: var(--primary-color);
             border-bottom: 2px solid var(--border-color);
@@ -182,7 +229,6 @@
             color: var(--secondary-color);
         }
         
-        /* 卡片样式 */
         .card {
             background-color: var(--bg-card);
             border-radius: 10px;
@@ -198,230 +244,8 @@
             border: none;
             padding: 0;
             line-height: 1.3;
-        /* 导航菜单 - 响应式优化 */
-        .main-nav {
-            display: flex;
-            gap: 25px;
-            align-items: center;
         }
         
-        .nav-link {
-            color: var(--text-dark);
-            text-decoration: none; /* 移除下划线 */
-            font-size: 15px; /* 增大字体 */
-            font-weight: 500;
-            padding: 8px 0;
-            position: relative;
-            transition: color 0.2s ease;
-            white-space: nowrap; /* 防止换行 */
-        }
-        
-        .nav-link:hover {
-            color: var(--primary-color);
-        }
-        
-        .nav-link.active {
-            color: var(--primary-color);
-        }
-        
-        .nav-link.active::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background-color: var(--primary-color);
-            border-radius: 1px;
-        }
-        
-        /* 禁用链接样式 - 无下划线 */
-        .nav-link-disabled {
-            color: var(--text-light);
-            text-decoration: none; /* 移除下划线 */
-            font-size: 15px;
-            font-weight: 500;
-            padding: 8px 0;
-            cursor: not-allowed;
-            opacity: 0.7;
-            white-space: nowrap;
-        }
-        
-        .brands-dropdown {
-            position: relative;
-        }
-        
-        .brands-menu {
-            position: absolute;
-            top: 100%;
-            left: -10px;
-            background-color: var(--white);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 10px 0;
-            min-width: 180px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-10px);
-            transition: all 0.2s ease;
-            z-index: 1000;
-        }
-        
-        .brands-dropdown:hover .brands-menu {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-        
-        .brands-menu a {
-            display: block;
-            padding: 10px 20px;
-            color: var(--text-dark);
-            text-decoration: none; /* 移除下划线 */
-            font-size: 14px;
-            transition: background-color 0.2s ease;
-        }
-        
-        .brands-menu a:hover {
-            background-color: var(--bg-light);
-            color: var(--primary-color);
-        }
-        
-        .brands-menu .nav-link-disabled {
-            padding: 10px 20px;
-            color: var(--text-light);
-            cursor: not-allowed;
-        }
-        
-        /* 移动端菜单优化 */
-        .mobile-menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 24px;
-            color: var(--text-dark);
-            cursor: pointer;
-            padding: 5px;
-        }
-        
-        /* 响应式设计 - 导航栏优化 */
-        @media (max-width: 1024px) {
-            .main-nav {
-                gap: 20px;
-            }
-            
-            .nav-link, .nav-link-disabled {
-                font-size: 14px;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .header-container {
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                padding: 12px 0;
-            }
-            
-            .mobile-menu-toggle {
-                display: block;
-            }
-            
-            .main-nav {
-                position: fixed;
-                top: 60px;
-                left: 0;
-                right: 0;
-                background: var(--white);
-                border-bottom: 1px solid var(--border-color);
-                padding: 20px;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 15px;
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-                transform: translateY(-100%);
-                opacity: 0;
-                visibility: hidden;
-                transition: all 0.3s ease;
-                z-index: 999;
-            }
-            
-            .main-nav.active {
-                transform: translateY(0);
-                opacity: 1;
-                visibility: visible;
-            }
-            
-            .nav-link, .nav-link-disabled {
-                font-size: 16px;
-                padding: 12px 0;
-                width: 100%;
-                border-bottom: 1px solid var(--border-color);
-            }
-            
-            .nav-link:last-child, .nav-link-disabled:last-child {
-                border-bottom: none;
-            }
-            
-            .brands-dropdown {
-                width: 100%;
-            }
-            
-            .brands-menu {
-                position: static;
-                opacity: 1;
-                visibility: visible;
-                transform: none;
-                box-shadow: none;
-                border: none;
-                padding-left: 20px;
-                margin-top: 10px;
-                background: var(--bg-light);
-                border-radius: 6px;
-            }
-            
-            .brands-menu a {
-                padding: 10px 15px;
-                border-bottom: 1px solid var(--border-color);
-            }
-            
-            .brands-menu a:last-child {
-                border-bottom: none;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .logo h1 {
-                font-size: 18px;
-            }
-            
-            .logo-tagline {
-                display: none;
-            }
-            
-            .nav-link, .nav-link-disabled {
-                font-size: 15px;
-            }
-            
-            .main-nav {
-                top: 55px;
-                padding: 15px;
-            }
-        }
-        
-        /* 主要内容区域 */
-        .main-content {
-            flex: 1;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 30px 20px;
-            width: 100%;
-        }
-            line-height: 1.3;
-        }
-        
-        /* 品牌亮点 */
         .brand-highlights {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -461,7 +285,6 @@
             line-height: 1.3;
         }
         
-        /* 品牌详情 */
         .brand-details {
             margin-top: 30px;
             padding-top: 25px;
@@ -500,7 +323,6 @@
             font-weight: 600;
         }
         
-        /* 车型系列 */
         .models-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -573,7 +395,6 @@
             border-bottom: none;
         }
         
-        /* 技术演进 */
         .tech-timeline {
             margin: 30px 0;
         }
@@ -651,7 +472,6 @@
             line-height: 1.5;
         }
         
-        /* 相关页面 */
         .related-pages {
             display: flex;
             gap: 15px;
@@ -717,7 +537,6 @@
             box-shadow: none;
         }
         
-        /* Footer */
         .site-footer {
             background-color: var(--bg-light);
             border-top: 1px solid var(--border-color);
@@ -757,24 +576,8 @@
             line-height: 1.5;
         }
         
-        /* 响应式设计 - 移动端优化 */
+        /* 响应式设计 */
         @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                gap: 15px;
-                padding: 15px 0;
-            }
-            
-            .main-nav {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 15px;
-            }
-            
-            .nav-link {
-                font-size: 13px;
-            }
-            
             .main-content {
                 padding: 20px 15px;
             }
@@ -836,22 +639,6 @@
         }
         
         @media (max-width: 480px) {
-            .logo h1 {
-                font-size: 18px;
-            }
-            
-            .logo-tagline {
-                display: none;
-            }
-            
-            .main-nav {
-                gap: 10px;
-            }
-            
-            .nav-link {
-                font-size: 12px;
-            }
-            
             .brand-highlights {
                 grid-template-columns: 1fr;
             }
@@ -892,7 +679,6 @@
             }
         }
         
-        /* 响应式设计 - 平板优化 */
         @media (min-width: 769px) and (max-width: 1024px) {
             .brand-highlights {
                 grid-template-columns: repeat(2, 1fr);
@@ -918,11 +704,11 @@
                 </div>
             </a>
             
-            <button class="mobile-menu-toggle" aria-label="菜单">☰</button><nav class="main-nav">
+            <nav class="main-nav">
                 <a href="/SmartEVPedia/" class="nav-link">首页</a>
                 
                 <div class="brands-dropdown">
-                    <a href="#" class="nav-link active">品牌</a>
+                    <a href="/SmartEVPedia/brands/lixiang/" class="nav-link active">品牌</a>
                     <div class="brands-menu">
                         <a href="/SmartEVPedia/brands/lixiang/">理想汽车</a>
                         <a href="#" class="nav-link-disabled">小鹏汽车 (即将上线)</a>
@@ -1087,7 +873,7 @@
                         <div class="tech-dot blue"></div>
                         <div class="tech-info">
                             <div class="tech-title">AD Max 2.0 (2022)</div>
-                            <div class="tech-desc">高速NOA，激光雷达</div>
+                            <div class="tech-desc">高速NOA，激光雷达</li>
                         </div>
                     </div>
                     <div class="tech-item">
