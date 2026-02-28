@@ -127,11 +127,11 @@
             opacity: 0.7;
         }
         
-        .brands-dropdown {
+        .brands-dropdown, .os-dropdown {
             position: relative;
         }
         
-        .brands-menu {
+        .brands-menu, .os-menu {
             position: absolute;
             top: 100%;
             left: -10px;
@@ -148,13 +148,14 @@
             z-index: 1000;
         }
         
-        .brands-dropdown:hover .brands-menu {
+        .brands-dropdown:hover .brands-menu,
+        .os-dropdown:hover .os-menu {
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
         }
         
-        .brands-menu a {
+        .brands-menu a, .os-menu a {
             display: block;
             padding: 8px 20px;
             color: var(--text-dark);
@@ -163,7 +164,7 @@
             transition: background-color 0.2s ease;
         }
         
-        .brands-menu a:hover {
+        .brands-menu a:hover, .os-menu a:hover {
             background-color: var(--bg-light);
             color: var(--primary-color);
         }
@@ -540,7 +541,15 @@
                     </div>
                 </div>
                 
-                <div class="os-dropdown"><a href="#" class="nav-link active">OS版本</a><div class="os-menu"><a href="/SmartEVPedia/brands/lixiang/os-versions/">理想汽车OS版本</a><a href="/SmartEVPedia/brands/xiaopeng/os-versions/">小鹏汽车OS版本</a><a href="/SmartEVPedia/brands/weilai/os-versions/">蔚来汽车OS版本</a></div></div>
+                <div class="os-dropdown">
+                    <a href="#" class="nav-link active">OS版本</a>
+                    <div class="os-menu">
+                        <a href="/SmartEVPedia/brands/lixiang/os-versions/">理想汽车OS版本</a>
+                        <a href="/SmartEVPedia/brands/xiaopeng/os-versions/">小鹏汽车OS版本</a>
+                        <a href="/SmartEVPedia/brands/weilai/os-versions/">蔚来汽车OS版本</a>
+                    </div>
+                </div>
+                
                 <a href="#" class="nav-link-disabled">智驾系统 (即将上线)</a>
                 <a href="#" class="nav-link-disabled">芯片平台 (即将上线)</a>
             </nav>
@@ -554,89 +563,137 @@
         </div>
         
         <div class="nav-links">
-            <a href="#xmart4">Xmart OS 4.x</a>
+            <a href="#aios6">天玑 AIOS 6.x</a>
+            <a href="#xos5">XOS 天玑 5.x</a>
+            <a href="#xos4">XOS 天玑 4.x</a>
             <a href="#xmart3">Xmart OS 3.x</a>
             <a href="#xmart2">Xmart OS 2.x</a>
             <a href="#xmart1">Xmart OS 1.x</a>
         </div>
         
         <h1 class="page-title brand-green">小鹏汽车OS版本演进</h1>
-        <p>基于小鹏汽车官方OTA更新记录，完整记录从Xmart OS 1.0到Xmart OS 4.x的所有版本更新。</p>
+        <p>基于小鹏汽车官方OTA更新记录，完整记录从Xmart OS 1.0到天玑AIOS 6.0的所有版本更新。</p>
         
         <div class="version-timeline">
             
             <div class="major-version">
-                <h2 id="xmart4">Xmart OS 4.x 系列 (2023-2025)</h2>
-                <p>天玑系统，全场景语音2.0，智能驾驶全面升级。</p>
+                <h2 id="aios6">天玑 AIOS 6.x 系列 (2026年)</h2>
+                <p>行业首个主动服务座舱，全新「驭光」设计语言，第二代VLA智驾系统。</p>
                 
                 <div class="version-card">
                     <div class="version-header">
-                        <div class="version-number">Xmart OS 4.6 <span class="version-badge">最新</span></div>
-                        <div class="version-date">2025年1月发布</div>
+                        <div class="version-number">天玑 AIOS 6.0 <span class="version-badge">最新</span></div>
+                        <div class="version-date">2026年1月20日首批推送</div>
                     </div>
                     
                     <ul class="update-list">
-                        <li>全场景语音2.0全面升级</li>
-                        <li>新增智能场景推荐功能</li>
-                        <li>优化XNGP城市导航辅助驾驶</li>
+                        <li>行业首个落地主动服务座舱，车辆能主动预判用户需求并提供服务</li>
+                        <li>全新「驭光」设计语言，非线性动画交互</li>
+                        <li>行业首个端侧座舱视觉语言模型（VLM）</li>
+                        <li>750TOPS智能座舱有效算力（图灵AI芯片）</li>
+                        <li>3D立体车道级SR导航，全国都能用</li>
+                        <li>跨场景多轮对话能力，全场景自由对话</li>
+                        <li>全新游戏中心，增强娱乐体验</li>
+                        <li>首批覆盖小鹏X9超级增程、G7超级增程、2026款G6等车型</li>
+                    </ul>
+                    
+                    <div class="tech-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">芯片平台</span>
+                            <span class="spec-value">高通骁龙8295P + 图灵AI芯片</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">座舱算力</span>
+                            <span class="spec-value">750 TOPS</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">首发车型</span>
+                            <span class="spec-value">X9超级增程、G7超级增程、2026款G6</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-links">
+                        <a href="https://www.ithome.com/0/914/652.htm" class="btn btn-success" target="_blank">IT之家报道</a>
+                        <a href="https://finance.sina.com.cn/tech/digi/2026-01-20/doc-inhhxkrc9104767.shtml" class="btn btn-success" target="_blank">新浪科技报道</a>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="major-version">
+                <h2 id="xos5">XOS 天玑 5.x 系列 (2024-2025)</h2>
+                <p>AI天玑系统，端到端大模型，无限XNGP全国都好用。</p>
+                
+                <div class="version-card">
+                    <div class="version-header">
+                        <div class="version-number">XOS 天玑 5.6.0</div>
+                        <div class="version-date">2025年4月21日发布</div>
+                    </div>
+                    
+                    <ul class="update-list">
+                        <li>智能出行体验全方位革新</li>
+                        <li>覆盖P7i、X9、G9、G6、P7+等多款车型</li>
+                        <li>优化XNGP端到端模型</li>
+                        <li>增强智能场景推荐功能</li>
                         <li>提升系统稳定性和响应速度</li>
-                        <li>新增多款第三方应用支持</li>
                     </ul>
                     
                     <div class="card-links">
-                        <a href="https://www.xiaopeng.com/news/detail/12345" class="btn btn-success" target="_blank">官方更新说明</a>
+                        <a href="https://www.xchuxing.com/article/150676" class="btn btn-success" target="_blank">新出行详细解析</a>
                     </div>
                 </div>
                 
                 <div class="version-card">
                     <div class="version-header">
-                        <div class="version-number">Xmart OS 4.5</div>
-                        <div class="version-date">2024年10月发布</div>
+                        <div class="version-number">XOS 天玑 5.5.0</div>
+                        <div class="version-date">2025年1月23日推送</div>
                     </div>
                     
                     <ul class="update-list">
-                        <li>天玑系统界面全面优化</li>
-                        <li>新增智能节能模式</li>
-                        <li>优化充电桩查找和预约功能</li>
-                        <li>提升语音识别准确率</li>
-                        <li>新增车载游戏和应用                    </ul>
+                        <li>新增车位到车位（先锋版）智驾功能</li>
+                        <li>XNGP端到端模型升级</li>
+                        <li>新增教练车、清扫车、防撞车识别能力</li>
+                        <li>覆盖P7i、G6、G9、X9、P7+等车型</li>
+                        <li>开启"万人尝鲜"升级，计划招募15000人</li>
+                    </ul>
                     
                     <div class="card-links">
-                        <a href="https://www.xiaopeng.com/news/detail/12344" class="btn btn-success" target="_blank">官方更新说明</a>
+                        <a href="https://finance.sina.com.cn/tech/roll/2025-01-23/doc-inefxtpe4828380.shtml" class="btn btn-success" target="_blank">新浪科技报道</a>
+                        <a href="https://www.ithome.com/0/820/663.htm" class="btn btn-success" target="_blank">IT之家报道</a>
                     </div>
                 </div>
                 
                 <div class="version-card">
                     <div class="version-header">
-                        <div class="version-number">Xmart OS 4.4</div>
+                        <div class="version-number">XOS 天玑 5.2.0</div>
                         <div class="version-date">2024年7月发布</div>
                     </div>
                     
                     <ul class="update-list">
-                        <li>新增智能场景卡片功能</li>
-                        <li>优化XNGP无图城市导航辅助驾驶</li>
-                        <li>提升系统性能和稳定性</li>
-                        <li>新增多款音视频应用</li>
-                        <li>优化充电体验和电池管理</li>
+                        <li>484项功能升级</li>
+                        <li>无限XNGP全量推送</li>
+                        <li>实现第一阶段"全国都好用"</li>
+                        <li>端到端大模型使用，OTA迭代速度创行业纪录</li>
+                        <li>每2天一次版本迭代，每2周一次体验升级</li>
                     </ul>
                     
                     <div class="card-links">
-                        <a href="https://www.xiaopeng.com/news/detail/12343" class="btn btn-success" target="_blank">官方更新说明</a>
+                        <a href="https://chejiahao.autohome.com.cn/info/16178021" class="btn btn-success" target="_blank">汽车之家报道</a>
                     </div>
                 </div>
                 
                 <div class="version-card">
                     <div class="version-header">
-                        <div class="version-number">Xmart OS 4.3</div>
+                        <div class="version-number">XOS 天玑 5.0</div>
                         <div class="version-date">2024年4月发布</div>
                     </div>
                     
                     <ul class="update-list">
                         <li>天玑系统正式发布</li>
                         <li>全新UI设计和交互逻辑</li>
-                        <li>全场景语音2.0上线</li>
+                        <li>端到端智能驾驶架构</li>
                         <li>智能场景推荐功能</li>
-                        <li>优化XNGP智能驾驶体验</li>
+                        <li>覆盖G9、X9等旗舰车型</li>
                     </ul>
                     
                     <div class="tech-specs">
@@ -649,20 +706,71 @@
                             <span class="spec-value">小鹏G9、X9</span>
                         </div>
                         <div class="spec-item">
-                            <span class="spec-label">语音系统</span>
-                            <span class="spec-value">全场景语音2.0</span>
+                            <span class="spec-label">智能驾驶</span>
+                            <span class="spec-value">XNGP全场景辅助驾驶</span>
                         </div>
                     </div>
                     
                     <div class="card-links">
-                        <a href="https://www.xiaopeng.com/news/detail/12342" class="btn btn-success" target="_blank">官方更新说明</a>
+                        <a href="https://events.xiaopeng.com/o01t56.html" class="btn btn-success" target="_blank">小鹏官方活动</a>
                     </div>
+                </div>
+                
+            </div>
+            
+            <div class="major-version">
+                <h2 id="xos4">XOS 天玑 4.x 系列 (2023-2024)</h2>
+                <p>智能座舱全面升级，全场景语音2.0，XNGP无图城市导航。</p>
+                
+                <div class="version-card">
+                    <div class="version-header">
+                        <div class="version-number">XOS 天玑 4.6</div>
+                        <div class="version-date">2024年1月发布</div>
+                    </div>
+                    
+                    <ul class="update-list">
+                        <li>全场景语音2.0全面升级</li>
+                        <li>新增智能场景推荐功能</li>
+                        <li>优化XNGP城市导航辅助驾驶</li>
+                        <li>提升系统稳定性和响应速度</li>
+                        <li>新增多款第三方应用支持</li>
+                    </ul>
                 </div>
                 
                 <div class="version-card">
                     <div class="version-header">
-                        <div class="version-number">Xmart OS 4.0</div>
-                        <div class="version-date">2023年12月发布</div>
+                        <div class="version-number">XOS 天玑 4.4</div>
+                        <div class="version-date">2023年10月发布</div>
+                    </div>
+                    
+                    <ul class="update-list">
+                        <li>新增智能场景卡片功能</li>
+                        <li>优化XNGP无图城市导航辅助驾驶</li>
+                        <li>提升系统性能和稳定性</li>
+                        <li>新增多款音视频应用</li>
+                        <li>优化充电体验和电池管理</li>
+                    </ul>
+                </div>
+                
+                <div class="version-card">
+                    <div class="version-header">
+                        <div class="version-number">XOS 天玑 4.3</div>
+                        <div class="version-date">2023年7月发布</div>
+                    </div>
+                    
+                    <ul class="update-list">
+                        <li>天玑系统界面全面优化</li>
+                        <li>新增智能节能模式</li>
+                        <li>优化充电桩查找和预约功能</li>
+                        <li>提升语音识别准确率</li>
+                        <li>新增车载游戏和应用</li>
+                    </ul>
+                </div>
+                
+                <div class="version-card">
+                    <div class="version-header">
+                        <div class="version-number">XOS 天玑 4.0</div>
+                        <div class="version-date">2023年4月发布</div>
                     </div>
                     
                     <ul class="update-list">
@@ -672,10 +780,6 @@
                         <li>优化智能驾驶体验</li>
                         <li>提升系统响应速度</li>
                     </ul>
-                    
-                    <div class="card-links">
-                        <a href="https://www.xiaopeng.com/news/detail/12341" class="btn btn-success" target="_blank">官方更新说明</a>
-                    </div>
                 </div>
                 
             </div>
@@ -687,7 +791,7 @@
                 <div class="version-card">
                     <div class="version-header">
                         <div class="version-number">Xmart OS 3.5</div>
-                        <div class="version-date">2023年6月发布</div>
+                        <div class="version-date">2023年1月发布</div>
                     </div>
                     
                     <ul class="update-list">
@@ -697,16 +801,12 @@
                         <li>提升系统稳定性和性能</li>
                         <li>新增多款车载应用</li>
                     </ul>
-                    
-                    <div class="card-links">
-                        <a href="https://www.xiaopeng.com/news/detail/12340" class="btn btn-success" target="_blank">官方更新说明</a>
-                    </div>
                 </div>
                 
                 <div class="version-card">
                     <div class="version-header">
                         <div class="version-number">Xmart OS 3.4</div>
-                        <div class="version-date">2022年12月发布</div>
+                        <div class="version-date">2022年10月发布</div>
                     </div>
                     
                     <ul class="update-list">
@@ -716,16 +816,12 @@
                         <li>新增OTA远程诊断功能</li>
                         <li>优化电池管理系统</li>
                     </ul>
-                    
-                    <div class="card-links">
-                        <a href="https://www.xiaopeng.com/news/detail/12339" class="btn btn-success" target="_blank">官方更新说明</a>
-                    </div>
                 </div>
                 
                 <div class="version-card">
                     <div class="version-header">
                         <div class="version-number">Xmart OS 3.2</div>
-                        <div class="version-date">2022年6月发布</div>
+                        <div class="version-date">2022年4月发布</div>
                     </div>
                     
                     <ul class="update-list">
@@ -750,10 +846,6 @@
                             <span class="spec-value">全场景语音1.0</span>
                         </div>
                     </div>
-                    
-                    <div class="card-links">
-                        <a href="https://www.xiaopeng.com/news/detail/12338" class="btn btn-success" target="_blank">官方更新说明</a>
-                    </div>
                 </div>
                 
                 <div class="version-card">
@@ -769,10 +861,6 @@
                         <li>提升系统稳定性</li>
                         <li>优化充电体验</li>
                     </ul>
-                    
-                    <div class="card-links">
-                        <a href="https://www.xiaopeng.com/news/detail/12337" class="btn btn-success" target="_blank">官方更新说明</a>
-                    </div>
                 </div>
                 
                 <div class="version-card">
@@ -788,10 +876,6 @@
                         <li>多屏互动功能</li>
                         <li>智能场景模式</li>
                     </ul>
-                    
-                    <div class="card-links">
-                        <a href="https://www.xiaopeng.com/news/detail/12336" class="btn btn-success" target="_blank">官方更新说明</a>
-                    </div>
                 </div>
                 
             </div>
