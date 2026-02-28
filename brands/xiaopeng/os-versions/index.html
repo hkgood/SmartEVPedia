@@ -39,7 +39,7 @@
             line-height: 1.6;
         }
         
-        /* 修复的导航栏 */
+        /* 统一的导航栏样式 */
         .site-header {
             background-color: var(--white);
             border-bottom: 1px solid var(--border-color);
@@ -224,56 +224,6 @@
         
         .page-title.brand-green {
             color: var(--secondary-color);
-        }
-        
-        .back-link {
-            margin-bottom: 20px;
-        }
-        
-        .back-link a {
-            color: var(--primary-color);
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        
-        .back-link a:hover {
-            opacity: 0.8;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--border-color);
-            flex-wrap: wrap;
-        }
-        
-        .nav-links a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-size: 14px;
-        }
-        
-        .nav-links a:hover {
-            opacity: 0.8;
-        }
-        
-        .card {
-            background-color: var(--bg-card);
-            border-radius: 10px;
-            padding: 25px;
-            margin-bottom: 30px;
-            border: 1px solid var(--border-color);
-        }
-        
-        .card h2 {
-            color: var(--text-dark);
-            margin-bottom: 20px;
-            font-size: 20px;
-            border: none;
-            padding: 0;
-            line-height: 1.3;
         }
         
         .version-timeline {
@@ -465,11 +415,6 @@
                 padding: 20px 15px;
             }
             
-            .card {
-                padding: 20px;
-                margin-bottom: 25px;
-            }
-            
             .version-card {
                 padding: 20px;
                 margin-bottom: 20px;
@@ -497,11 +442,6 @@
         }
         
         @media (max-width: 480px) {
-            .nav-links {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
             .major-version h2 {
                 font-size: 18px;
             }
@@ -518,6 +458,7 @@
     </style>
 </head>
 <body>
+    <!-- 统一的导航模块 -->
     <header class="site-header">
         <div class="header-container">
             <a href="/SmartEVPedia/" class="logo">
@@ -557,20 +498,6 @@
     </header>
     
     <main class="main-content">
-        <div class="back-link">
-            <a href="/SmartEVPedia/brands/xiaopeng/">← 返回小鹏汽车</a>
-            <a href="/SmartEVPedia/">← 返回首页</a>
-        </div>
-        
-        <div class="nav-links">
-            <a href="#aios6">天玑 AIOS 6.x</a>
-            <a href="#xos5">XOS 天玑 5.x</a>
-            <a href="#xos4">XOS 天玑 4.x</a>
-            <a href="#xmart3">Xmart OS 3.x</a>
-            <a href="#xmart2">Xmart OS 2.x</a>
-            <a href="#xmart1">Xmart OS 1.x</a>
-        </div>
-        
         <h1 class="page-title brand-green">小鹏汽车OS版本演进</h1>
         <p>基于小鹏汽车官方OTA更新记录，完整记录从Xmart OS 1.0到天玑AIOS 6.0的所有版本更新。</p>
         
