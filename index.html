@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartEVPedia - 中国智能电动车软件与智驾演进百科</title>
     <style>
-        /* 统一的基础样式 */
         :root {
             --primary-color: #007aff;
-            --secondary-color: #ff9500;
+            --secondary-color: #00b894;
             --success-color: #34c759;
             --text-dark: #1d1d1f;
             --text-light: #8e8e93;
@@ -39,7 +38,7 @@
             line-height: 1.6;
         }
         
-        /* 修复的导航栏 */
+        /* 统一的导航栏样式 */
         .site-header {
             background-color: var(--white);
             border-bottom: 1px solid var(--border-color);
@@ -103,7 +102,7 @@
         }
         
         .nav-link.active {
-            color: var(--primary-color);
+            color: var(--secondary-color);
         }
         
         .nav-link.active::after {
@@ -113,7 +112,7 @@
             left: 0;
             right: 0;
             height: 2px;
-            background-color: var(--primary-color);
+            background-color: var(--secondary-color);
             border-radius: 1px;
         }
         
@@ -205,152 +204,49 @@
             }
         }
         
-        /* 首页专用CSS */
+        /* 首页内容样式 */
         .main-content {
             flex: 1;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 30px 20px;
+            padding: 40px 20px;
             width: 100%;
         }
         
-        .page-title {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 15px;
-            margin-bottom: 30px;
-            line-height: 1.3;
+        .hero-section {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 40px 0;
         }
         
-        .intro-card {
-            background-color: var(--bg-card);
-            border-radius: 10px;
-            padding: 30px;
-            margin-bottom: 40px;
-            border: 1px solid var(--border-color);
-        }
-        
-        .intro-card h2 {
-            color: var(--text-dark);
-            margin-bottom: 20px;
-            font-size: 24px;
-            border: none;
-            padding: 0;
-            line-height: 1.3;
-        }
-        
-        .intro-card p {
-            font-size: 16px;
-            line-height: 1.6;
-            color: var(--text-dark);
-            margin-bottom: 20px;
-        }
-        
-        .brands-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-        }
-        
-        .brand-card {
-            background-color: var(--white);
-            border-radius: 12px;
-            padding: 25px;
-            border: 1px solid var(--border-color);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        
-        .brand-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-        }
-        
-        .brand-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid var(--border-color);
-        }
-        
-        .brand-name {
-            font-size: 20px;
+        .hero-title {
+            font-size: 36px;
             font-weight: 700;
             color: var(--text-dark);
-            line-height: 1.3;
+            margin-bottom: 20px;
+            line-height: 1.2;
         }
         
-        .brand-tag {
-            font-size: 12px;
-            font-weight: 600;
-            color: var(--white);
-            padding: 3px 8px;
-            border-radius: 12px;
-            margin-left: 10px;
-        }
-        
-        .brand-tag.orange {
-            background-color: var(--secondary-color);
-        }
-        
-        .brand-tag.green {
-            background-color: #00b894;
-        }
-        
-        .brand-tag.purple {
-            background-color: #9b59b6;
-        }
-        
-        .brand-desc {
-            font-size: 14px;
+        .hero-subtitle {
+            font-size: 18px;
             color: var(--text-light);
-            line-height: 1.5;
-            margin-bottom: 20px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
         }
         
-        .brand-features {
-            list-style: none;
-            padding-left: 0;
-            margin-bottom: 20px;
-        }
-        
-        .brand-features li {
-            padding: 8px 0;
-            border-bottom: 1px solid var(--border-color);
-            font-size: 13px;
-            color: var(--text-dark);
-            line-height: 1.4;
-            position: relative;
-            padding-left: 20px;
-        }
-        
-        .brand-features li:before {
-            content: "•";
-            color: var(--primary-color);
-            position: absolute;
-            left: 0;
-            font-size: 16px;
-            line-height: 1.4;
-        }
-        
-        .brand-features li:last-child {
-            border-bottom: none;
-        }
-        
-        .brand-links {
+        .hero-cta {
             display: flex;
-            gap: 10px;
-            margin-top: 20px;
-            padding-top: 15px;
-            border-top: 1px solid var(--border-color);
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
         
         .btn {
             display: inline-block;
-            padding: 8px 16px;
-            border-radius: 6px;
-            font-size: 13px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
             font-weight: 500;
             text-decoration: none;
             transition: all 0.2s ease;
@@ -363,19 +259,125 @@
         }
         
         .btn-primary:hover {
-            background-color: #0056cc;
+            background-color: #0066cc;
             transform: translateY(-1px);
         }
         
         .btn-secondary {
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            border: 1px solid var(--border-color);
+            background-color: var(--white);
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
         }
         
         .btn-secondary:hover {
-            background-color: var(--border-color);
-            transform: translateY(-1px);
+            background-color: var(--bg-light);
+        }
+        
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 30px;
+            text-align: center;
+            line-height: 1.3;
+        }
+        
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .brand-card {
+            background-color: var(--bg-card);
+            border-radius: 12px;
+            padding: 30px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .brand-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+        
+        .brand-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        
+        .brand-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.3;
+        }
+        
+        .brand-tag {
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+            line-height: 1.4;
+        }
+        
+        .brand-tag.blue {
+            background-color: #e6f2ff;
+            color: #007aff;
+        }
+        
+        .brand-tag.green {
+            background-color: #e6f7f2;
+            color: #00b894;
+        }
+        
+        .brand-tag.purple {
+            background-color: #f2e6ff;
+            color: #9b59b6;
+        }
+        
+        .brand-desc {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        
+        .brand-features {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 25px;
+        }
+        
+        .brand-features li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 14px;
+            color: var(--text-dark);
+            position: relative;
+            padding-left: 20px;
+            line-height: 1.5;
+        }
+        
+        .brand-features li:before {
+            content: "•";
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        
+        .brand-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .brand-links {
+            display: flex;
+            gap: 10px;
         }
         
         .site-footer {
@@ -416,48 +418,45 @@
             line-height: 1.5;
         }
         
-        /* 响应式设计 */
         @media (max-width: 768px) {
-            .main-content {
-                padding: 20px 15px;
+            .hero-title {
+                font-size: 28px;
             }
             
-            .intro-card {
-                padding: 20px;
-                margin-bottom: 30px;
+            .hero-subtitle {
+                font-size: 16px;
+            }
+            
+            .section-title {
+                font-size: 24px;
             }
             
             .brands-grid {
                 grid-template-columns: 1fr;
-                gap: 20px;
             }
             
             .brand-card {
-                padding: 20px;
+                padding: 25px;
             }
             
             .brand-links {
                 flex-direction: column;
-                gap: 8px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 24px;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
             }
             
             .btn {
                 width: 100%;
                 text-align: center;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .page-title {
-                font-size: 22px;
-            }
-            
-            .intro-card h2 {
-                font-size: 20px;
-            }
-            
-            .brand-name {
-                font-size: 18px;
             }
             
             .footer-links {
@@ -468,6 +467,7 @@
     </style>
 </head>
 <body>
+    <!-- 统一的导航模块 -->
     <header class="site-header">
         <div class="header-container">
             <a href="/SmartEVPedia/" class="logo">
@@ -483,7 +483,8 @@
                 <div class="brands-dropdown">
                     <a href="#" class="nav-link">品牌</a>
                     <div class="brands-menu">
-                        <a href="/SmartEVPedia/brands/lixiang/">理想汽车</a                        <a href="/SmartEVPedia/brands/xiaopeng/">小鹏汽车</a>
+                        <a href="/SmartEVPedia/brands/lixiang/">理想汽车</a>
+                        <a href="/SmartEVPedia/brands/xiaopeng/">小鹏汽车</a>
                         <a href="/SmartEVPedia/brands/weilai/">蔚来汽车</a>
                         <a href="#" class="nav-link-disabled">华为智选 (即将上线)</a>
                         <a href="#" class="nav-link-disabled">小米汽车 (即将上线)</a>
@@ -506,87 +507,84 @@
     </header>
     
     <main class="main-content">
-        <h1 class="page-title">SmartEVPedia</h1>
-        <p class="intro-text">中国智能电动车软件与智驾演进百科，记录中国智能电动车品牌的软件系统、智能驾驶、芯片平台的技术演进历程。</p>
+        <section class="hero-section">
+            <h1 class="hero-title">SmartEVPedia</h1>
+            <p class="hero-subtitle">记录中国智能电动车软件与智能驾驶系统的演进历程，从操作系统版本迭代到智驾技术突破，为您提供最全面、最权威的智能电动车软件演进百科。</p>
+            <div class="hero-cta">
+                <a href="#brands" class="btn btn-primary">探索品牌</a>
+                <a href="/SmartEVPedia/brands/lixiang/os-versions/" class="btn btn-secondary">查看OS版本</a>
+            </div>
+        </section>
         
-        <div class="intro-card">
-            <h2>项目简介</h2>
-            <p>SmartEVPedia 是一个专注于中国智能电动车软件与智能驾驶技术演进的百科项目。我们系统性地记录各大品牌的OS版本更新、智能驾驶系统迭代、芯片平台升级等技术演进历程。</p>
-            <p>通过结构化的数据整理和清晰的版本时间线，帮助开发者、研究者和爱好者更好地理解中国智能电动车技术的发展脉络。</p>
-        </div>
-        
-        <div class="brands-grid">
-            
-            <div class="brand-card">
-                <div class="brand-header">
-                    <div class="brand-name">理想汽车</div>
-                    <div class="brand-tag orange">Li Auto</div>
+        <section id="brands">
+            <h2 class="section-title">主要品牌</h2>
+            <div class="brands-grid">
+                <div class="brand-card">
+                    <div class="brand-header">
+                        <div class="brand-name">理想汽车</div>
+                        <div class="brand-tag blue">Li Auto</div>
+                    </div>
+                    <p class="brand-desc">中国领先的智能电动汽车品牌，以增程式技术和家庭用户定位著称。从Li OS 1.0到8.x的完整演进历程。</p>
+                    <ul class="brand-features">
+                        <li>增程式技术路线</li>
+                        <li>家庭用户定位</li>
+                        <li>智能座舱系统</li>
+                        <li>端到端智能驾驶</li>
+                    </ul>
+                    <div class="brand-links">
+                        <a href="/SmartEVPedia/brands/lixiang/" class="btn btn-primary">品牌详情</a>
+                        <a href="/SmartEVPedia/brands/lixiang/os-versions/" class="btn btn-secondary">OS版本</a>
+                    </div>
                 </div>
-                <p class="brand-desc">家庭智能电动车品牌，以增程式电动车和家庭用户定位著称。从OS 1.0到OS 8.x的完整演进历程。</p>
-                <ul class="brand-features">
-                    <li>增程+纯电双技术路线</li>
-                    <li>VLA司机大模型</li>
-                    <li>智能空间3.0</li>
-                    <li>端到端智能驾驶</li>
-                </ul>
-                <div class="brand-links">
-                    <a href="/SmartEVPedia/brands/lixiang/" class="btn btn-primary">品牌详情</a>
-                    <a href="/SmartEVPedia/brands/lixiang/os-versions/" class="btn btn-secondary">OS版本</a>
+                
+                <div class="brand-card">
+                    <div class="brand-header">
+                        <div class="brand-name">小鹏汽车</div>
+                        <div class="brand-tag green">Xpeng</div>
+                    </div>
+                    <p class="brand-desc">中国智能电动汽车品牌，以全栈自研的智能驾驶技术著称。从Xmart OS 1.0到天玑AIOS 6.0的完整演进历程。</p>
+                    <ul class="brand-features">
+                        <li>全栈自研智能驾驶</li>
+                        <li>800V高压平台</li>
+                        <li>XNGP全场景辅助驾驶</li>
+                        <li>天玑智能座舱系统</li>
+                    </ul>
+                    <div class="brand-links">
+                        <a href="/SmartEVPedia/brands/xiaopeng/" class="btn btn-primary">品牌详情</a>
+                        <a href="/SmartEVPedia/brands/xiaopeng/os-versions/" class="btn btn-secondary">OS版本</a>
+                    </div>
+                </div>
+                
+                <div class="brand-card">
+                    <div class="brand-header">
+                        <div class="brand-name">蔚来汽车</div>
+                        <div class="brand-tag purple">Nio</div>
+                    </div>
+                    <p class="brand-desc">中国高端智能电动汽车品牌，以换电技术和用户服务著称。从Aspen 1.0到Banyan 3.3.0的完整演进历程。</p>
+                    <ul class="brand-features">
+                        <li>换电技术</li>
+                        <li>高端用户定位</li>
+                        <li>NAD自动驾驶系统</li>
+                        <li>NOMI智能助手</li>
+                    </ul>
+                    <div class="brand-links">
+                        <a href="/SmartEVPedia/brands/weilai/" class="btn btn-primary">品牌详情</a>
+                        <a href="/SmartEVPedia/brands/weilai/os-versions/" class="btn btn-secondary">OS版本</a>
+                    </div>
                 </div>
             </div>
-            
-            <div class="brand-card">
-                <div class="brand-header">
-                    <div class="brand-name">小鹏汽车</div>
-                    <div class="brand-tag green">Xpeng</div>
-                </div>
-                <p class="brand-desc">中国智能电动汽车品牌，以全栈自研的智能驾驶技术著称。从Xmart OS 1.0到4.x的完整演进历程。</p>
-                <ul class="brand-features">
-                    <li>全栈自研智能驾驶</li>
-                    <li>800V高压平台</li>
-                    <li>XNGP全场景辅助驾驶</li>
-                    <li>天玑智能座舱系统</li>
-                </ul>
-                <div class="brand-links">
-                    <a href="/SmartEVPedia/brands/xiaopeng/" class="btn btn-primary">品牌详情</a>
-                    <a href="/SmartEVPedia/brands/xiaopeng/os-versions/" class="btn btn-secondary">OS版本</a>
-                </div>
-            </div>
-            
-            <div class="brand-card">
-                <div class="brand-header">
-                    <div class="brand-name">蔚来汽车</div>
-                    <div class="brand-tag purple">Nio</div>
-                </div>
-                <p class="brand-desc">中国高端智能电动汽车品牌，以用户服务和换电技术著称。从Aspen 1.0到Banyan 2.x的完整演进历程。</p>
-                <ul class="brand-features">
-                    <li>可充可换可升级电池服务</li>
-                    <li>NAD自动驾驶系统</li>
-                    <li>NOMI智能助手</li>
-                    <li>SkyOS天枢系统</li>
-                </ul>
-                <div class="brand-links">
-                    <a href="/SmartEVPedia/brands/weilai/" class="btn btn-primary">品牌详情</a>
-                    <a href="/SmartEVPedia/brands/weilai/os-versions/" class="btn btn-secondary">OS版本</a>
-                </div>
-            </div>
-            
-        </div>
-        
-        <div class="intro-card">
-            <h2>数据来源与更新</h2>
-            <p>所有数据均基于各品牌官方发布的OTA更新记录、技术白皮书、发布会信息等公开资料整理。我们致力于提供准确、及时、结构化的技术演进信息。</p>
-            <p>项目持续更新中，欢迎通过GitHub提交问题或贡献内容。</p>
-        </div>
+        </section>
     </main>
     
     <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-links">
                 <a href="/SmartEVPedia/">首页</a>
+                <a href="/SmartEVPedia/brands/lixiang/">理想汽车</a>
+                <a href="/SmartEVPedia/brands/xiaopeng/">小鹏汽车</a>
+                <a href="/SmartEVPedia/brands/weilai/">蔚来汽车</a>
                 <a href="https://github.com/hkgood/SmartEVPedia">GitHub 仓库</a>
                 <a href="https://github.com/hkgood/SmartEVPedia/issues">问题反馈</a>
-                <a href="https://github.com/hkgood/SmartEVPedia/blob/main/README.md">项目文档</a>
             </div>
             <div class="copyright">
                 © 2026 SmartEVPedia. 数据基于官方发布信息，持续更新中。
