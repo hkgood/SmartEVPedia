@@ -456,6 +456,66 @@
         }
         
         /* 卡片内容优化 */
+        /* 品牌亮点 */
+        .brand-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+        }
+
+        .highlight-item {
+            text-align: center;
+            padding: 15px;
+        }
+
+        .highlight-label {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 5px;
+        }
+
+        .highlight-value {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+
+        .brand-details {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .brand-details h3 {
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .detail-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .detail-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .detail-list li:last-child {
+            border-bottom: none;
+        }
+
+        .detail-list li strong {
+            color: var(--secondary-color);
+        }
         .card-content-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -498,105 +558,43 @@
         
         .tech-dot {
             width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            flex-shrink: 0;
-        }
-        
-        .tech-dot.orange {
-            background: #ff9500;
-        }
-        
-        .tech-dot.blue {
-            background: #007aff;
-        }
-        
-        .tech-info {
-            flex: 1;
-        }
-        
-        .tech-title {
-            font-size: 14px;
-            font-weight: 500;
-            color: var(--text-dark);
-            margin-bottom: 2px;
-        }
-        
-        .tech-desc {
-            font-size: 12px;
-            color: #8e8e93;
-        }
-        
-        /* 优化版本卡片间距 */
-        .version-card {
-            margin-bottom: 20px;
-        }
-        
-        .version-header {
-            margin-bottom: 15px;
-        }
-        
-        .update-list li {
-            padding: 8px 0;
-            line-height: 1.5;
-        }
-        
-        /* 响应式优化 */
-        @media (max-width: 768px) {
-            .card-content-grid {
-                grid-template-columns: 1fr;
-            }
+
+        <div class="card">
+            <h2>品牌简介</h2>
+            <p>理想汽车成立于2015年，是中国新能源汽车制造商，专注于为家庭用户提供智能电动车。以"创造移动的家，创造幸福的家"为品牌使命。</p>
             
-            .version-card {
-                padding: 15px;
-            }
-            
-            .tech-item {
-                margin-bottom: 12px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .brand-card {
-                padding: 12px;
-            }
-            
-            .tech-item {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 5px;
-            }
-            
-            .tech-dot {
-                margin-bottom: 5px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header class="site-header">
-        <div class="header-container">
-            <a href="/SmartEVPedia/" class="logo">
-                <div>
-                    <h1>SmartEVPedia</h1>
-                    <div class="logo-tagline">中国智能电动车软件与智驾演进百科</div>
-                </div>
-            </a>
-            
-            <nav class="main-nav">
-                <a href="/SmartEVPedia/" class="nav-link">首页</a>
-                
-                <div class="brands-dropdown">
-                    <a href="#" class="nav-link active">品牌</a>
-                    <div class="brands-menu">
-                        <a href="/SmartEVPedia/brands/lixiang/">理想汽车</a>
-                        <a href="#" style="color: var(--text-light); cursor: not-allowed;">小鹏汽车 (即将上线)</a>
-                        <a href="#" style="color: var(--text-light); cursor: not-allowed;">蔚来汽车 (即将上线)</a>
-                        <a href="#" style="color: var(--text-light); cursor: not-allowed;">华为智选 (即将上线)</a>
-                        <a href="#" style="color: var(--text-light); cursor: not-allowed;">小米汽车 (即将上线)</a>
-                    </div>
+            <div class="brand-highlights">
+                <div class="highlight-item">
+                    <div class="highlight-label">成立时间</div>
+                    <div class="highlight-value">2015年</div>
                 </div>
                 
+                <div class="highlight-item">
+                    <div class="highlight-label">首款车型</div>
+                    <div class="highlight-value">理想ONE (2019)</div>
+                </div>
+                
+                <div class="highlight-item">
+                    <div class="highlight-label">技术路线</div>
+                    <div class="highlight-value">增程+纯电双路线</div>
+                </div>
+                
+                <div class="highlight-item">
+                    <div class="highlight-label">市场定位</div>
+                    <div class="highlight-value">家庭智能电动车</div>
+                </div>
+            </div>
+            
+            <div class="brand-details">
+                <h3>核心特点</h3>
+                <ul class="detail-list">
+                    <li><strong>家庭用户定位</strong>: 专注于为家庭用户提供智能出行解决方案</li>
+                    <li><strong>增程技术领先</strong>: 早期以增程式电动车解决里程焦虑</li>
+                    <li><strong>智能座舱</strong>: 多屏交互和智能语音助手"理想同学"</li>
+                    <li><strong>持续OTA升级</strong>: 通过软件更新不断提升用户体验</li>
+                </ul>
+            </div>
+        </div>
                 <a href="#" class="nav-link" style="color: var(--text-light); cursor: not-allowed;">OS版本 (即将上线)</a>
                 <a href="#" class="nav-link" style="color: var(--text-light); cursor: not-allowed;">智驾系统 (即将上线)</a>
                 <a href="#" class="nav-link" style="color: var(--text-light); cursor: not-allowed;">芯片平台 (即将上线)</a>
