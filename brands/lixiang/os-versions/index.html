@@ -154,6 +154,47 @@
             transform: translateY(0);
         }
         
+        .os-dropdown {
+            position: relative;
+        }
+        
+        .os-menu {
+            position: absolute;
+            top: 100%;
+            left: -10px;
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 10px 0;
+            min-width: 180px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.2s ease;
+            z-index: 1000;
+        }
+        
+        .os-dropdown:hover .os-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .os-menu a {
+            display: block;
+            padding: 8px 20px;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 14px;
+            transition: background-color 0.2s ease;
+        }
+        
+        .os-menu a:hover {
+            background-color: var(--bg-light);
+            color: var(--primary-color);
+        }
+        
         .brands-menu a {
             display: block;
             padding: 8px 20px;
