@@ -147,6 +147,33 @@
             transition: all 0.2s ease;
             z-index: 1000;
         }
+
+                .os-dropdown {
+            position: relative;
+        }
+        
+        .os-menu {
+            position: absolute;
+            top: 100%;
+            left: -10px;
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 10px 0;
+            min-width: 180px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.2s ease;
+            z-index: 1000;
+        }
+
+        .os-dropdown:hover .os-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
         
         .brands-dropdown:hover .brands-menu {
             opacity: 1;
