@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartEVPedia - 中国智能电动车软件与智驾演进百科</title>
+    <title>理想汽车OS版本演进 - SmartEVPedia</title>
     <style>
         /* 统一的基础样式 */
         :root {
@@ -26,12 +26,18 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
+            line-height: 1.5; /* 优化行高 */
             color: var(--text-dark);
             background-color: var(--white);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+        }
+        
+        /* 段落和文本优化 */
+        p {
+            margin-bottom: 1em;
+            line-height: 1.6;
         }
         
         /* 统一的Header样式 */
@@ -169,6 +175,7 @@
             border-bottom: 2px solid var(--border-color);
             padding-bottom: 15px;
             margin-bottom: 30px;
+            line-height: 1.3;
         }
         
         .page-title.brand-orange {
@@ -190,6 +197,7 @@
             font-size: 18px;
             border: none;
             padding: 0;
+            line-height: 1.3;
         }
         
         /* 版本卡片 */
@@ -197,14 +205,14 @@
             background-color: var(--bg-card);
             border-radius: 10px;
             padding: 20px;
-            margin-bottom: 15px;
+            margin-bottom: 20px; /* 增加间距 */
             border: 1px solid var(--border-color);
         }
         
         .version-header {
             display: flex;
             align-items: center;
-            margin-bottom: 10px;
+            margin-bottom: 15px; /* 增加间距 */
             flex-wrap: wrap;
             gap: 10px;
         }
@@ -213,11 +221,13 @@
             font-size: 18px;
             font-weight: 700;
             color: var(--text-dark);
+            line-height: 1.3;
         }
         
         .version-date {
             font-size: 14px;
             color: var(--text-light);
+            line-height: 1.4;
         }
         
         .version-badge {
@@ -227,6 +237,7 @@
             background: #fff8f0;
             padding: 2px 8px;
             border-radius: 10px;
+            line-height: 1.4;
         }
         
         .update-list {
@@ -236,12 +247,13 @@
         }
         
         .update-list li {
-            padding: 6px 0;
+            padding: 8px 0; /* 增加内边距 */
             border-bottom: 1px solid var(--border-color);
             font-size: 14px;
             color: var(--text-dark);
             position: relative;
             padding-left: 20px;
+            line-height: 1.5; /* 优化行高 */
         }
         
         .update-list li:before {
@@ -250,6 +262,7 @@
             position: absolute;
             left: 0;
             font-size: 18px;
+            line-height: 1.5;
         }
         
         .update-list li:last-child {
@@ -260,7 +273,7 @@
         .card-links {
             display: flex;
             gap: 10px;
-            margin-top: 15px;
+            margin-top: 20px; /* 增加间距 */
             padding-top: 15px;
             border-top: 1px solid var(--border-color);
         }
@@ -273,6 +286,7 @@
             font-weight: 500;
             text-decoration: none;
             transition: all 0.2s ease;
+            line-height: 1.4;
         }
         
         .btn-primary {
@@ -291,28 +305,6 @@
         }
         
         .btn-success:hover {
-        }
-
-        /* 兼容旧的类名 */
-        .card-link {
-            display: inline-block;
-            padding: 8px 16px;
-            border-radius: 6px;
-            font-size: 14px;
-            font-weight: 500;
-            text-decoration: none;
-            transition: all 0.2s ease;
-        }
-
-        .card-link-ota {
-            background-color: var(--success-color);
-            color: var(--white);
-        }
-
-        .card-link-ota:hover {
-            background-color: #2ca64a;
-            transform: translateY(-1px);
-        }
             background-color: #2ca64a;
             transform: translateY(-1px);
         }
@@ -324,6 +316,28 @@
         
         .btn-secondary:hover {
             background-color: #e68500;
+            transform: translateY(-1px);
+        }
+        
+        /* 兼容旧的类名 */
+        .card-link {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            line-height: 1.4;
+        }
+        
+        .card-link-ota {
+            background-color: var(--success-color);
+            color: var(--white);
+        }
+        
+        .card-link-ota:hover {
+            background-color: #2ca64a;
             transform: translateY(-1px);
         }
         
@@ -339,6 +353,7 @@
         .spec-item {
             display: flex;
             margin-bottom: 8px;
+            line-height: 1.5;
         }
         
         .spec-label {
@@ -377,6 +392,7 @@
             color: var(--text-light);
             text-decoration: none;
             font-size: 14px;
+            line-height: 1.5;
         }
         
         .footer-links a:hover {
@@ -386,6 +402,67 @@
         .copyright {
             color: var(--text-light);
             font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        /* OS版本页面特定样式 */
+        .back-link {
+            margin-bottom: 20px;
+        }
+        
+        .back-link a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin-right: 15px;
+            line-height: 1.5;
+        }
+        
+        .back-link a:hover {
+            opacity: 0.8;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        .version-timeline {
+            margin: 40px 0;
+        }
+        
+        .major-version {
+            margin-bottom: 40px;
+        }
+        
+        .major-version h2 {
+            color: var(--secondary-color);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+            line-height: 1.3;
+        }
+        
+        .major-version p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-size: 14px;
+            line-height: 1.6;
         }
         
         /* 响应式设计 */
@@ -418,6 +495,15 @@
                 flex-direction: column;
                 gap: 10px;
             }
+            
+            .version-card {
+                padding: 15px;
+            }
+            
+            .update-list li {
+                padding: 6px 0;
+                line-height: 1.4;
+            }
         }
         
         @media (max-width: 480px) {
@@ -435,6 +521,12 @@
             
             .nav-link {
                 font-size: 12px;
+            }
+            
+            .version-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
             }
         }
     </style>
@@ -471,388 +563,385 @@
     </header>
     
     <main class="main-content">
-        <!-- 页面具体内容将在这里插入 -->
-        <div id="page-content"></div>
-    <div class="back-link">
-        <a href="/SmartEVPedia/brands/lixiang/">← 返回理想汽车</a>
-        <a href="/SmartEVPedia/">← 返回首页</a>
-    </div>
-    
-    <div class="nav-links">
-        <a href="#os8">OS 8.x</a>
-        <a href="#os7">OS 7.x</a>
-        <a href="#os6">OS 6.x</a>
-        <a href="#os5">OS 5.x</a>
-        <a href="#os4">OS 4.x</a>
-        <a href="#os3">OS 3.x</a>
-        <a href="#os2">OS 2.x</a>
-        <a href="#os1">OS 1.x</a>
-    </div>
-    
-    <h1>理想汽车OS版本演进</h1>
-    <p>基于理想汽车官方OTA更新记录，完整记录从OS 1.0到OS 8.4的所有版本更新。</p>
-    
-    <div class="version-timeline">
+        <div class="back-link">
+            <a href="/SmartEVPedia/brands/lixiang/">← 返回理想汽车</a>
+            <a href="/SmartEVPedia/">← 返回首页</a>
+        </div>
         
-        <div class="major-version">
-            <h2 id="os8">OS 8.x 系列 (2025-2026)</h2>
-            <p>VLA司机大模型时代，端到端智能驾驶。</p>
+        <div class="nav-links">
+            <a href="#os8">OS 8.x</a>
+            <a href="#os7">OS 7.x</a>
+            <a href="#os6">OS 6.x</a>
+            <a href="#os5">OS 5.x</a>
+            <a href="#os4">OS 4.x</a>
+            <a href="#os3">OS 3.x</a>
+            <a href="#os2">OS 2.x</a>
+            <a href="#os1">OS 1.x</a>
+        </div>
+        
+        <h1 class="page-title brand-orange">理想汽车OS版本演进</h1>
+        <p>基于理想汽车官方OTA更新记录，完整记录从OS 1.0到OS 8.4的所有版本更新。</p>
+        
+        <div class="version-timeline">
             
-            <div class="version-card">
-                <div class="version-header">
-                    <div class="version-number">OS 8.4 <span class="version-badge">测试中</span></div>
-                    <div class="version-date">2026年2月18日（测试版）</div>
-                </div>
+            <div class="major-version">
+                <h2 id="os8">OS 8.x 系列 (2025-2026)</h2>
+                <p>VLA司机大模型时代，端到端智能驾驶。</p>
                 
-                <ul class="update-list">
-                    <li>VLA司机大模型行为强化学习能力升级</li>
-                    <li>新增宠物模式，车内环境智能调节</li>
-                    <li>艺术相框功能，个性化车机界面</li>
-                    <li>充电预热功能（增程车型）</li>
-                    <li>超充站状态实况展示，高峰期避堵</li>
-                    <li>支持U盘播放本地影音，兼容主流格式</li>
-                </ul>
-                
-                <div class="card-links">
-                    <a href="https://chejiahao.autohome.com.cn/info/24872258" class="card-link card-link-ota" target="_blank">OTA 8.4测试版</a>
-                </div>
-            </div>
-            
-            <div class="version-card">
-                <div class="version-header">
-                    <div class="version-number">OS 8.3</div>
-                    <div class="version-date">2026年2月7日发布</div>
-                </div>
-                
-                <ul class="update-list">
-                    <li>新增超充站状态实况展示功能</li>
-                    <li>支持U盘播放本地影音（MP4、MKV、FLAC等）</li>
-                    <li>辅助驾驶出园区可提醒缴停车费</li>
-                    <li>VLA司机大模型变道决策更精准</li>
-                    <li>优化车机娱乐与实用体验</li>
-                </ul>
-                
-                <div class="card-links">
-                    <a href="https://www.ithome.com/0/920/123.htm" class="card-link card-link-ota" target="_blank">OTA 8.3功能介绍</a>
-                </div>
-            </div>
-            
-            <div class="version-card">
-                <div class="version-header">
-                    <div class="version-number">OS 8.2</div>
-                    <div class="version-date">2026年1月21日发布</div>
-                </div>
-                
-                <ul class="update-list">
-                    <li>VLA司机大模型行为强化学习上线</li>
-                    <li>新增宠物模式，车内温湿度智能调节</li>
-                    <li>艺术相框功能，个性化车机界面</li>
-                    <li>充电预热功能（增程车型）</li>
-                    <li>40项新功能，涵盖智驾、舒适、交互维度</li>
-                </ul>
-                
-                <div class="card-links">
-                    <a href="https://finance.sina.com.cn/tech/digi/2026-01-21/doc-inhiaemv8135608.shtml" class="card-link card-link-ota" target="_blank">OTA 8.2功能介绍</a>
-                </div>
-            </div>
-            
-            <div class="version-card">
-                <div class="version-header">
-                    <div class="version-number">OS 8.1</div>
-                    <div class="version-date">2025年12月发布</div>
-                </div>
-                
-                <ul class="update-list">
-                    <li>支持绑定理想AI眼镜</li>
-                    <li>全场景车道级导航上线</li>
-                    <li>新增47项功能</li>
-                    <li>覆盖MEGA、i系列、L系列车型</li>
-                    <li>22/23款L系列后续推送</li>
-                </ul>
-                
-                <div class="card-links">
-                    <a href="https://www.ithome.com/0/903/014.htm" class="card-link card-link-ota" target="_blank">OTA 8.1功能介绍</a>
-                </div>
-            </div>
-            
-            <div class="version-card">
-                <div class="version-header">
-                    <div class="version-number">OS 8.0</div>
-                    <div class="version-date">2025年9月10日发布</div>
-                </div>
-                
-                <ul class="update-list">
-                    <li>全球首个VLA司机大模型上车</li>
-                    <li>端到端智能驾驶架构</li>
-                    <li>54项新增功能</li>
-                    <li>26项体验优化</li>
-                    <li>覆盖全系车型</li>
-                </ul>
-                
-                <div class="tech-specs">
-                    <div class="spec-item">
-                        <span class="spec-label">芯片平台</span>
-                        <span class="spec-value">高通骁龙8295 (5nm)</span>
+                <div class="version-card">
+                    <div class="version-header">
+                        <div class="version-number">OS 8.4 <span class="version-badge">测试中</span></div>
+                        <div class="version-date">2026年2月18日（测试版）</div>
                     </div>
-                    <div class="spec-item">
-                        <span class="spec-label">AI算力</span>
-                        <span class="spec-value">30 TOPS</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">覆盖车型</span>
-                        <span class="spec-value">MEGA、i系列、L系列全系</span>
+                    
+                    <ul class="update-list">
+                        <li>VLA司机大模型行为强化学习能力升级</li>
+                        <li>新增宠物模式，车内环境智能调节</li>
+                        <li>艺术相框功能，个性化车机界面</li>
+                        <li>充电预热功能（增程车型）</li>
+                        <li>超充站状态实况展示，高峰期避堵</li>
+                        <li>支持U盘播放本地影音，兼容主流格式</li>
+                    </ul>
+                    
+                    <div class="card-links">
+                        <a href="https://chejiahao.autohome.com.cn/info/24872258" class="btn btn-success" target="_blank">OTA 8.4测试版</a>
                     </div>
                 </div>
                 
-                <div class="card-links">
-                    <a href="https://finance.sina.com.cn/tech/digi/2025-09-10/doc-infpzepe4146187.shtml" class="card-link card-link-ota" target="_blank">OTA 8.0功能介绍</a>
-                </div>
-            </div>
-            
-        </div>
-        
-        <div class="major-version">
-            <h2 id="os7">OS 7.x 系列 (2024-2025)</h2>
-            <p>AI大模型时代，Mind GPT智能助手。</p>
-            
-            <div class="version-card">
-                <div class="version-header">
-                    <div class="version-number">OS 7.4</div>
-                    <div class="version-date">2025年5月28日发布</div>
-                </div>
-                
-                <ul class="update-list">
-                    <li>理想同学毛绒形象上线</li>
-                    <li>智能家庭账号系统</li>
-                    <li>支付宝车载助手正式上线</li>
-                    <li>超充站降锁功能</li>
-                    <li>App冰箱定时开启</li>
-                    <li>自动关闭遮阳帘功能</li>
-                </ul>
-                
-                <div class="card-links">
-                    <a href="https://www.ithome.com/0/856/665.htm" class="card-link card-link-ota" target="_blank">OTA 7.4功能介绍</a>
-                </div>
-            </div>
-            
-            <div class="version-card">
-                <div class="version-header">
-                    <div class="version-number">OS 7.0</div>
-                    <div class="version-date">2024年12月底发布</div>
-                </div>
-                
-                <ul class="update-list">
-                    <li>Mind GPT-3o大模型能力升级</li>
-                    <li>Mind Diffusion V2.0图像生成</li>
-                    <li>AI推理可视化界面</li>
-                    <li>高速端到端功能</li>
-                    <li>理想同学从车机进入手机App</li>
-                </ul>
-                
-                <div class="card-links">
-                    <a href="https://www.ithome.com/0/820/544.htm" class="card-link card-link-ota" target="_blank">OTA 7.0功能介绍</a>
-                </div>
-            </div>
-            
-        </div>
-        
-        <div class="major-version">
-            <h2 id="os6">OS 6.x 系列 (2024年)</h2>
-            <p>智能驾驶全面升级，无图NOA城区领航。</p>
-            
-            <div class="version-card">
-                <div class="version-header">
-                    <div class="version-number">OS 6.2</div>
-                    <div class="version-date">2024年9月3日发布</div>
-                </div>
-                
-                <ul class="update-list">
-                    <li>无图NOA城区领航功能</li>
-                    <li>智能泊车能力增强</li>
-                    <li>主动安全系统升级</li>
-                    <li>智能充电优化</li>
-                    <li>覆盖MEGA和L系列车型</li>
-                </ul>
-                
-                <div class="card-links">
-                    <a href="https://www.lixiang.com/community/detail/article/1436914.html" class="card-link card-link-ota" target="_blank">OTA 6.2.0功能介绍</a>
-                </div>
-            </div>
-            
-            <div class="version-card">
-                <div class="version-header">
-                    <div class="version-number">OS 6.1</div>
-                    <div class="version-date">2024年8月中旬发布</div>
-                </div>
-                
-                <ul class="update-list">
-                    <li>新增车窗、后排遮阳帘暂停功能</li>
-                    <li>理想汽车App充电地图焕新</li>
-                    <li>超充站、优选超充站分开显示</li>
-                    <li>6项新增功能</li>
-                </ul>
-                
-                <div class="card-links">
-                    <a href="https://www.lixiang.com/community/detail/article/1372150.html" class="card-link card-link-ota" target="_blank">OTA 6.1.0功能介绍</a>
-                </div>
-            </div>
-            
-            <div class="version-card">
-                <div class="version-header">
-                    <div class="version-number">OS 6.0</div>
-                    <div class="version-date">2024年7月15日发布</div>
-                </div>
-                
-                <ul class="update-list">
-                    <li>59项新增功能</li>
-                    <li>52项体验优化</li>
-                    <li>智能驾驶、智能空间、智能充电全面升级</li>
-                    <li>6月30日Beta版不限量招募</li>
-                </ul>
-                
-                <div class="tech-specs">
-                    <div class="spec-item">
-                        <span class="spec-label">芯片平台</span>
-                        <span class="spec-value">高通骁龙8295 (5nm)</span>
+                <div class="version-card">
+                    <div class="version-header">
+                        <div class="version-number">OS 8.3</div>
+                        <div class="version-date">2026年2月7日发布</div>
                     </div>
-                    <div class="spec-item">
-                        <span class="spec-label">覆盖车型</span>
-                        <span class="spec-value">MEGA、L6首发，后续OTA至全系</span>
+                    
+                    <ul class="update-list">
+                        <li>新增超充站状态实况展示功能</li>
+                        <li>支持U盘播放本地影音（MP4、MKV、FLAC等）</li>
+                        <li>辅助驾驶出园区可提醒缴停车费</li>
+                        <li>VLA司机大模型变道决策更精准</li>
+                        <li>优化车机娱乐与实用体验</li>
+                    </ul>
+                    
+                    <div class="card-links">
+                        <a href="https://www.ithome.com/0/920/123.htm" class="btn btn-success" target="_blank">OTA 8.3功能介绍</a>
                     </div>
                 </div>
                 
-                <div class="card-links">
-                    <a href="https://auto.zol.com.cn/884/8845913.html" class="card-link card-link-ota" target="_blank">OTA 6.0发布新闻</a>
-                </div>
-            </div>
-            
-        </div>
-        
-        <div class="major-version">
-            <h2 id="os5">OS 5.x 系列 (2023-2024)</h2>
-            <p>智能驾驶AD Max 3.0，智能空间SS 3.0。</p>
-            
-            <div class="version-card">
-                <div class="version-header">
-                    <div class="version-number">OS 5.0</div>
-                    <div class="version-date">2023年12月19日发布</div>
-                </div>
-                
-                <ul class="update-list">
-                    <li>智能驾驶AD Max 3.0正式版</li>
-                    <                    <li>智能空间SS 3.0升级</li>
-                    <li>智能增程REV 3.0优化</li>
-                    <li>12月10日智能软件发布会发布</li>
-                    <li>12月19日全量用户推送</li>
-                </ul>
-                
-                <div class="card-links">
-                    <a href="https://startup.aliyun.com/info/1069796.html" class="card-link card-link-ota" target="_blank">OTA 5.0发布新闻</a>
-                </div>
-            </div>
-            
-        </div>
-        
-        <div class="major-version">
-            <h2 id="os4">OS 4.x 系列 (2022-2023)</h2>
-            <p>理想L9首发，任务栏设计，理想同学2.0。</p>
-            
-            <div class="version-card">
-                <div class="version-header">
-                    <div class="version-number">OS 4.2</div>
-                    <div class="version-date">2022年发布</div>
-                </div>
-                
-                <ul class="update-list">
-                    <li>理想L9 OTA 4.2.0版本更新</li>
-                    <li>系统稳定性优化</li>
-                    <li>用户体验改进</li>
-                </ul>
-                
-                <div class="card-links">
-                    <a href="https://www.lixiang.com/community/articledetail/623614" class="card-link card-link-ota" target="_blank">OTA 4.2.0更新说明</a>
-                </div>
-            </div>
-            
-        </div>
-        
-        <div class="major-version">
-            <h2 id="os3">OS 3.x 系列 (2021-2022)</h2>
-            <p>理想ONE持续更新，全场景智能空间概念。</p>
-            
-            <div class="version-card">
-                <div class="version-header">
-                    <div class="version-number">OS 3.1</div>
-                    <div class="version-date">2021年5月31日发布</div>
-                </div>
-                
-                <ul class="update-list">
-                    <li>理想ONE OTA 3.1版本推送</li>
-                    <li>系统性能优化</li>
-                    <li>用户体验改进</li>
-                </ul>
-            </div>
-            
-        </div>
-        
-        <div class="major-version">
-            <h2 id="os2">OS 2.x 系列 (2020-2021)</h2>
-            <p>理想同学语音助手引入，应用生态起步。</p>
-            
-            <div class="version-card">
-                <div class="version-header">
-                    <div class="version-number">OS 2.0</div>
-                    <div class="version-date">2020年发布</div>
-                </div>
-                
-                <ul class="update-list">
-                    <li>理想同学语音助手上线</li>
-                    <li>QQ音乐、喜马拉雅应用</li>
-                    <li>导航系统体验优化</li>
-                    <li>理想ONE 2020款</li>
-                </ul>
-            </div>
-            
-        </div>
-        
-        <div class="major-version">
-            <h2 id="os1">OS 1.x 系列 (2019-2020)</h2>
-            <p>基础座舱系统，四屏交互，OTA能力建立。</p>
-            
-            <div class="version-card">
-                <div class="version-header">
-                    <div class="version-number">OS 1.0</div>
-                    <div class="version-date">2019年5月（理想ONE首发）</div>
-                </div>
-                
-                <ul class="update-list">
-                    <li>四屏交互系统</li>
-                    <li>基础车辆控制功能</li>
-                    <li>基础导航和媒体播放</li>
-                    <li>车辆状态显示和设置</li>
-                    <li>OTA升级能力建立</li>
-                </ul>
-                
-                <div class="tech-specs">
-                    <div class="spec-item">
-                        <span class="spec-label">芯片平台</span>
-                        <span class="spec-value">高通骁龙820A (14nm)</span>
+                <div class="version-card">
+                    <div class="version-header">
+                        <div class="version-number">OS 8.2</div>
+                        <div class="version-date">2026年1月21日发布</div>
                     </div>
-                    <div class="spec-item">
-                        <span class="spec-label">屏幕配置</span>
-                        <span class="spec-value">12.3"仪表 + 16.2"中控 + 12.3"副驾 + 10.1"控制屏</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">首发车型</span>
-                        <span class="spec-value">理想ONE 2019款</span>
+                    
+                    <ul class="update-list">
+                        <li>VLA司机大模型行为强化学习上线</li>
+                        <li>新增宠物模式，车内温湿度智能调节</li>
+                        <li>艺术相框功能，个性化车机界面</li>
+                        <li>充电预热功能（增程车型）</li>
+                        <li>40项新功能，涵盖智驾、舒适、交互维度</li>
+                    </ul>
+                    
+                    <div class="card-links">
+                        <a href="https://finance.sina.com.cn/tech/digi/2026-01-21/doc-inhiaemv8135608.shtml" class="btn btn-success" target="_blank">OTA 8.2功能介绍</a>
                     </div>
                 </div>
+                
+                <div class="version-card">
+                    <div class="version-header">
+                        <div class="version-number">OS 8.1</div>
+                        <div class="version-date">2025年12月发布</div>
+                    </div>
+                    
+                    <ul class="update-list">
+                        <li>支持绑定理想AI眼镜</li>
+                        <li>全场景车道级导航上线</li>
+                        <li>新增47项功能</li>
+                        <li>覆盖MEGA、i系列、L系列车型</li>
+                        <li>22/23款L系列后续推送</li>
+                    </ul>
+                    
+                    <div class="card-links">
+                        <a href="https://www.ithome.com/0/903/014.htm" class="btn btn-success" target="_blank">OTA 8.1功能介绍</a>
+                    </div>
+                </div>
+                
+                <div class="version-card">
+                    <div class="version-header">
+                        <div class="version-number">OS 8.0</div>
+                        <div class="version-date">2025年9月10日发布</div>
+                    </div>
+                    
+                    <ul class="update-list">
+                        <li>全球首个VLA司机大模型上车</li>
+                        <li>端到端智能驾驶架构</li>
+                        <li>54项新增功能</li>
+                        <li>26项体验优化</li>
+                        <li>覆盖全系车型</li>
+                    </ul>
+                    
+                    <div class="tech-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">芯片平台</span>
+                            <span class="spec-value">高通骁龙8295 (5nm)</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">AI算力</span>
+                            <span class="spec-value">30 TOPS</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">覆盖车型</span>
+                            <span class="spec-value">MEGA、i系列、L系列全系</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-links">
+                        <a href="https://finance.sina.com.cn/tech/digi/2025-09-10/doc-infpzepe4146187.shtml" class="btn btn-success" target="_blank">OTA 8.0功能介绍</a>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="major-version">
+                <h2 id="os7">OS 7.x 系列 (2024-2025)</h2>
+                <p>AI大模型时代，Mind GPT智能助手。</p>
+                
+                <div class="version-card">
+                    <div class="version-header">
+                        <div class="version-number">OS 7.4</div>
+                        <div class="version-date">2025年5月28日发布</div>
+                    </div>
+                    
+                    <ul class="update-list">
+                        <li>理想同学毛绒形象上线</li>
+                        <li>智能家庭账号系统</li>
+                        <li>支付宝车载助手正式上线</li>
+                        <li>超充站降锁功能</li>
+                        <li>App冰箱定时开启</li>
+                        <li>自动关闭遮阳帘功能</li>
+                    </ul>
+                    
+                    <div class="card-links">
+                        <a href="https://www.ithome.com/0/856/665.htm" class="btn btn-success" target="_blank">OTA 7.4功能介绍</a>
+                    </div>
+                </div>
+                
+                <div class="version-card">
+                    <div class="version-header">
+                        <div class="version-number">OS 7.0</div>
+                        <div class="version-date">2024年12月底发布</div>
+                    </div>
+                    
+                    <ul class="update-list">
+                        <li>Mind GPT-3o大模型能力升级</li>
+                        <li>Mind Diffusion V2.0图像生成</li>
+                        <li>AI推理可视化界面</li>
+                        <li>高速端到端功能</li>
+                        <li>理想同学从车机进入手机App</li>
+                    </ul>
+                    
+                    <div class="card-links">
+                        <a href="https://www.ithome.com/0/820/544.htm" class="btn btn-success" target="_blank">OTA 7.0功能介绍</a>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="major-version">
+                <h2 id="os6">OS 6.x 系列 (2024年)</h2>
+                <p>智能驾驶全面升级，无图NOA城区领航。</p>
+                
+                <div class="version-card">
+                    <div class="version-header">
+                        <div class="version-number">OS 6.2</div>
+                        <div class="version-date">2024年9月3日发布</div>
+                    </div>
+                    
+                    <ul class="update-list">
+                        <li>无图NOA城区领航功能</li>
+                        <li>智能泊车能力增强</li>
+                        <li>主动安全系统升级</li>
+                        <li>智能充电优化</li>
+                        <li>覆盖MEGA和L系列车型</li>
+                    </ul>
+                    
+                    <div class="card-links">
+                        <a href="https://www.lixiang.com/community/detail/article/1436914.html" class="btn btn-success" target="_blank">OTA 6.2.0功能介绍</a>
+                    </div>
+                </div>
+                
+                <div class="version-card">
+                    <div class="version-header">
+                        <div class="version-number">OS 6.1</div>
+                        <div class="version-date">2024年8月中旬发布</div>
+                    </div>
+                    
+                    <ul class="update-list">
+                        <li>新增车窗、后排遮阳帘暂停功能</li>
+                        <li>理想汽车App充电地图焕新</li>
+                        <li>超充站、优选超充站分开显示</li>
+                        <li>6项新增功能</li>
+                    </ul>
+                    
+                    <div class="card-links">
+                        <a href="https://www.lixiang.com/community/detail/article/1372150.html" class="btn btn-success" target="_blank">OTA 6.1.0功能介绍</a>
+                    </div>
+                </div>
+                
+                <div class="version-card">
+                    <div class="version-header">
+                        <div class="version-number">OS 6.0</div>
+                        <div class="version-date">2024年7月15日发布</div>
+                    </div>
+                    
+                    <ul class="update-list">
+                        <li>59项新增功能</li>
+                        <li>52项体验优化</li>
+                        <li>智能驾驶、智能空间、智能充电全面升级</li>
+                        <li>6月30日Beta版不限量招募</li>
+                    </ul>
+                    
+                    <div class="tech-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">芯片平台</span>
+                            <span class="spec-value">高通骁龙8295 (5nm)</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">覆盖车型</span>
+                            <span class="spec-value">MEGA、L6首发，后续OTA至全系</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-links">
+                        <a href="https://auto.zol.com.cn/884/8845913.html" class="btn btn-success" target="_blank">OTA 6.0发布新闻</a>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="major-version">
+                <h2 id="os5">OS 5.x 系列 (2023-2024)</h2>
+                <p>智能驾驶AD Max 3.0，智能空间SS 3.0。</p>
+                
+                <div class="version-card">
+                    <div class="version-header">
+                        <div class="version-number">OS 5.0</div>
+                        <div class="version-date">2023年12月19日发布</div>
+                    </div>
+                    
+                    <ul class="update-list">
+                        <li>智能驾驶AD Max 3.0正式版</li>
+                        <li>智能空间SS 3.0升级</li>
+                        <li>智能增程REV 3.0优化</li>
+                        <li>12月10日智能软件发布会发布</li>
+                        <li>12月19日全量用户推送</li>
+                    </ul>
+                    
+                    <div class="card-links">
+                        <a href="https://startup.aliyun.com/info/1069796.html" class="btn btn-success" target="_blank">OTA 5.0发布新闻</a>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="major-version">
+                <h2 id="os4">OS 4.x 系列 (2022-2023)</h2>
+                <p>理想L9首发，任务栏设计，理想同学2.0。</p>
+                
+                <div class="version-card">
+                    <div class="version-header">
+                        <div class="version-number">OS 4.2</div>
+                        <div class="version-date">2022年发布</div>
+                    </div>
+                    
+                    <ul class="update-list">
+                        <li>理想L9 OTA 4.2.0版本更新</li>
+                        <li>系统稳定性优化</li>
+                        <li>用户体验改进</li>
+                    </ul>
+                    
+                    <div class="card-links">
+                        <a href="https://www.lixiang.com/community/articledetail/623614" class="btn btn-success" target="_blank">OTA 4.2.0更新说明</a>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="major-version">
+                <h2 id="os3">OS 3.x 系列 (2021-2022)</h2>
+                <p>理想ONE持续更新，全场景智能空间概念。</p>
+                
+                <div class="version-card">
+                    <div class="version-header">
+                        <div class="version-number">OS 3.1</div>
+                        <div class="version-date">2021年5月31日发布</div>
+                    </div>
+                    
+                    <ul class="update-list">
+                        <li>理想ONE OTA 3.1版本推送</li>
+                        <li>系统性能优化</li>
+                        <li>用户体验改进</li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+            <div class="major-version">
+                <h2 id="os2">OS 2.x 系列 (2020-2021)</h2>
+                <p>理想同学语音助手引入，应用生态起步。</p>
+                
+                <div class="version-card">
+                    <div class="version-header">
+                        <div class="version-number">OS 2.0</div>
+                        <div class="version-date">2020年发布</div>
+                    </div>
+                    
+                    <ul class="update-list">
+                        <li>理想同学语音助手上线</li>
+                        <li>QQ音乐、喜马拉雅应用</li>
+                        <li>导航系统体验优化</li>
+                        <li>理想ONE 2020款</li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+            <div class="major-version">
+                <h2 id="os1">OS 1.x 系列 (2019-2020)</h2>
+                <p>基础座舱系统，四屏交互，OTA能力建立。</p>
+                
+                <div class="version-card">
+                    <div class="version-header">
+                        <div class="version-number">OS 1.0</div>
+                        <div class="version-date">2019年5月（理想ONE首发）</div>
+                    </div>
+                    
+                    <ul class="update-list">
+                        <li>四屏交互系统</li>
+                        <li>基础车辆控制功能</li>
+                        <li>基础导航和媒体播放</li>
+                        <li>车辆状态显示和设置</li>
+                        <li>OTA升级能力建立</li>
+                    </ul>
+                    
+                    <div class="tech-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">芯片平台</span>
+                            <span class="spec-value">高通骁龙820A (14nm)</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">屏幕配置</span>
+                            <span class="spec-value">12.3"仪表 + 16.2"中控 + 12.3"副驾 + 10.1"控制屏</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">首发车型</span>
+                            <span class="spec-value">理想ONE 2019款</span>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
             
         </div>
-        
-    </div>
-    
     </main>
     
     <footer class="site-footer">
