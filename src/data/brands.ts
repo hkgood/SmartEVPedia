@@ -582,7 +582,664 @@ export const brands: Brand[] = [
       }
     ]
   },
-  // 小鹏、蔚来、华为、小米数据需要同样完整化...
+  {
+    id: "xiaopeng",
+    name: "小鹏汽车",
+    englishName: "Xpeng",
+    description: "以技术为导向的智能电动汽车品牌，国内首个量产端到端大模型智驾的车企，致力于通过数据驱动和全栈自研，引领未来出行变革。",
+    officialLink: "https://www.xiaopeng.com/",
+    logoUrl: "https://logo.clearbit.com/xpeng.com",
+    color: "bg-emerald-500",
+    hardwarePlatforms: [
+      {
+        name: "图灵 AI 架构 (SEPA 3.0)",
+        generation: "第四代 AI 架构",
+        releaseDate: "2024 - 2026",
+        cockpitChip: "高通8295P + 自研图灵座舱芯片",
+        adChip: "小鹏自研图灵 AI 芯片 (40核)",
+        sensors: ["AI鹰眼视觉方案", "取消激光雷达（纯视觉）"],
+        models: ["P7+", "MONA M03", "G6", "X9"]
+      },
+      {
+        name: "SEPA 2.0 扶摇架构",
+        generation: "第三代中央超算架构",
+        releaseDate: "2023 - 2024",
+        cockpitChip: "高通骁龙8155 / 8295",
+        adChip: "双NVIDIA Orin-X (508 TOPS)",
+        sensors: ["双激光雷达", "800万像素高清摄像头", "毫米波雷达", "超声波雷达"],
+        models: ["G6", "G9", "X9"]
+      },
+      {
+        name: "Edward 平台",
+        generation: "第二代架构",
+        releaseDate: "2020 - 2022",
+        cockpitChip: "高通骁龙820A / 8155",
+        adChip: "NVIDIA Xavier / Orin-X",
+        sensors: ["双激光雷达", "14个高清摄像头", "5个毫米波雷达", "12个超声波雷达"],
+        models: ["P7", "P7i", "G9(老款)"]
+      },
+      {
+        name: "David 平台",
+        generation: "第一代架构",
+        releaseDate: "2018 - 2021",
+        cockpitChip: "高通骁龙820A",
+        adChip: "NVIDIA Xavier / Mobileye EyeQ4",
+        sensors: ["13个高清摄像头", "5个毫米波雷达", "12个超声波雷达"],
+        models: ["G3", "G3i", "P5"]
+      }
+    ],
+    softwareHistory: [
+      // XOS 6.x 系列 (图灵AI架构)
+      {
+        version: "XOS 6.5",
+        date: "2026-01",
+        type: "OS",
+        description: "全面适配图灵AI芯片，进入AI大模型深度参与自动驾驶与座舱交互的新阶段",
+        features: [
+          "[智驾核心] L3级有条件自动驾驶在北上广深核心区域开启公测",
+          "[智驾核心] 端到端大模型参数量提升400%",
+          "[智驾核心] 车位到车位无缝智驾全量推送",
+          "全场景主动式AI管家上线",
+          "多模态大模型语音交互升级"
+        ],
+        supportedPlatforms: ["图灵 AI 架构 (SEPA 3.0)"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "XOS 6.4",
+        date: "2025-11",
+        type: "OS",
+        description: "持续优化AI智驾体验",
+        features: [
+          "[智驾核心] AI鹰眼视觉系统优化",
+          "[智驾核心] 城市NOA 扩展更多城市",
+          "全场景语音2.5",
+          "智能场景引擎增强"
+        ],
+        supportedPlatforms: ["图灵 AI 架构 (SEPA 3.0)"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "XOS 6.3",
+        date: "2025-09",
+        type: "OS",
+        description: "秋季更新",
+        features: [
+          "[智驾核心] XNGP 4.5 城市体验优化",
+          "智能泊车增强",
+          "语音助手能力提升",
+          "娱乐系统优化"
+        ],
+        supportedPlatforms: ["图灵 AI 架构 (SEPA 3.0)", "SEPA 2.0 扶摇架构"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "XOS 6.2",
+        date: "2025-07",
+        type: "OS",
+        description: "夏季更新",
+        features: [
+          "[智驾核心] XNGP 4.0 全场景辅助驾驶",
+          "AI代驾功能增强",
+          "离车泊入功能",
+          "充电网络优化"
+        ],
+        supportedPlatforms: ["图灵 AI 架构 (SEPA 3.0)", "SEPA 2.0 扶摇架构"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "XOS 6.1",
+        date: "2025-05",
+        type: "OS",
+        description: "功能完善",
+        features: [
+          "[智驾核心] 城市NOA 逐步开放",
+          "全场景语音2.0",
+          "智能仪表盘优化",
+          "系统稳定性提升"
+        ],
+        supportedPlatforms: ["图灵 AI 架构 (SEPA 3.0)", "SEPA 2.0 扶摇架构"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "XOS 6.0",
+        date: "2025-03",
+        type: "OS",
+        description: "AI天玑系统正式发布",
+        features: [
+          "[智驾核心] XNGP 4.0 发布",
+          "[智驾核心] 端到端大模型应用",
+          "AI天玑系统首发",
+          "全新智能座舱UI"
+        ],
+        supportedPlatforms: ["图灵 AI 架构 (SEPA 3.0)", "SEPA 2.0 扶摇架构"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      // Xmart OS 5.x 系列 (SEPA 2.0扶摇架构)
+      {
+        version: "Xmart OS 5.5",
+        date: "2025-01",
+        type: "OS",
+        description: "农历新年更新",
+        features: [
+          "[智驾核心] XNGP 3.5 城市NOA",
+          "春节主题上线",
+          "全场景语音增强",
+          "智能除雾功能"
+        ],
+        supportedPlatforms: ["SEPA 2.0 扶摇架构"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "Xmart OS 5.4",
+        date: "2024-11",
+        type: "OS",
+        description: "秋季更新",
+        features: [
+          "[智驾核心] XNGP 3.0 城市NOA",
+          "高速NGP 2.0",
+          "语音连续对话增强",
+          "泊车体验优化"
+        ],
+        supportedPlatforms: ["SEPA 2.0 扶摇架构"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "Xmart OS 5.3",
+        date: "2024-09",
+        type: "OS",
+        description: "G6/P7i 新车型适配",
+        features: [
+          "[智驾核心] XNGP 2.5 发布",
+          "高速NGP 增强",
+          "全场景语音1.0",
+          "仪表盘UI更新"
+        ],
+        supportedPlatforms: ["SEPA 2.0 扶摇架构"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "Xmart OS 5.2",
+        date: "2024-07",
+        type: "OS",
+        description: "夏季高温优化",
+        features: [
+          "空调系统优化",
+          "电池热管理",
+          "充电效率提升",
+          "语音助手增强"
+        ],
+        supportedPlatforms: ["SEPA 2.0 扶摇架构", "Edward 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "Xmart OS 5.1",
+        date: "2024-05",
+        type: "OS",
+        description: "春季更新",
+        features: [
+          "[智驾核心] XNGP 2.0 发布",
+          "城市NOA 首批城市开放",
+          "全场景语音上线",
+          "智能泊车增强"
+        ],
+        supportedPlatforms: ["SEPA 2.0 扶摇架构", "Edward 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "Xmart OS 5.0",
+        date: "2024-03",
+        type: "OS",
+        description: "开启AI定义汽车时代",
+        features: [
+          "[智驾核心] XNGP 端到端大模型",
+          "城市NOA预告",
+          "全新UI设计",
+          "天玑系统预告"
+        ],
+        supportedPlatforms: ["SEPA 2.0 扶摇架构", "Edward 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      // Xmart OS 4.x 系列 (Edward平台)
+      {
+        version: "Xmart OS 4.6",
+        date: "2024-01",
+        type: "OS",
+        description: "农历新年更新",
+        features: [
+          "春节主题",
+          "新年语音祝福",
+          "氛围灯效",
+          "系统优化"
+        ],
+        supportedPlatforms: ["Edward 平台", "David 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "Xmart OS 4.5",
+        date: "2023-11",
+        type: "OS",
+        description: "秋季更新",
+        features: [
+          "[智驾核心] NGP 城市NOA 首批城市",
+          "VPA 记忆泊车增强",
+          "语音助手能力提升",
+          "应用生态扩展"
+        ],
+        supportedPlatforms: ["Edward 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "Xmart OS 4.4",
+        date: "2023-09",
+        type: "OS",
+        description: "G6 发布",
+        features: [
+          "[智驾核心] XNGP 1.5 城市NOA",
+          "扶摇架构首发",
+          "全场景语音上线",
+          "智能泊车优化"
+        ],
+        supportedPlatforms: ["SEPA 2.0 扶摇架构"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "Xmart OS 4.3",
+        date: "2023-07",
+        type: "OS",
+        description: "夏季更新",
+        features: [
+          "[智驾核心] NGP 2.0 高速NOA",
+          "VPA 泊车辅助增强",
+          "语音连续对话",
+          "K歌功能优化"
+        ],
+        supportedPlatforms: ["Edward 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "Xmart OS 4.2",
+        date: "2023-05",
+        type: "OS",
+        description: "P7i 发布",
+        features: [
+          "[智驾核心] P7i 全新智驾平台",
+          "全场景语音预告",
+          "全新UI设计",
+          "车机交互优化"
+        ],
+        supportedPlatforms: ["Edward 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "Xmart OS 4.1",
+        date: "2023-03",
+        type: "OS",
+        description: "春季更新",
+        features: [
+          "[智驾核心] NGP 城市NOA 内测",
+          "VPA 记忆泊车上线",
+          "语音助手持续优化",
+          "应用商店更新"
+        ],
+        supportedPlatforms: ["Edward 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "Xmart OS 4.0",
+        date: "2023-01",
+        type: "OS",
+        description: "年度大更新",
+        features: [
+          "[智驾核心] XNGP 1.0 发布",
+          "[智驾核心] 高速NGP 2.0",
+          "全场景语音1.0",
+          "仪表盘重制"
+        ],
+        supportedPlatforms: ["Edward 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      // Xmart OS 3.x 系列
+      {
+        version: "Xmart OS 3.5",
+        date: "2022-11",
+        type: "OS",
+        description: "G9 发布",
+        features: [
+          "5D 影院功能",
+          "丹拿音响优化",
+          "语音助手增强",
+          "系统流畅度提升"
+        ],
+        supportedPlatforms: ["Edward 平台", "David 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "Xmart OS 3.4",
+        date: "2022-09",
+        type: "OS",
+        description: "秋季更新",
+        features: [
+          "[智驾核心] NGP 高速NOA 增强",
+          "语音助手能力提升",
+          "泊车辅助增强",
+          "应用生态扩展"
+        ],
+        supportedPlatforms: ["Edward 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "Xmart OS 3.3",
+        date: "2022-07",
+        type: "OS",
+        description: "夏季高温优化",
+        features: [
+          "空调系统优化",
+          "电池热管理",
+          "充电效率提升",
+          "语音助手增强"
+        ],
+        supportedPlatforms: ["Edward 平台", "David 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "Xmart OS 3.2",
+        date: "2022-05",
+        type: "OS",
+        description: "P5 发布",
+        features: [
+          "[智驾核心] NGP 高速NOA",
+          "城市智能辅助驾驶预告",
+          "语音助手优化",
+          "全新UI界面"
+        ],
+        supportedPlatforms: ["David 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "Xmart OS 3.1",
+        date: "2022-03",
+        type: "OS",
+        description: "春季更新",
+        features: [
+          "[智驾核心] NGP 高速领航辅助",
+          "VPA 记忆泊车上线",
+          "语音可见即可说",
+          "应用商店"
+        ],
+        supportedPlatforms: ["Edward 平台", "David 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "Xmart OS 3.0",
+        date: "2022-01",
+        type: "OS",
+        description: "P7 重大更新",
+        features: [
+          "小P 2.0 语音助手",
+          "全新车机系统",
+          "OTA 2.0",
+          "应用生态基础"
+        ],
+        supportedPlatforms: ["Edward 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      // Xmart OS 2.x 系列
+      {
+        version: "Xmart OS 2.8",
+        date: "2021-11",
+        type: "OS",
+        description: "G3i 发布",
+        features: [
+          "语音助手持续优化",
+          "新增手机互联",
+          "泊车辅助增强",
+          "系统稳定性提升"
+        ],
+        supportedPlatforms: ["David 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "Xmart OS 2.7",
+        date: "2021-09",
+        type: "OS",
+        description: "秋季更新",
+        features: [
+          "语音助手能力增强",
+          "导航功能优化",
+          "应用生态扩展",
+          "系统流畅度提升"
+        ],
+        supportedPlatforms: ["David 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "Xmart OS 2.6",
+        date: "2021-07",
+        type: "OS",
+        description: "夏季更新",
+        features: [
+          "空调系统优化",
+          "语音助手持续优化",
+          "蓝牙钥匙体验改善",
+          "充电管理优化"
+        ],
+        supportedPlatforms: ["David 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "Xmart OS 2.5",
+        date: "2021-05",
+        type: "OS",
+        description: "P5 预告",
+        features: [
+          "语音助手预告城市NOA",
+          "导航功能增强",
+          "应用商店预告",
+          "个性化设置"
+        ],
+        supportedPlatforms: ["David 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "Xmart OS 2.4",
+        date: "2021-03",
+        type: "OS",
+        description: "春季更新",
+        features: [
+          "语音助手能力增强",
+          "导航功能优化",
+          "OTA机制完善",
+          "系统稳定性提升"
+        ],
+        supportedPlatforms: ["David 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "Xmart OS 2.3",
+        date: "2021-01",
+        type: "OS",
+        description: "农历新年更新",
+        features: [
+          "春节主题",
+          "新年语音祝福",
+          "氛围灯效",
+          "基础功能完善"
+        ],
+        supportedPlatforms: ["David 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "Xmart OS 2.2",
+        date: "2020-11",
+        type: "OS",
+        description: "G3 2021款发布",
+        features: [
+          "全新UI设计",
+          "语音助手持续优化",
+          "OTA升级机制建立",
+          "应用生态基础"
+        ],
+        supportedPlatforms: ["David 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "Xmart OS 2.1",
+        date: "2020-09",
+        type: "OS",
+        description: "秋季更新",
+        features: [
+          "语音助手能力提升",
+          "导航功能增强",
+          "车辆设置完善",
+          "用户体验优化"
+        ],
+        supportedPlatforms: ["David 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "Xmart OS 2.0",
+        date: "2020-07",
+        type: "OS",
+        description: "P7 首发",
+        features: [
+          "小P 1.0 语音助手首发",
+          "全新车机系统",
+          "OTA 1.0 体系建立",
+          "智能座舱基础"
+        ],
+        supportedPlatforms: ["Edward 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      // Xmart OS 1.x 系列
+      {
+        version: "Xmart OS 1.8",
+        date: "2020-05",
+        type: "OS",
+        description: "G3 2020款发布",
+        features: [
+          "语音助手持续优化",
+          "哨兵模式功能",
+          "蓝牙钥匙体验改善",
+          "系统流畅度提升"
+        ],
+        supportedPlatforms: ["David 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "Xmart OS 1.7",
+        date: "2020-03",
+        type: "OS",
+        description: "疫情更新",
+        features: [
+          "空气净化系统优化",
+          "语音助手增强",
+          "远程控制功能",
+          "系统稳定性提升"
+        ],
+        supportedPlatforms: ["David 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "Xmart OS 1.6",
+        date: "2020-01",
+        type: "OS",
+        description: "农历新年更新",
+        features: [
+          "春节主题上线",
+          "新年语音祝福",
+          "节日氛围功能",
+          "基础功能完善"
+        ],
+        supportedPlatforms: ["David 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "Xmart OS 1.5",
+        date: "2019-11",
+        type: "OS",
+        description: "G3 2020款发布",
+        features: [
+          "语音助手1.0发布",
+          "可见即可说功能",
+          "OTA升级机制预告",
+          "基础智能功能"
+        ],
+        supportedPlatforms: ["David 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "Xmart OS 1.4",
+        date: "2019-09",
+        type: "OS",
+        description: "秋季更新",
+        features: [
+          "语音助手持续优化",
+          "导航功能增强",
+          "车辆设置完善",
+          "系统流畅度提升"
+        ],
+        supportedPlatforms: ["David 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "Xmart OS 1.3",
+        date: "2019-07",
+        type: "OS",
+        description: "夏季更新",
+        features: [
+          "空调系统优化",
+          "语音助手预告",
+          "基础车机功能",
+          "用户体验提升"
+        ],
+        supportedPlatforms: ["David 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "Xmart OS 1.2",
+        date: "2019-05",
+        type: "OS",
+        description: "G3 首次大规模更新",
+        features: [
+          "小P 语音助手预告",
+          "车机系统基础功能",
+          "OTA机制建立",
+          "智能座舱基础"
+        ],
+        supportedPlatforms: ["David 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "Xmart OS 1.1",
+        date: "2019-03",
+        type: "OS",
+        description: "春季更新",
+        features: [
+          "语音基础功能",
+          "导航系统基础",
+          "车辆设置功能",
+          "系统稳定性提升"
+        ],
+        supportedPlatforms: ["David 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      },
+      {
+        version: "Xmart OS 1.0",
+        date: "2018-12",
+        type: "OS",
+        description: "小鹏G3 首次发布",
+        features: [
+          "小鹏G3 车机系统首发",
+          "基础车机功能",
+          "语音基础功能",
+          "智能座舱基础"
+        ],
+        supportedPlatforms: ["David 平台"],
+        detailsUrl: "https://www.xiaopeng.com/"
+      }
+    ]
+  }
 ];
 
 export const chipPlatforms: ChipPlatform[] = [
