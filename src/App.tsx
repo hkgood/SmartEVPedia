@@ -56,7 +56,7 @@ export default function App() {
       <main className="flex-1 overflow-y-auto w-full h-screen">
         {/* Mobile Header */}
         <div className="lg:hidden flex items-center justify-between p-4 bg-white border-b border-slate-200 sticky top-0 z-30">
-          <div className="font-bold text-lg text-slate-900">SmartEVPedia</div>
+          <img src="logo.svg" alt="SmartEVPedia" className="w-8 h-8" />
           <button
             onClick={() => setIsSidebarOpen(true)}
             className="p-2 text-slate-600 hover:bg-slate-100 rounded-lg"
