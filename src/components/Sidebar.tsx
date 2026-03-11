@@ -21,9 +21,7 @@ export default function Sidebar({
       {/* Logo */}
       <div className="p-4 border-b border-slate-200">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-emerald-500 flex items-center justify-center">
-            <span className="text-white font-bold text-lg">E</span>
-          </div>
+          <img src="/logo.svg" alt="SmartEVPedia" className="w-10 h-10" />
           <div>
             <h1 className="font-bold text-slate-900">SmartEVPedia</h1>
             <p className="text-xs text-slate-500">智能电动车百科</p>
