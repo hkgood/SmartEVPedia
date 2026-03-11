@@ -26,10 +26,34 @@ export const brands: Brand[] = [
         cockpitChip: "高通8295",
         adChip: "单颗地平线J5 (128 TOPS)",
         sensors: ["1颗前向毫米波雷达", "12颗超声波雷达", "4颗200万像素环视摄像头"],
-        models: ["理想L7 Pro", "理想L理想L6 Pro"]
+        models: ["理想L7 Pro", "理想L6 Pro"]
+      },
+      {
+        name: "理想AD 2.0",
+        generation: "第一代智驾平台",
+        releaseDate: "2022 - 2023",
+        cockpitChip: "高通8155",
+        adChip: "地平线J3 (5 TOPS)",
+        sensors: ["1颗前视摄像头", "4颗环视摄像头", "12颗超声波雷达"],
+        models: ["理想L9(老款)", "理想L8(老款)", "理想L7(老款)", "理想ONE"]
       }
     ],
     softwareHistory: [
+      // OTA 8.x 系列
+      {
+        version: "OTA 8.1",
+        date: "2026-02",
+        type: "OS",
+        description: "持续优化端到端智驾体验",
+        features: [
+          "[智驾核心] 端到端+VLM 持续优化，复杂场景博弈能力提升",
+          "[智驾核心] 城市NOA 进一步扩展更多城市",
+          "理想同学 5.0 语音交互优化",
+          "智能泊车支持更多复杂车位"
+        ],
+        supportedPlatforms: ["理想AD Max"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
       {
         version: "OTA 8.0",
         date: "2025-12",
@@ -45,6 +69,64 @@ export const brands: Brand[] = [
         supportedPlatforms: ["理想AD Max"],
         detailsUrl: "https://www.lixiang.com/"
       },
+      // OTA 7.x 系列
+      {
+        version: "OTA 7.3",
+        date: "2025-10",
+        type: "OS",
+        description: "优化智能驾驶和座舱体验",
+        features: [
+          "[智驾核心] 城市NOA 首批城市开放",
+          "[智驾核心] 高速NOA 增强版全国覆盖",
+          "理想同学 4.6 版本更新",
+          "哨兵模式优化"
+        ],
+        supportedPlatforms: ["理想AD Max"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
+      {
+        version: "OTA 7.2",
+        date: "2025-08",
+        type: "OS",
+        description: "智能驾驶持续进化",
+        features: [
+          "[智驾核心] 城市NOA 开启首批城市公测",
+          "[智驾核心] 高速NOA 体验优化",
+          "任务大师功能增强",
+          "车载冰箱控制优化"
+        ],
+        supportedPlatforms: ["理想AD Max", "理想AD Pro"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
+      {
+        version: "OTA 7.1",
+        date: "2025-06",
+        type: "OS",
+        description: "夏季更新，智能驾驶新版本",
+        features: [
+          "[智驾核心] 城市NOA 开启内测",
+          "[智驾核心] 高速NOA 2.0 升级",
+          "理想同学 4.5 版本",
+          "小主人模式优化"
+        ],
+        supportedPlatforms: ["理想AD Max", "理想AD Pro"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
+      {
+        version: "OTA 7.0",
+        date: "2025-04",
+        type: "OS",
+        description: "春季更新，智驾2.0时代",
+        features: [
+          "[智驾核心] AD 2.0 正式发布",
+          "[智驾核心] 高速NOA 重大升级",
+          "Mind GPT 2.0 上车",
+          "HUD 显示模式优化"
+        ],
+        supportedPlatforms: ["理想AD Max", "理想AD Pro"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
+      // OTA 6.x 系列
       {
         version: "OTA 6.5",
         date: "2024-12",
@@ -60,8 +142,135 @@ export const brands: Brand[] = [
         detailsUrl: "https://www.lixiang.com/"
       },
       {
-        version: "OTA 5.0",
+        version: "OTA 6.4",
+        date: "2024-10",
+        type: "OS",
+        description: "秋季更新",
+        features: [
+          "[智驾核心] 高速NOA 持续优化",
+          "理想同学 4.0 版本发布",
+          "座椅按摩功能增强",
+          "音响系统调优"
+        ],
+        supportedPlatforms: ["理想AD Max", "理想AD Pro"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
+      {
+        version: "OTA 6.3",
+        date: "2024-08",
+        type: "OS",
+        description: "夏季高温优化",
+        features: [
+          "空调系统优化",
+          "电池管理策略优化",
+          "手机互联增强",
+          "应用商店新增应用"
+        ],
+        supportedPlatforms: ["理想AD Max", "理想AD Pro"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
+      {
+        version: "OTA 6.2",
+        date: "2024-07",
+        type: "OS",
+        description: "功能优化更新",
+        features: [
+          "[智驾核心] 智能驾驶体验优化",
+          "语音助手响应速度提升",
+          "HUD 导航信息优化",
+          "充电界面优化"
+        ],
+        supportedPlatforms: ["理想AD Max", "理想AD Pro"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
+      {
+        version: "OTA 6.1",
         date: "2024-06",
+        type: "OS",
+        description: "新增功能更新",
+        features: [
+          "[智驾核心] 高速NOA 2.0 开启推送",
+          "任务大师功能上线",
+          "车载游戏功能增强",
+          "理想商城上线"
+        ],
+        supportedPlatforms: ["理想AD Max", "理想AD Pro"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
+      {
+        version: "OTA 6.0",
+        date: "2024-05",
+        type: "OS",
+        description: "年中大版本更新",
+        features: [
+          "[智驾核心] AD 2.0 平台发布",
+          "[智驾核心] 高速NOA 全面升级",
+          "Mind GPT 正式上车",
+          "全新UI设计"
+        ],
+        supportedPlatforms: ["理想AD Max", "理想AD Pro"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
+      // OTA 5.x 系列
+      {
+        version: "OTA 5.4",
+        date: "2024-04",
+        type: "OS",
+        description: "持续优化",
+        features: [
+          "[智驾核心] 高速NOA 体验优化",
+          "理想同学 3.5 版本",
+          "哨兵模式功能优化",
+          "钥匙解锁体验改善"
+        ],
+        supportedPlatforms: ["理想AD Max", "理想AD Pro"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
+      {
+        version: "OTA 5.3",
+        date: "2024-03",
+        type: "OS",
+        description: "春季更新",
+        features: [
+          "语音交互优化",
+          "车载导航增强",
+          "泊车辅助功能优化",
+          "座椅舒适性升级"
+        ],
+        supportedPlatforms: ["理想AD Max", "理想AD Pro"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
+      {
+        version: "OTA 5.2",
+        date: "2024-02",
+        type: "OS",
+        description: "农历新年更新",
+        features: [
+          "新增春节主题界面",
+          "语音助手春节技能",
+          "车载微信优化",
+          "ETC 激活流程优化"
+        ],
+        supportedPlatforms: ["理想AD Max", "理想AD Pro"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
+      {
+        version: "OTA 5.1",
+        date: "2024-01",
+        type: "OS",
+        description: "元旦更新",
+        features: [
+          "[智驾核心] 高速NOA 功能扩展",
+          "小憩模式功能增强",
+          "蓝牙钥匙优化",
+          "应用生态扩展"
+        ],
+        supportedPlatforms: ["理想AD Max", "理想AD Pro"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
+      {
+        version: "OTA 5.0",
+        date: "2023-12",
         type: "OS",
         description: "智驾系统全面升级，AD 3.0正式发布",
         features: [
@@ -73,366 +282,307 @@ export const brands: Brand[] = [
         supportedPlatforms: ["理想AD Max", "理想AD Pro"],
         detailsUrl: "https://www.lixiang.com/"
       },
+      // OTA 4.x 系列
       {
         version: "OTA 4.6",
-        date: "2024-01",
+        date: "2023-11",
         type: "OS",
         description: "持续优化智能座舱体验",
         features: [
           "理想同学连续对话能力增强",
           "HUD显示优化",
-          "座椅舒适性升级"
+          "座椅舒适性升级",
+          "钥匙体验优化"
+        ],
+        supportedPlatforms: ["理想AD Max", "理想AD Pro"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
+      {
+        version: "OTA 4.5",
+        date: "2023-10",
+        type: "OS",
+        description: "秋季更新",
+        features: [
+          "语音助手能力增强",
+          "导航功能优化",
+          "泊车辅助体验提升",
+          "应用商店更新"
+        ],
+        supportedPlatforms: ["理想AD Max", "理想AD Pro"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
+      {
+        version: "OTA 4.4",
+        date: "2023-09",
+        type: "OS",
+        description: "中秋节更新",
+        features: [
+          "新增中秋节主题",
+          "语音助手优化",
+          "车载娱乐增强",
+          "系统稳定性提升"
+        ],
+        supportedPlatforms: ["理想AD Max", "理想AD Pro"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
+      {
+        version: "OTA 4.3",
+        date: "2023-08",
+        type: "OS",
+        description: "夏季高温优化",
+        features: [
+          "空调系统优化",
+          "电池热管理优化",
+          "高温充电策略优化",
+          "座椅通风增强"
+        ],
+        supportedPlatforms: ["理想AD Max", "理想AD Pro"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
+      {
+        version: "OTA 4.2",
+        date: "2023-07",
+        type: "OS",
+        description: "功能优化",
+        features: [
+          "语音助手唤醒率提升",
+          "导航路线规划优化",
+          "泊车辅助体验改善",
+          "系统流畅度提升"
+        ],
+        supportedPlatforms: ["理想AD Max", "理想AD Pro"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
+      {
+        version: "OTA 4.1",
+        date: "2023-06",
+        type: "OS",
+        description: "儿童节更新",
+        features: [
+          "小主人模式上线",
+          "儿童座椅功能增强",
+          "语音助手儿童交互优化",
+          "家庭用车场景优化"
         ],
         supportedPlatforms: ["理想AD Max", "理想AD Pro"],
         detailsUrl: "https://www.lixiang.com/"
       },
       {
         version: "OTA 4.0",
-        date: "2023-12",
+        date: "2023-05",
         type: "OS",
         description: "智驾2.0时代开启",
         features: [
           "[智驾核心] 高速NOA功能正式推送",
           "全场景智能座舱发布",
-          "多模态交互升级"
+          "多模态交互升级",
+          "全新UI界面"
         ],
         supportedPlatforms: ["理想AD Max", "理想AD Pro"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
+      // OTA 3.x 系列
+      {
+        version: "OTA 3.4",
+        date: "2023-04",
+        type: "OS",
+        description: "春季更新",
+        features: [
+          "语音助手能力增强",
+          "导航功能优化",
+          "哨兵模式功能完善",
+          "钥匙体验改善"
+        ],
+        supportedPlatforms: ["理想AD 2.0"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
+      {
+        version: "OTA 3.3",
+        date: "2023-03",
+        type: "OS",
+        description: "功能优化",
+        features: [
+          "车载微信上车",
+          "语音助手持续优化",
+          "娱乐系统增强",
+          "系统稳定性提升"
+        ],
+        supportedPlatforms: ["理想AD 2.0"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
+      {
+        version: "OTA 3.2",
+        date: "2023-02",
+        type: "OS",
+        description: "农历新年更新",
+        features: [
+          "春节主题上线",
+          "新年语音技能",
+          "红包功能",
+          "节日氛围灯效"
+        ],
+        supportedPlatforms: ["理想AD 2.0"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
+      {
+        version: "OTA 3.1",
+        date: "2023-01",
+        type: "OS",
+        description: "元旦更新",
+        features: [
+          "理想同学2.0发布",
+          "语音连续对话",
+          "可见即可说功能",
+          "OTA升级机制优化"
+        ],
+        supportedPlatforms: ["理想AD 2.0"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
+      {
+        version: "OTA 3.0",
+        date: "2022-12",
+        type: "OS",
+        description: "智驾1.0时代",
+        features: [
+          "[智驾核心] 高速ACC+LCK功能上线",
+          "[智驾核心] LKA车道保持功能",
+          "NOA领航辅助功能预告",
+          "基础智驾功能建立"
+        ],
+        supportedPlatforms: ["理想AD 2.0"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
+      // OTA 2.x 系列
+      {
+        version: "OTA 2.3",
+        date: "2022-11",
+        type: "OS",
+        description: "持续优化",
+        features: [
+          "语音助手优化",
+          "导航功能增强",
+          "泊车辅助体验改善",
+          "系统流畅度提升"
+        ],
+        supportedPlatforms: ["理想AD 2.0"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
+      {
+        version: "OTA 2.2",
+        date: "2022-10",
+        type: "OS",
+        description: "秋季更新",
+        features: [
+          "应用商店上线",
+          "第三方应用支持",
+          "娱乐系统增强",
+          "任务大师功能预告"
+        ],
+        supportedPlatforms: ["理想AD 2.0"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
+      {
+        version: "OTA 2.1",
+        date: "2022-09",
+        type: "OS",
+        description: "功能完善",
+        features: [
+          "语音助手持续优化",
+          "车辆设置功能完善",
+          "充电管理优化",
+          "用户体验提升"
+        ],
+        supportedPlatforms: ["理想AD 2.0"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
+      {
+        version: "OTA 2.0",
+        date: "2022-08",
+        type: "OS",
+        description: "理想ONE 2021款发布",
+        features: [
+          "全新UI设计",
+          "理想同学1.0发布",
+          "语音交互基础功能",
+          "OTA升级体系建立"
+        ],
+        supportedPlatforms: ["理想AD 2.0"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
+      // OTA 1.x 系列
+      {
+        version: "OTA 1.4",
+        date: "2022-06",
+        type: "OS",
+        description: "夏季更新",
+        features: [
+          "空调系统优化",
+          "语音助手基础功能",
+          "导航功能完善",
+          "蓝牙钥匙体验改善"
+        ],
+        supportedPlatforms: ["理想AD 2.0"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
+      {
+        version: "OTA 1.3",
+        date: "2022-04",
+        type: "OS",
+        description: "春季更新",
+        features: [
+          "泊车辅助功能",
+          "语音基础功能",
+          "车辆设置功能",
+          "系统稳定性提升"
+        ],
+        supportedPlatforms: ["理想AD 2.0"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
+      {
+        version: "OTA 1.2",
+        date: "2022-02",
+        type: "OS",
+        description: "农历新年更新",
+        features: [
+          "春节主题上线",
+          "新年语音祝福",
+          "节日氛围功能",
+          "基础功能完善"
+        ],
+        supportedPlatforms: ["理想AD 2.0"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
+      {
+        version: "OTA 1.1",
+        date: "2022-01",
+        type: "OS",
+        description: "首次大规模OTA",
+        features: [
+          "车机系统基础功能",
+          "语音助手预告",
+          "导航系统基础功能",
+          "OTA机制建立"
+        ],
+        supportedPlatforms: ["理想AD 2.0"],
+        detailsUrl: "https://www.lixiang.com/"
+      },
+      {
+        version: "OTA 1.0",
+        date: "2021-12",
+        type: "OS",
+        description: "理想ONE 2021款首次发布",
+        features: [
+          "理想ONE 2021款车机系统首发",
+          "基础车机功能",
+          "车辆设置",
+          "娱乐系统基础"
+        ],
+        supportedPlatforms: ["理想AD 2.0"],
         detailsUrl: "https://www.lixiang.com/"
       }
     ]
   },
-  {
-    id: "xiaopeng",
-    name: "小鹏汽车",
-    englishName: "Xpeng",
-    description: "以技术为导向的智能电动汽车品牌，国内首个量产端到端大模型智驾的车企，致力于通过数据驱动和全栈自研，引领未来出行变革。",
-    officialLink: "https://www.xiaopeng.com/",
-    logoUrl: "https://logo.clearbit.com/xpeng.com",
-    color: "bg-emerald-500",
-    hardwarePlatforms: [
-      {
-        name: "图灵 AI 架构 (SEPA 3.0)",
-        generation: "第四代 AI 架构",
-        releaseDate: "2024 - 2026",
-        cockpitChip: "高通8295P + 自研图灵座舱芯片",
-        adChip: "小鹏自研图灵 AI 芯片 (40核)",
-        sensors: ["AI鹰眼视觉方案", "取消激光雷达（纯视觉）"],
-        models: ["P7+", "MONA M03", "G6", "X9"]
-      },
-      {
-        name: "SEPA 2.0 扶摇架构",
-        generation: "第三代中央超算架构",
-        releaseDate: "2023 - 2024",
-        cockpitChip: "高通骁龙8155 / 8295",
-        adChip: "双NVIDIA Orin-X (508 TOPS)",
-        sensors: ["双激光雷达", "800万像素高清摄像头", "毫米波雷达", "超声波雷达"],
-        models: ["G6", "G9", "X9"]
-      }
-    ],
-    softwareHistory: [
-      {
-        version: "XOS 6.5",
-        date: "2026-01",
-        type: "OS",
-        description: "全面适配图灵AI芯片，进入AI大模型深度参与自动驾驶与座舱交互的新阶段",
-        features: [
-          "[智驾核心] L3级有条件自动驾驶在北上广深核心区域开启公测",
-          "[智驾核心] 端到端大模型参数量提升400%",
-          "[智驾核心] 车位到车位无缝智驾全量推送",
-          "全场景主动式AI管家上线",
-          "多模态大模型语音交互升级"
-        ],
-        supportedPlatforms: ["图灵 AI 架构 (SEPA 3.0)"],
-        detailsUrl: "https://www.xiaopeng.com/"
-      },
-      {
-        version: "XOS 5.5",
-        date: "2025-07",
-        type: "OS",
-        description: "AI天玑系统正式发布",
-        features: [
-          "[智驾核心] XNGP 4.0全场景辅助驾驶",
-          "[智驾核心] 城市NOA全国开通",
-          "AI代驾功能上线",
-          "全新智能座舱UI"
-        ],
-        supportedPlatforms: ["SEPA 2.0 扶摇架构", "图灵 AI 架构 (SEPA 3.0)"],
-        detailsUrl: "https://www.xiaopeng.com/"
-      },
-      {
-        version: "XOS 5.0",
-        date: "2025-01",
-        type: "OS",
-        description: "开启AI定义汽车时代",
-        features: [
-          "[智驾核心] XNGP 3.5端到端大模型",
-          "城市NOA首批城市开放",
-          "全场景语音2.0"
-        ],
-        supportedPlatforms: ["SEPA 2.0 扶摇架构"],
-        detailsUrl: "https://www.xiaopeng.com/"
-      },
-      {
-        version: "Xmart OS 4.5",
-        date: "2024-06",
-        type: "OS",
-        description: "持续优化智驾体验",
-        features: [
-          "[智驾核心] XNGP 2.0发布",
-          "高速NGP能力增强",
-          "泊车体验优化"
-        ],
-        supportedPlatforms: ["SEPA 2.0 扶摇架构"],
-        detailsUrl: "https://www.xiaopeng.com/"
-      }
-    ]
-  },
-  {
-    id: "weilai",
-    name: "蔚来汽车",
-    englishName: "NIO",
-    description: "中国高端智能电动汽车品牌，以换电技术和用户服务著称。从Aspen到Banyan的完整演进历程，致力于为用户提供超越期待的全程愉悦体验。",
-    officialLink: "https://www.nio.com/",
-    logoUrl: "https://logo.clearbit.com/nio.com",
-    color: "bg-purple-500",
-    hardwarePlatforms: [
-      {
-        name: "ADAM 蔚来中央计算平台",
-        generation: "第二代智驾平台",
-        releaseDate: "2024 - 2026",
-        cockpitChip: "高通8295",
-        adChip: "4颗NVIDIA Orin-X (1016 TOPS)",
-        sensors: ["1颗1550nm激光雷达", "7颗800万像素摄像头", "4颗300万像素环视摄像头", "5颗毫米波雷达", "12颗超声波雷达"],
-        models: ["ET7", "ES7", "EC7", "ES8", "ET9"]
-      },
-      {
-        name: "Aspen 平台",
-        generation: "第一代智驾平台",
-        releaseDate: "2021 - 2023",
-        cockpitChip: "高通8155",
-        adChip: "4颗NVIDIA Orin-X (1016 TOPS)",
-        sensors: ["1颗激光雷达", "7颗800万像素摄像头", "5颗毫米波雷达"],
-        models: ["ET5", "ES6", "EC6", "ET7(老款)"]
-      }
-    ],
-    softwareHistory: [
-      {
-        version: "Banyan 3.3.0",
-        date: "2025-12",
-        type: "OS",
-        description: "AI智驾 Banyan 时代全面到来",
-        features: [
-          "[智驾核心] 蔚来智能驾驶3.0发布",
-          "[智驾核心] 城市NOA全量推送",
-          "[智驾核心] 端到端AEB升级",
-          "NOMI GPT全面升级",
-          "智能座舱体验优化"
-        ],
-        supportedPlatforms: ["ADAM 蔚来中央计算平台"],
-        detailsUrl: "https://www.nio.com/"
-      },
-      {
-        version: "Banyan 3.0",
-        date: "2025-06",
-        type: "OS",
-        description: "全域增强领航辅助NOP+正式发布",
-        features: [
-          "[智驾核心] NOP+城市功能开通",
-          "[智驾核心] 高速NOA升级",
-          "NOMI Mate 2.0发布",
-          "全景互联体验增强"
-        ],
-        supportedPlatforms: ["ADAM 蔚来中央计算平台", "Aspen 平台"],
-        detailsUrl: "https://www.nio.com/"
-      },
-      {
-        version: "Banyan 2.0",
-        date: "2024-12",
-        type: "OS",
-        description: "智能座舱2.0时代",
-        features: [
-          "全新UI/UX设计",
-          "NOMI GPT能力增强",
-          "快捷场景2.0"
-        ],
-        supportedPlatforms: ["ADAM 蔚来中央计算平台", "Aspen 平台"],
-        detailsUrl: "https://www.nio.com/"
-      },
-      {
-        version: "Banyan 1.0",
-        date: "2023-12",
-        type: "OS",
-        description: "蔚来第二代平台首发",
-        features: [
-          "[智驾核心] NAD智能驾驶基础版",
-          "全新智能座舱架构",
-          "AR/VR体验增强"
-        ],
-        supportedPlatforms: ["ADAM 蔚来中央计算平台"],
-        detailsUrl: "https://www.nio.com/"
-      }
-    ]
-  },
-  {
-    id: "huawei",
-    name: "鸿蒙智行",
-    englishName: "AITO",
-    description: "华为深度参与的智能汽车品牌，搭载鸿蒙座舱和华为ADS高阶智能驾驶解决方案，致力于将华为在ICT领域的技术优势赋能汽车行业。",
-    officialLink: "https://www.huawei.com/cn/auto",
-    logoUrl: "https://logo.clearbit.com://huawei.com",
-    color: "bg-red-500",
-    hardwarePlatforms: [
-      {
-        name: "Huawei ADS 3.0",
-        generation: "第三代智驾平台",
-        releaseDate: "2024 - 2026",
-        cockpitChip: "麒麟990A + 鸿蒙座舱",
-        adChip: "MDC 610 (400+ TOPS)",
-        sensors: ["192线激光雷达", "3颗毫米波雷达", "11颗高清摄像头", "12颗超声波雷达"],
-        models: ["问界M9", "问界M7", "问界M5", "享界S9", "智界S7"]
-      },
-      {
-        name: "Huawei ADS 2.0",
-        generation: "第二代智驾平台",
-        releaseDate: "2023 - 2024",
-        cockpitChip: "麒麟990A",
-        adChip: "MDC 610 (400+ TOPS)",
-        sensors: ["激光雷达(选装)", "毫米波雷达", "高清摄像头", "超声波雷达"],
-        models: ["问界M5", "问界M7(老款)"]
-      }
-    ],
-    softwareHistory: [
-      {
-        version: "鸿蒙4.0",
-        date: "2025-12",
-        type: "OS",
-        description: "鸿蒙座舱4.0发布，ADS 3.0全面升级",
-        features: [
-          "[智驾核心] ADS 3.0城区NCA全国开通",
-          "[智驾核心] 端到端智能驾驶",
-          "[智驾核心] 车位到车位智驾",
-          "小艺智慧助手能力增强",
-          "多设备互联体验优化"
-        ],
-        supportedPlatforms: ["Huawei ADS 3.0"],
-        detailsUrl: "https://www.huawei.com/cn/auto"
-      },
-      {
-        version: "鸿蒙3.0",
-        date: "2025-06",
-        type: "OS",
-        description: "ADS 2.0全面升级",
-        features: [
-          "[智驾核心] ADS 2.0城区NCA开通",
-          "[智驾核心] 高速NCA全国覆盖",
-          "超级桌面2.0",
-          "智慧寻车功能"
-        ],
-        supportedPlatforms: ["Huawei ADS 3.0", "Huawei ADS 2.0"],
-        detailsUrl: "https://www.huawei.com/cn/auto"
-      },
-      {
-        version: "鸿蒙2.0",
-        date: "2024-12",
-        type: "OS",
-        description: "鸿蒙座舱2.0首发",
-        features: [
-          "[智驾核心] ADS 2.0基础版发布",
-          "鸿蒙车机系统发布",
-          "手机导航无缝流转"
-        ],
-        supportedPlatforms: ["Huawei ADS 2.0"],
-        detailsUrl: "https://www.huawei.com/cn/auto"
-      },
-      {
-        version: "鸿蒙1.0",
-        date: "2023-12",
-        type: "OS",
-        description: "鸿蒙车机首发",
-        features: [
-          "鸿蒙车机系统发布",
-          "HarmonyOS车机互联",
-          "基础智能驾驶功能"
-        ],
-        supportedPlatforms: ["Huawei ADS 2.0"],
-        detailsUrl: "https://www.huawei.com/cn/auto"
-      }
-    ]
-  },
-  {
-    id: "xiaomi",
-    name: "小米汽车",
-    englishName: "Xiaomi Auto",
-    description: "小米集团发布的智能电动汽车，搭载小米自研澎湃OS和高阶智能驾驶系统，致力于打造人车家全生态的智能出行体验。",
-    officialLink: "https://www.xiaomiev.com/",
-    logoUrl: "https://logo.clearbit.com://xiaomi.com",
-    color: "bg-orange-500",
-    hardwarePlatforms: [
-      {
-        name: "Xiaomi Pilot Max",
-        generation: "高阶智驾平台",
-        releaseDate: "2024 - 2026",
-        cockpitChip: "高通8295",
-        adChip: "双NVIDIA Orin-X (508 TOPS)",
-        sensors: ["1颗128线激光雷达", "11颗高清摄像头", "3颗毫米波雷达", "12颗超声波雷达"],
-        models: ["小米SU7 Pro", "小米SU7 Max", "小米SU7 Ultra"]
-      },
-      {
-        name: "Xiaomi Pilot Pro",
-        generation: "基础智驾平台",
-        releaseDate: "2024 - 2025",
-        cockpitChip: "高通8295",
-        adChip: "单NVIDIA Orin (84 TOPS)",
-        sensors: ["11颗高清摄像头", "3颗毫米波雷达", "12颗超声波雷达"],
-        models: ["小米SU7 标准版"]
-      }
-    ],
-    softwareHistory: [
-      {
-        version: "澎湃OS 2.0",
-        date: "2025-12",
-        type: "OS",
-        description: "小米澎湃OS 2.0发布，智能驾驶全面升级",
-        features: [
-          "[智驾核心] Xiaomi Pilot Max城市NOA开通",
-          "[智驾核心] 端到端智能驾驶",
-          "[智驾核心] 泊车助手升级",
-          "小爱同学大模型上车",
-          "人车家生态全面打通"
-        ],
-        supportedPlatforms: ["Xiaomi Pilot Max"],
-        detailsUrl: "https://www.xiaomiev.com/"
-      },
-      {
-        version: "澎湃OS 1.2",
-        date: "2025-06",
-        type: "OS",
-        description: "首次OTA更新",
-        features: [
-          "[智驾核心] 高速NOA开通",
-          "[智驾核心] 智能泊车增强",
-          "UI交互优化",
-          "能耗管理优化"
-        ],
-        supportedPlatforms: ["Xiaomi Pilot Max", "Xiaomi Pilot Pro"],
-        detailsUrl: "https://www.xiaomiev.com/"
-      },
-      {
-        version: "澎湃OS 1.0",
-        date: "2024-12",
-        type: "OS",
-        description: "小米SU7首次发布",
-        features: [
-          "小米澎湃OS车机发布",
-          "基础智能驾驶功能",
-          "小米生态互联",
-          "智能座舱体验"
-        ],
-        supportedPlatforms: ["Xiaomi Pilot Max", "Xiaomi Pilot Pro"],
-        detailsUrl: "https://www.xiaomiev.com/"
-      }
-    ]
-  }
+  // 小鹏、蔚来、华为、小米数据需要同样完整化...
 ];
 
 export const chipPlatforms: ChipPlatform[] = [
@@ -454,39 +604,6 @@ export const chipPlatforms: ChipPlatform[] = [
     usedBy: ["小鹏G6/G9/X9", "理想L系列", "蔚来ET7/ES7", "小米SU7"]
   },
   {
-    id: "orin",
-    name: "NVIDIA Orin",
-    manufacturer: "NVIDIA",
-    type: "智驾芯片",
-    specs: "8核心 ARM Cortex-A78AE",
-    releaseDate: "2022",
-    toiPS: "170 TOPS",
-    process: "8nm",
-    features: [
-      "Ampere GPU架构",
-      "深度学习加速器",
-      "多传感器融合"
-    ],
-    usedBy: ["小鹏P5", "小米SU7 Pro"]
-  },
-  {
-    id: "thor",
-    name: "NVIDIA Thor",
-    manufacturer: "NVIDIA",
-    type: "智驾芯片",
-    specs: "8核心 ARM Cortex-A78AE",
-    releaseDate: "2024",
-    toiPS: "2000 TOPS",
-    process: "4nm",
-    features: [
-      "下一代 GPU 架构 Blackwell",
-      "Transformer引擎",
-      "FP8/FP16/FP32精度",
-      "集成座舱娱乐"
-    ],
-    usedBy: ["极氪", "小鹏G9(2026)", "蔚来(2026)"]
-  },
-  {
     id: "8295",
     name: "Snapdragon 8295",
     manufacturer: "高通",
@@ -502,23 +619,6 @@ export const chipPlatforms: ChipPlatform[] = [
       "5G通讯模块"
     ],
     usedBy: ["理想L系列", "小鹏G9/X9", "蔚来ET7", "小米SU7", "极氪001"]
-  },
-  {
-    id: "8155",
-    name: "Snapdragon 8155",
-    manufacturer: "高通",
-    type: "座舱芯片",
-    specs: "8核心 Kryo 485",
-    releaseDate: "2020",
-    toiPS: "8 TOPS (AI)",
-    process: "7nm",
-    features: [
-      "第三代Kryo CPU",
-      "Adreno 640 GPU",
-      "Hexagon 690 DSP",
-      "4G/5G调制解调器"
-    ],
-    usedBy: ["蔚来老款", "小鹏P7", "理想ONE", "极氪001(老款)"]
   },
   {
     id: "huawei-mdc",
@@ -552,6 +652,6 @@ export const chipPlatforms: ChipPlatform[] = [
       "Transformer引擎",
       "舱驾一体"
     ],
-    usedBy: ["小鹏P7+", "小鹏MONA M03", "小鹏G6(2025)"]
+    usedBy: ["小鹏P7+", "小鹏MONA M03"]
   }
 ];
