@@ -1239,6 +1239,998 @@ export const brands: Brand[] = [
         detailsUrl: "https://www.xiaopeng.com/"
       }
     ]
+  },
+  {
+    id: "weilai",
+    name: "蔚来汽车",
+    englishName: "NIO",
+    description: "中国高端智能电动汽车品牌，以换电技术和用户服务著称。从Aspen到Banyan的完整演进历程，致力于为用户提供超越期待的全程愉悦体验。",
+    officialLink: "https://www.nio.com/",
+    logoUrl: "https://logo.clearbit.com/nio.com",
+    color: "bg-purple-500",
+    hardwarePlatforms: [
+      {
+        name: "ADAM 蔚来中央计算平台",
+        generation: "第二代智驾平台",
+        releaseDate: "2024 - 2026",
+        cockpitChip: "高通8295",
+        adChip: "4颗NVIDIA Orin-X (1016 TOPS)",
+        sensors: ["1颗1550nm激光雷达", "7颗800万像素摄像头", "4颗300万像素环视摄像头", "5颗毫米波雷达", "12颗超声波雷达"],
+        models: ["ET7", "ES7", "EC7", "ES8", "ET9", "ET5T"]
+      },
+      {
+        name: "Aspen 平台",
+        generation: "第一代智驾平台",
+        releaseDate: "2021 - 2023",
+        cockpitChip: "高通8155",
+        adChip: "4颗NVIDIA Orin-X (1016 TOPS)",
+        sensors: ["1颗激光雷达", "7颗800万像素摄像头", "5颗毫米波雷达"],
+        models: ["ET5", "ES6", "EC6", "ET7(老款)", "ES8(老款)"]
+      },
+      {
+        name: "Lion 平台",
+        generation: "早期平台",
+        releaseDate: "2018 - 2021",
+        cockpitChip: "英伟达Tegra X1",
+        adChip: "Mobileye EyeQ4",
+        sensors: ["1颗前视摄像头", "4颗环视摄像头", "5颗毫米波雷达", "12颗超声波雷达"],
+        models: ["ES8", "ES6", "EC6"]
+      }
+    ],
+    softwareHistory: [
+      // Banyan 3.x 系列
+      {
+        version: "Banyan 3.5",
+        date: "2026-02",
+        type: "OS",
+        description: "AI智驾持续进化",
+        features: [
+          "[智驾核心] NAD 3.0 端到端智驾",
+          "[智驾核心] 城市NOA 进一步扩展",
+          "NOMI GPT 3.0 增强",
+          "智能座舱体验优化"
+        ],
+        supportedPlatforms: ["ADAM 蔚来中央计算平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      {
+        version: "Banyan 3.4",
+        date: "2025-12",
+        type: "OS",
+        description: "年度大更新",
+        features: [
+          "[智驾核心] NAD 2.5 智驾系统",
+          "[智驾核心] 城市NOA 全国开通",
+          "[智驾核心] 车位到车位功能",
+          "NOMI GPT 2.5 发布",
+          "全新UI设计"
+        ],
+        supportedPlatforms: ["ADAM 蔚来中央计算平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      {
+        version: "Banyan 3.3",
+        date: "2025-10",
+        type: "OS",
+        description: "秋季更新",
+        features: [
+          "[智驾核心] NAD 2.0 城市NOA",
+          "[智驾核心] 高速NOP+ 增强",
+          "NOMI 认知能力提升",
+          "智能泊车增强"
+        ],
+        supportedPlatforms: ["ADAM 蔚来中央计算平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      {
+        version: "Banyan 3.2",
+        date: "2025-08",
+        type: "OS",
+        description: "夏季更新",
+        features: [
+          "[智驾核心] NAD 1.5 智驾升级",
+          "[智驾核心] 城市NOA 首批城市",
+          "NOMI GPT 2.0",
+          "离车泊车功能"
+        ],
+        supportedPlatforms: ["ADAM 蔚来中央计算平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      {
+        version: "Banyan 3.1",
+        date: "2025-06",
+        type: "OS",
+        description: "功能完善",
+        features: [
+          "[智驾核心] NAD 1.0 发布",
+          "[智驾核心] 高速NOP+ 全量推送",
+          "NOMI GPT 上车",
+          "智能驾驶持续优化"
+        ],
+        supportedPlatforms: ["ADAM 蔚来中央计算平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      {
+        version: "Banyan 3.0",
+        date: "2025-04",
+        type: "OS",
+        description: " Banyan 时代全面开启",
+        features: [
+          "[智驾核心] NAD 智能驾驶发布",
+          "[智驾核心] NOP+ 高速领航辅助",
+          "NOMI 2.0 发布",
+          "全新智能座舱"
+        ],
+        supportedPlatforms: ["ADAM 蔚来中央计算平台", "Aspen 平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      // Banyan 2.x 系列
+      {
+        version: "Banyan 2.6",
+        date: "2025-02",
+        type: "OS",
+        description: "农历新年更新",
+        features: [
+          "春节主题",
+          "NOMI 语音增强",
+          "氛围灯效优化",
+          "系统稳定性提升"
+        ],
+        supportedPlatforms: ["ADAM 蔚来中央计算平台", "Aspen 平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      {
+        version: "Banyan 2.5",
+        date: "2024-12",
+        type: "OS",
+        description: "冬季更新",
+        features: [
+          "[智驾核心] NOP+ 高速NOA 增强",
+          "NOMI 能力提升",
+          "智能座舱优化",
+          "电池管理增强"
+        ],
+        supportedPlatforms: ["ADAM 蔚来中央计算平台", "Aspen 平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      {
+        version: "Banyan 2.4",
+        date: "2024-10",
+        type: "OS",
+        description: "秋季更新",
+        features: [
+          "[智驾核心] NOP+ 城市NOA 预告",
+          "NOMI 连续对话增强",
+          "应用生态扩展",
+          "系统流畅度提升"
+        ],
+        supportedPlatforms: ["ADAM 蔚来中央计算平台", "Aspen 平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      {
+        version: "Banyan 2.3",
+        date: "2024-08",
+        type: "OS",
+        description: "夏季高温优化",
+        features: [
+          "空调系统优化",
+          "电池热管理",
+          "充电效率提升",
+          "NOMI 语音优化"
+        ],
+        supportedPlatforms: ["ADAM 蔚来中央计算平台", "Aspen 平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      {
+        version: "Banyan 2.2",
+        date: "2024-06",
+        type: "OS",
+        description: "ETT发布",
+        features: [
+          "[智驾核心] NOP+ 高速NOA",
+          "NOMI 能力增强",
+          "智能泊车优化",
+          "座舱体验提升"
+        ],
+        supportedPlatforms: ["ADAM 蔚来中央计算平台", "Aspen 平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      {
+        version: "Banyan 2.1",
+        date: "2024-04",
+        type: "OS",
+        description: "春季更新",
+        features: [
+          "[智驾核心] NOP 增强版",
+          "NOMI 持续优化",
+          "HUD显示优化",
+          "系统稳定性提升"
+        ],
+        supportedPlatforms: ["ADAM 蔚来中央计算平台", "Aspen 平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      {
+        version: "Banyan 2.0",
+        date: "2024-02",
+        type: "OS",
+        description: "年度大更新",
+        features: [
+          "全新UI设计",
+          "NOMI 2.0 预告",
+          "快捷场景2.0",
+          "OTA机制优化"
+        ],
+        supportedPlatforms: ["ADAM 蔚来中央计算平台", "Aspen 平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      // Banyan 1.x 系列
+      {
+        version: "Banyan 1.4",
+        date: "2024-01",
+        type: "OS",
+        description: "农历新年更新",
+        features: [
+          "春节主题",
+          "NOMI 语音增强",
+          "氛围灯效",
+          "系统优化"
+        ],
+        supportedPlatforms: ["Aspen 平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      {
+        version: "Banyan 1.3",
+        date: "2023-12",
+        type: "OS",
+        description: "ET9发布",
+        features: [
+          "[智驾核心] NOP 高速NOA",
+          "NOMI 能力增强",
+          "智能驾驶优化",
+          "座舱体验提升"
+        ],
+        supportedPlatforms: ["Aspen 平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      {
+        version: "Banyan 1.2",
+        date: "2023-10",
+        type: "OS",
+        description: "秋季更新",
+        features: [
+          "NOMI 持续优化",
+          "导航功能增强",
+          "应用生态扩展",
+          "系统流畅度提升"
+        ],
+        supportedPlatforms: ["Aspen 平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      {
+        version: "Banyan 1.1",
+        date: "2023-08",
+        type: "OS",
+        description: "ET5T发布",
+        features: [
+          "NOMI 1.5 发布",
+          "语音助手增强",
+          "智能座舱优化",
+          "车辆设置完善"
+        ],
+        supportedPlatforms: ["Aspen 平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      {
+        version: "Banyan 1.0",
+        date: "2023-06",
+        type: "OS",
+        description: "第二代平台首发",
+        features: [
+          "全新UI设计",
+          "NOMI 1.0 发布",
+          "AR/VR体验增强",
+          "OTA 2.0"
+        ],
+        supportedPlatforms: ["Aspen 平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      // Aspen 系列
+      {
+        version: "Aspen 3.5",
+        date: "2023-04",
+        type: "OS",
+        description: "春季更新",
+        features: [
+          "NOMI 能力增强",
+          "语音连续对话",
+          "导航优化",
+          "系统稳定性提升"
+        ],
+        supportedPlatforms: ["Aspen 平台", "Lion 平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      {
+        version: "Aspen 3.4",
+        date: "2023-02",
+        type: "OS",
+        description: "农历新年更新",
+        features: [
+          "春节主题",
+          "NOMI 新年技能",
+          "氛围灯效",
+          "系统优化"
+        ],
+        supportedPlatforms: ["Aspen 平台", "Lion 平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      {
+        version: "Aspen 3.3",
+        date: "2022-12",
+        type: "OS",
+        description: "ET7 发布",
+        features: [
+          "NOMI 增强版",
+          "全新UI设计",
+          "语音助手优化",
+          "智能驾驶预告"
+        ],
+        supportedPlatforms: ["Aspen 平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      {
+        version: "Aspen 3.2",
+        date: "2022-10",
+        type: "OS",
+        description: "秋季更新",
+        features: [
+          "NOMI 能力提升",
+          "导航功能增强",
+          "应用生态扩展",
+          "系统流畅度提升"
+        ],
+        supportedPlatforms: ["Aspen 平台", "Lion 平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      {
+        version: "Aspen 3.1",
+        date: "2022-08",
+        type: "OS",
+        description: "ES7发布",
+        features: [
+          "NOMI 持续优化",
+          "语音助手增强",
+          "智能座舱升级",
+          "车辆设置完善"
+        ],
+        supportedPlatforms: ["Aspen 平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      {
+        version: "Aspen 3.0",
+        date: "2022-06",
+        type: "OS",
+        description: "ET7 首发",
+        features: [
+          "NOMI 1.0 正式版",
+          "全新车机系统",
+          "OTA 2.0 体系",
+          "智能座舱基础"
+        ],
+        supportedPlatforms: ["Aspen 平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      // Aspen 早期版本
+      {
+        version: "Aspen 2.5",
+        date: "2022-04",
+        type: "OS",
+        description: "ES6/EC6中期改款",
+        features: [
+          "NOMI 预告",
+          "语音助手持续优化",
+          "导航功能增强",
+          "系统稳定性提升"
+        ],
+        supportedPlatforms: ["Lion 平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      {
+        version: "Aspen 2.4",
+        date: "2022-02",
+        type: "OS",
+        description: "农历新年更新",
+        features: [
+          "春节主题",
+          "NOMI 新年祝福",
+          "氛围灯效",
+          "基础功能完善"
+        ],
+        supportedPlatforms: ["Lion 平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      {
+        version: "Aspen 2.3",
+        date: "2021-12",
+        type: "OS",
+        description: "年度更新",
+        features: [
+          "NOMI 基础版",
+          "语音助手预告",
+          "导航系统增强",
+          "OTA机制建立"
+        ],
+        supportedPlatforms: ["Lion 平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      {
+        version: "Aspen 2.2",
+        date: "2021-10",
+        type: "OS",
+        description: "秋季更新",
+        features: [
+          "NOMI 预告",
+          "语音基础功能",
+          "车辆设置完善",
+          "用户体验提升"
+        ],
+        supportedPlatforms: ["Lion 平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      {
+        version: "Aspen 2.1",
+        date: "2021-08",
+        type: "OS",
+        description: "ES6发布",
+        features: [
+          "NOMI 语音助手预告",
+          "全新车机界面",
+          "智能座舱预告",
+          "OTA机制预告"
+        ],
+        supportedPlatforms: ["Lion 平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      {
+        version: "Aspen 2.0",
+        date: "2021-06",
+        type: "OS",
+        description: "ES6/EC6首发",
+        features: [
+          "NOMI 1.0 预告",
+          "全新车机系统",
+          "OTA 1.0 体系",
+          "智能座舱基础"
+        ],
+        supportedPlatforms: ["Lion 平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      // Aspen 1.x 系列
+      {
+        version: "Aspen 1.4",
+        date: "2021-04",
+        type: "OS",
+        description: "春季更新",
+        features: [
+          "语音助手持续优化",
+          "导航功能增强",
+          "系统稳定性提升",
+          "用户体验改善"
+        ],
+        supportedPlatforms: ["Lion 平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      {
+        version: "Aspen 1.3",
+        date: "2021-02",
+        type: "OS",
+        description: "农历新年更新",
+        features: [
+          "春节主题",
+          "NOMI 预告",
+          "节日氛围",
+          "基础功能完善"
+        ],
+        supportedPlatforms: ["Lion 平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      {
+        version: "Aspen 1.2",
+        date: "2020-12",
+        type: "OS",
+        description: "年度更新",
+        features: [
+          "NOMI 预告",
+          "语音基础功能",
+          "导航系统基础",
+          "OTA机制建立"
+        ],
+        supportedPlatforms: ["Lion 平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      {
+        version: "Aspen 1.1",
+        date: "2020-10",
+        type: "OS",
+        description: "秋季更新",
+        features: [
+          "NOMI 语音助手预告",
+          "车机系统优化",
+          "车辆设置完善",
+          "用户体验提升"
+        ],
+        supportedPlatforms: ["Lion 平台"],
+        detailsUrl: "https://www.nio.com/"
+      },
+      {
+        version: "Aspen 1.0",
+        date: "2020-08",
+        type: "OS",
+        description: "ES8 2020款首发",
+        features: [
+          "NOMI 语音助手首发",
+          "全新车机系统",
+          "OTA 1.0",
+          "智能座舱基础"
+        ],
+        supportedPlatforms: ["Lion 平台"],
+        detailsUrl: "https://www.nio.com/"
+      }
+    ]
+  },
+  {
+    id: "huawei",
+    name: "鸿蒙智行",
+    englishName: "AITO",
+    description: "华为深度参与的智能汽车品牌，搭载鸿蒙座舱和华为ADS高阶智能驾驶解决方案，致力于将华为在ICT领域的技术优势赋能汽车行业。",
+    officialLink: "https://www.huawei.com/cn/auto",
+    logoUrl: "https://logo.clearbit.com/huawei.com",
+    color: "bg-red-500",
+    hardwarePlatforms: [
+      {
+        name: "Huawei ADS 3.0",
+        generation: "第三代智驾平台",
+        releaseDate: "2024 - 2026",
+        cockpitChip: "麒麟990A + 鸿蒙座舱",
+        adChip: "MDC 810 (400+ TOPS)",
+        sensors: ["192线激光雷达", "3颗毫米波雷达", "11颗高清摄像头", "12颗超声波雷达"],
+        models: ["问界M9", "问界M7 Pro", "享界S9", "智界S7"]
+      },
+      {
+        name: "Huawei ADS 2.0",
+        generation: "第二代智驾平台",
+        releaseDate: "2023 - 2024",
+        cockpitChip: "麒麟990A",
+        adChip: "MDC 610 (400+ TOPS)",
+        sensors: ["激光雷达(选装)", "毫米波雷达", "高清摄像头", "超声波雷达"],
+        models: ["问界M5", "问界M7", "智界S7(老款)"]
+      },
+      {
+        name: "Huawei ADS 1.0",
+        generation: "第一代智驾平台",
+        releaseDate: "2022 - 2023",
+        cockpitChip: "麒麟990",
+        adChip: "MDC 210 (48 TOPS)",
+        sensors: ["前视摄像头", "毫米波雷达", "超声波雷达"],
+        models: ["问界M5(老款)"]
+      }
+    ],
+    softwareHistory: [
+      // 鸿蒙4.x 系列
+      {
+        version: "鸿蒙4.2",
+        date: "2026-02",
+        type: "OS",
+        description: "持续优化",
+        features: [
+          "[智驾核心] ADS 3.0 持续进化",
+          "[智驾核心] 城市NCA 体验优化",
+          "小艺智慧助手增强",
+          "系统稳定性提升"
+        ],
+        supportedPlatforms: ["Huawei ADS 3.0"],
+        detailsUrl: "https://www.huawei.com/cn/auto"
+      },
+      {
+        version: "鸿蒙4.1",
+        date: "2025-12",
+        type: "OS",
+        description: "年度大更新",
+        features: [
+          "[智驾核心] ADS 3.0 正式发布",
+          "[智驾核心] 城区NCA 全国开通",
+          "[智驾核心] 车位到车位智驾",
+          "小艺大模型增强",
+          "全新UI设计"
+        ],
+        supportedPlatforms: ["Huawei ADS 3.0"],
+        detailsUrl: "https://www.huawei.com/cn/auto"
+      },
+      {
+        version: "鸿蒙4.0",
+        date: "2025-10",
+        type: "OS",
+        description: "秋季更新",
+        features: [
+          "[智驾核心] ADS 3.0 预告",
+          "[智驾核心] 城市NCA 扩展",
+          "小艺智慧助手2.0",
+          "多设备互联增强"
+        ],
+        supportedPlatforms: ["Huawei ADS 3.0", "Huawei ADS 2.0"],
+        detailsUrl: "https://www.huawei.com/cn/auto"
+      },
+      {
+        version: "鸿蒙3.x 系列",
+        date: "2025-08",
+        type: "OS",
+        description: "夏季更新",
+        features: [
+          "[智驾核心] ADS 2.0 城市NCA",
+          "[智驾核心] 高速NCA 全国覆盖",
+          "超级桌面2.0",
+          "智慧寻车功能"
+        ],
+        supportedPlatforms: ["Huawei ADS 3.0", "Huawei ADS 2.0"],
+        detailsUrl: "https://www.huawei.com/cn/auto"
+      },
+      {
+        version: "鸿蒙3.0",
+        date: "2025-06",
+        type: "OS",
+        description: "功能完善",
+        features: [
+          "[智驾核心] ADS 2.0 持续优化",
+          "[智驾核心] NCA 城市覆盖扩展",
+          "小艺语音增强",
+          "车机互联优化"
+        ],
+        supportedPlatforms: ["Huawei ADS 2.0"],
+        detailsUrl: "https://www.huawei.com/cn/auto"
+      },
+      {
+        version: "鸿蒙2.x 系列",
+        date: "2025-04",
+        type: "OS",
+        description: "问界M9发布",
+        features: [
+          "[智驾核心] ADS 2.0 正式发布",
+          "[智驾核心] 高速NCA 全面推送",
+          "鸿蒙座舱2.0",
+          "超级桌面功能"
+        ],
+        supportedPlatforms: ["Huawei ADS 2.0"],
+        detailsUrl: "https://www.huawei.com/cn/auto"
+      },
+      // 鸿蒙1.x/2.x
+      {
+        version: "鸿蒙2.0",
+        date: "2025-02",
+        type: "OS",
+        description: "农历新年更新",
+        features: [
+          "春节主题",
+          "小艺语音增强",
+          "系统优化",
+          "功能完善"
+        ],
+        supportedPlatforms: ["Huawei ADS 2.0", "Huawei ADS 1.0"],
+        detailsUrl: "https://www.huawei.com/cn/auto"
+      },
+      {
+        version: "鸿蒙1.5",
+        date: "2024-12",
+        type: "OS",
+        description: "问界M7改款",
+        features: [
+          "[智驾核心] ADS 2.0 高速NCA",
+          "鸿蒙车机持续优化",
+          "语音助手增强",
+          "系统稳定性提升"
+        ],
+        supportedPlatforms: ["Huawei ADS 2.0"],
+        detailsUrl: "https://www.huawei.com/cn/auto"
+      },
+      {
+        version: "鸿蒙1.4",
+        date: "2024-10",
+        type: "OS",
+        description: "秋季更新",
+        features: [
+          "鸿蒙车机优化",
+          "语音助手增强",
+          "应用生态扩展",
+          "系统流畅度提升"
+        ],
+        supportedPlatforms: ["Huawei ADS 2.0", "Huawei ADS 1.0"],
+        detailsUrl: "https://www.huawei.com/cn/auto"
+      },
+      {
+        version: "鸿蒙1.3",
+        date: "2024-08",
+        type: "OS",
+        description: "夏季高温优化",
+        features: [
+          "空调系统优化",
+          "电池管理增强",
+          "语音助手优化",
+          "系统稳定性提升"
+        ],
+        supportedPlatforms: ["Huawei ADS 2.0", "Huawei ADS 1.0"],
+        detailsUrl: "https://www.huawei.com/cn/auto"
+      },
+      {
+        version: "鸿蒙1.2",
+        date: "2024-06",
+        type: "OS",
+        description: "问界M7发布",
+        features: [
+          "[智驾核心] ADS 2.0 基础版",
+          "鸿蒙车机2.0",
+          "手机导航无缝流转",
+          "智能座舱升级"
+        ],
+        supportedPlatforms: ["Huawei ADS 2.0"],
+        detailsUrl: "https://www.huawei.com/cn/auto"
+      },
+      {
+        version: "鸿蒙1.1",
+        date: "2024-04",
+        type: "OS",
+        description: "春季更新",
+        features: [
+          "鸿蒙车机持续优化",
+          "语音助手能力提升",
+          "导航功能增强",
+          "系统流畅度提升"
+        ],
+        supportedPlatforms: ["Huawei ADS 1.0"],
+        detailsUrl: "https://www.huawei.com/cn/auto"
+      },
+      {
+        version: "鸿蒙1.0",
+        date: "2024-02",
+        type: "OS",
+        description: "问界M5 首发",
+        features: [
+          "鸿蒙车机系统首发",
+          "HarmonyOS 车机互联",
+          "基础智能驾驶功能",
+          "智能座舱基础"
+        ],
+        supportedPlatforms: ["Huawei ADS 1.0"],
+        detailsUrl: "https://www.huawei.com/cn/auto"
+      }
+    ]
+  },
+  {
+    id: "xiaomi",
+    name: "小米汽车",
+    englishName: "Xiaomi Auto",
+    description: "小米集团发布的智能电动汽车，搭载小米自研澎湃OS和高阶智能驾驶系统，致力于打造人车家全生态的智能出行体验。",
+    officialLink: "https://www.xiaomiev.com/",
+    logoUrl: "https://logo.clearbit.com/xiaomi.com",
+    color: "bg-orange-500",
+    hardwarePlatforms: [
+      {
+        name: "Xiaomi Pilot Max",
+        generation: "高阶智驾平台",
+        releaseDate: "2024 - 2026",
+        cockpitChip: "高通8295",
+        adChip: "双NVIDIA Orin-X (508 TOPS)",
+        sensors: ["1颗128线激光雷达", "11颗高清摄像头", "3颗毫米波雷达", "12颗超声波雷达"],
+        models: ["小米SU7 Pro", "小米SU7 Max", "小米SU7 Ultra"]
+      },
+      {
+        name: "Xiaomi Pilot Pro",
+        generation: "基础智驾平台",
+        releaseDate: "2024 - 2025",
+        cockpitChip: "高通8295",
+        adChip: "单NVIDIA Orin (84 TOPS)",
+        sensors: ["11颗高清摄像头", "3颗毫米波雷达", "12颗超声波雷达"],
+        models: ["小米SU7 标准版"]
+      }
+    ],
+    softwareHistory: [
+      // 澎湃OS 3.x 系列
+      {
+        version: "澎湃OS 3.2",
+        date: "2026-02",
+        type: "OS",
+        description: "持续优化",
+        features: [
+          "[智驾核心] Xiaomi Pilot 城市NOA 增强",
+          "[智驾核心] 端到端智驾持续进化",
+          "小爱同学大模型增强",
+          "系统稳定性提升"
+        ],
+        supportedPlatforms: ["Xiaomi Pilot Max"],
+        detailsUrl: "https://www.xiaomiev.com/"
+      },
+      {
+        version: "澎湃OS 3.1",
+        date: "2025-12",
+        type: "OS",
+        description: "年度大更新",
+        features: [
+          "[智驾核心] Xiaomi Pilot Max 城市NOA 全国开通",
+          "[智驾核心] 端到端智能驾驶",
+          "小爱同学5.0",
+          "人车家生态全面打通"
+        ],
+        supportedPlatforms: ["Xiaomi Pilot Max"],
+        detailsUrl: "https://www.xiaomiev.com/"
+      },
+      {
+        version: "澎湃OS 3.0",
+        date: "2025-10",
+        type: "OS",
+        description: "秋季更新",
+        features: [
+          "[智驾核心] 城市NOA 扩展",
+          "[智驾核心] 高速NOA 增强",
+          "小爱同学4.0",
+          "智能座舱优化"
+        ],
+        supportedPlatforms: ["Xiaomi Pilot Max", "Xiaomi Pilot Pro"],
+        detailsUrl: "https://www.xiaomiev.com/"
+      },
+      // 澎湃OS 2.x 系列
+      {
+        version: "澎湃OS 2.5",
+        date: "2025-08",
+        type: "OS",
+        description: "夏季更新",
+        features: [
+          "[智驾核心] 城市NOA 首批城市",
+          "[智驾核心] 高速NOA 全国覆盖",
+          "小爱同学持续进化",
+          "车机互联增强"
+        ],
+        supportedPlatforms: ["Xiaomi Pilot Max", "Xiaomi Pilot Pro"],
+        detailsUrl: "https://www.xiaomiev.com/"
+      },
+      {
+        version: "澎湃OS 2.4",
+        date: "2025-06",
+        type: "OS",
+        description: "SU7 Ultra发布",
+        features: [
+          "[智驾核心] 城市NOA 开启公测",
+          "[智驾核心] 高速NOA 增强",
+          "小爱同学3.0",
+          "智能驾驶优化"
+        ],
+        supportedPlatforms: ["Xiaomi Pilot Max", "Xiaomi Pilot Pro"],
+        detailsUrl: "https://www.xiaomiev.com/"
+      },
+      {
+        version: "澎湃OS 2.3",
+        date: "2025-04",
+        type: "OS",
+        description: "春季更新",
+        features: [
+          "[智驾核心] 高速NOA 全面推送",
+          "小爱同学持续优化",
+          "智能座舱体验提升",
+          "系统稳定性增强"
+        ],
+        supportedPlatforms: ["Xiaomi Pilot Max", "Xiaomi Pilot Pro"],
+        detailsUrl: "https://www.xiaomiev.com/"
+      },
+      {
+        version: "澎湃OS 2.2",
+        date: "2025-02",
+        type: "OS",
+        description: "农历新年更新",
+        features: [
+          "春节主题",
+          "小爱同学新年技能",
+          "氛围灯效",
+          "系统优化"
+        ],
+        supportedPlatforms: ["Xiaomi Pilot Max", "Xiaomi Pilot Pro"],
+        detailsUrl: "https://www.xiaomiev.com/"
+      },
+      {
+        version: "澎湃OS 2.1",
+        date: "2024-12",
+        type: "OS",
+        description: "SU7 Pro/Max发布",
+        features: [
+          "[智驾核心] 高速NOA 首批推送",
+          "小爱同学2.0",
+          "智能座舱升级",
+          "车机互联增强"
+        ],
+        supportedPlatforms: ["Xiaomi Pilot Max", "Xiaomi Pilot Pro"],
+        detailsUrl: "https://www.xiaomiev.com/"
+      },
+      {
+        version: "澎湃OS 2.0",
+        date: "2024-10",
+        type: "OS",
+        description: "功能完善",
+        features: [
+          "小爱同学持续优化",
+          "导航功能增强",
+          "应用生态扩展",
+          "系统流畅度提升"
+        ],
+        supportedPlatforms: ["Xiaomi Pilot Max", "Xiaomi Pilot Pro"],
+        detailsUrl: "https://www.xiaomiev.com/"
+      },
+      // 澎湃OS 1.x 系列
+      {
+        version: "澎湃OS 1.4",
+        date: "2024-08",
+        type: "OS",
+        description: "夏季高温优化",
+        features: [
+          "空调系统优化",
+          "电池管理增强",
+          "语音助手优化",
+          "系统稳定性提升"
+        ],
+        supportedPlatforms: ["Xiaomi Pilot Max", "Xiaomi Pilot Pro"],
+        detailsUrl: "https://www.xiaomiev.com/"
+      },
+      {
+        version: "澎湃OS 1.3",
+        date: "2024-06",
+        type: "OS",
+        description: "功能增强",
+        features: [
+          "小爱同学持续优化",
+          "智能泊车增强",
+          "导航功能完善",
+          "用户体验提升"
+        ],
+        supportedPlatforms: ["Xiaomi Pilot Max", "Xiaomi Pilot Pro"],
+        detailsUrl: "https://www.xiaomiev.com/"
+      },
+      {
+        version: "澎湃OS 1.2",
+        date: "2024-04",
+        type: "OS",
+        description: "SU7发布",
+        features: [
+          "[智驾核心] 基础智驾功能",
+          "小米澎湃OS车机",
+          "小爱同学1.0",
+          "小米生态互联"
+        ],
+        supportedPlatforms: ["Xiaomi Pilot Max", "Xiaomi Pilot Pro"],
+        detailsUrl: "https://www.xiaomiev.com/"
+      },
+      {
+        version: "澎湃OS 1.1",
+        date: "2024-03",
+        type: "OS",
+        description: "首批用户更新",
+        features: [
+          "车机系统基础功能",
+          "语音助手基础",
+          "导航系统基础",
+          "智能座舱基础"
+        ],
+        supportedPlatforms: ["Xiaomi Pilot Max", "Xiaomi Pilot Pro"],
+        detailsUrl: "https://www.xiaomiev.com/"
+      },
+      {
+        version: "澎湃OS 1.0",
+        date: "2024-03",
+        type: "OS",
+        description: "小米SU7 首发",
+        features: [
+          "小米SU7 车机系统首发",
+          "基础车机功能",
+          "语音基础功能",
+          "智能座舱基础"
+        ],
+        supportedPlatforms: ["Xiaomi Pilot Max", "Xiaomi Pilot Pro"],
+        detailsUrl: "https://www.xiaomiev.com/"
+      }
+    ]
   }
 ];
 
